@@ -1,41 +1,89 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛡️ End-to-End Insurance Management Platform
 
-## Getting Started
+A powerful, AI-driven full-stack web application that transforms the way users interact with insurance. It provides a **centralized platform** to **explore, compare, manage, and purchase insurance policies**, while empowering insurers to list and manage their offerings. Powered by **Gemini AI**, **Firebase**, and a robust **Next.js + Node.js** stack, this project is designed for scalability, personalization, and trust.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 👥 For Users
+- ✅ **Unified Policy Dashboard**  
+  View and manage all your active and past insurance policies in one place.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🧠 **AI-Powered Recommendations (Gemini API)**  
+  Get intelligent, personalized insurance suggestions based on your profile, goals, and past coverage.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 📊 **Side-by-Side Policy Comparisons**  
+  Compare multiple insurance policies based on premium, coverage, tenure, and more.
 
-## Learn More
+- 🛒 **Direct Policy Purchase**  
+  Purchase insurance instantly from listed insurers within the platform.
 
-To learn more about Next.js, take a look at the following resources:
+- 🔁 **Renewal & Claim Tracking**  
+  Track your claim status and get smart reminders for policy renewals.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🏢 For Insurers
+- 📝 **Multi-Policy Management**  
+  Add, edit, or delete multiple insurance policies with complete details.
 
-## Deploy on Vercel
+- 📂 **Document Upload & Management**  
+  Upload brochures, T&Cs, and other documents securely (stored on Firebase Storage).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 📈 **Engagement Insights** *(upcoming)*  
+  Analytics to understand which policies are being searched, viewed, or purchased.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# InsuraSphere
-End to End Insurance Management Platform
->>>>>>> 60a7ba5dceeac4605fa25a3ba5f57d2c0d176941
+---
+
+## 🧠 AI Recommendations (Gemini API)
+
+Gemini provides tailored suggestions based on:
+- Age, income, goals, dependents
+- Risk appetite and policy history
+
+### 🔁 Workflow:
+1. User completes a financial profile
+2. App sends structured prompt to Gemini
+3. Gemini returns top 3 policy suggestions + explanations
+4. Frontend renders these recommendations with "Why This Fits You"
+
+> _"For a 32-year-old with ₹9L income and a goal of child education, we recommend a Term Life + Child ULIP combo policy for long-term benefit."_  
+
+### ✅ Benefits of Using Gemini:
+- Natural language reasoning
+- Simple explanation of complex insurance terms
+- Human-like, context-aware suggestions
+
+---
+
+## 🏗️ Tech Stack
+
+| Layer           | Technology                            |
+|------------------|----------------------------------------|
+| 🌐 Frontend      | Next.js, Tailwind CSS, React Context   |
+| 🔐 Authentication| Firebase Authentication                |
+| 🔥 Database      | Firebase Firestore                     |
+| ☁️ Storage       | Firebase Storage                       |
+| 🧠 AI/ML          | Google Gemini API                      |
+| ⚙️ Backend       | Node.js with Express (API layer)       |
+| 📄 OCR/NLP (optional)| Python (Tesseract, spaCy)          |
+
+---
+
+## 📱 Application Workflow
+
+```plaintext
+[User Registration/Login via Firebase]
+        ↓
+[Complete Profile & Set Goals]
+        ↓
+[Explore & Filter Insurance Policies]
+        ↓
+[Get AI Recommendations (Gemini API)]
+        ↓
+[Compare Policies Side-by-Side]
+        ↓
+[Purchase & View in Dashboard]
+        ↓
+[Renewal Alerts & Claim Status Tracking]
