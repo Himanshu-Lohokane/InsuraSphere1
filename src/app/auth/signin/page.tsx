@@ -13,13 +13,14 @@ import { FcGoogle } from 'react-icons/fc';
 import { HiOutlineMail } from 'react-icons/hi';
 import { RiLockPasswordLine } from 'react-icons/ri';
 import { MdOutlineBusinessCenter, MdOutlineAdminPanelSettings, MdOutlinePerson } from 'react-icons/md';
+import type { UserRole } from '@/contexts/AuthContext';
 
 export default function SignIn() {
   const router = useRouter();
   const { signIn, signInWithGoogle } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('user');
+  const [role, setRole] = useState<UserRole>('user');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [aiRecommendation, setAiRecommendation] = useState<string | null>(null);
@@ -77,7 +78,7 @@ export default function SignIn() {
         </p>
       </div>
 
-      <Tabs defaultValue="user" className="w-full" onValueChange={value => setRole(value)}>
+      <Tabs defaultValue="user" className="w-full" onValueChange={value => setRole(value as UserRole)}>
         <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="user" className="flex items-center space-x-2">
             <MdOutlinePerson className="w-4 h-4" />
