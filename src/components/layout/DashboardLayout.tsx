@@ -17,7 +17,16 @@ import { usePathname } from 'next/navigation';
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: HomeIcon },
-  { name: 'Policies', href: '/dashboard/policies', icon: DocumentTextIcon },
+  { 
+    name: 'Policies', 
+    href: '/dashboard/policies', 
+    icon: DocumentTextIcon,
+    subItems: [
+      { name: 'All Policies', href: '/dashboard/policies' },
+      { name: 'Compare Policies', href: '/dashboard/policies/compare' },
+      { name: 'Recommendations', href: '/dashboard/policies/recommendations' },
+    ]
+  },
   { name: 'Claims', href: '/dashboard/claims', icon: ChartBarIcon },
   { name: 'Profile', href: '/dashboard/profile', icon: UserCircleIcon },
 ];
@@ -88,6 +97,26 @@ export default function DashboardLayout({
                                 />
                                 {item.name}
                               </Link>
+                              {item.subItems && (
+                                <ul className="ml-6 mt-1 space-y-1">
+                                  {item.subItems.map((subItem) => (
+                                    <li key={subItem.name}>
+                                      <Link
+                                        href={subItem.href}
+                                        className={`
+                                          group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold
+                                          ${pathname === subItem.href
+                                            ? 'bg-gray-50 text-indigo-600'
+                                            : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-50'
+                                          }
+                                        `}
+                                      >
+                                        {subItem.name}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
                             </li>
                           ))}
                         </ul>
@@ -133,6 +162,26 @@ export default function DashboardLayout({
                         />
                         {item.name}
                       </Link>
+                      {item.subItems && (
+                        <ul className="ml-6 mt-1 space-y-1">
+                          {item.subItems.map((subItem) => (
+                            <li key={subItem.name}>
+                              <Link
+                                href={subItem.href}
+                                className={`
+                                  group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold
+                                  ${pathname === subItem.href
+                                    ? 'bg-gray-50 text-indigo-600'
+                                    : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-50'
+                                  }
+                                `}
+                              >
+                                {subItem.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -200,7 +249,9 @@ export default function DashboardLayout({
         </div>
 
         <main className="py-10">
-          <div className="px-4 sm:px-6 lg:px-8">{children}</div>
+          <div className="px-4 sm:px-6 lg:px-8">
+            {children}
+          </div>
         </main>
       </div>
     </div>

@@ -1,0 +1,1001 @@
+user_id,age,gender,annual_income_inr,premium,marital_status,has_dependents,occupation,health_issues,vehicle_owner,existing_policies,city_type,education_level,digital_literacy_score,family_medical_history,policy_duration_preference,investment_goal,interested_policy
+5b57d1d4-2c75-482e-8cb4-3fbf1678760a,44,Female,887801,87140.57,Single,Yes,Freelancer,Mild,No,3,Urban,Postgraduate,6,None,Long-Term,Child Education,life
+553823f2-9bdf-4fc9-94f2-9e7be5ee16d9,23,Female,992788,92174.84,Single,No,Engineer,Mild,Yes,3,Rural,High School,6,None,Long-Term,Wealth Creation,auto
+58d8c41c-e89a-4d71-bcfd-b0953e8f4c6d,64,Male,524327,38661.91,Married,No,Engineer,None,Yes,0,Rural,High School,6,Heart Disease,Short-Term,Child Education,term
+6de8afe6-a3dc-4d43-927d-047f5e74416d,55,Female,404064,10684.92,Single,Yes,Freelancer,None,No,0,Urban,High School,10,Heart Disease,Long-Term,None,life
+1a8d6aa9-04c5-4536-ada2-7d8182e29aae,68,Male,2663545,165817.41,Single,Yes,Freelancer,Chronic,Yes,1,Rural,Postgraduate,6,Diabetes,Short-Term,None,health
+06609f30-aa3c-4080-acac-e6936fb6d3f0,54,Female,1635278,65588.11,Married,No,Engineer,Mild,Yes,1,Rural,Postgraduate,8,None,Short-Term,Retirement,health
+a6a41cae-e239-460b-b06b-2aaee188ba5b,68,Male,287124,25135.07,Married,No,Teacher,Chronic,No,3,Urban,Postgraduate,9,Diabetes,Lifetime,Retirement,health
+9f531c24-1f73-4d47-b134-46a352ced237,53,Female,785500,53999.81,Divorced,Yes,Freelancer,None,Yes,0,Urban,High School,10,None,Short-Term,Retirement,life
+45276d64-f24a-425d-a9ea-4b098b8fd263,26,Male,858980,58643.16,Married,No,Engineer,None,No,2,Rural,Postgraduate,2,None,Long-Term,Retirement,term
+5d9fe563-5894-4819-8563-ae593267ac4f,40,Male,884011,77521.84,Divorced,Yes,Doctor,Mild,Yes,3,Rural,Postgraduate,9,Diabetes,Short-Term,None,term
+62806da6-7fab-43cd-8737-22f14debdd64,65,Female,745904,20079.34,Divorced,Yes,Retired,None,No,3,Rural,Postgraduate,2,None,Lifetime,Child Education,term
+35aaacb7-40e5-4e32-96df-b59357b5f069,65,Male,253432,7500.72,Married,Yes,Teacher,Chronic,Yes,0,Urban,Graduate,7,Cancer,Long-Term,Retirement,health
+3542cd05-dba5-4193-89ea-103ca866a4a1,19,Female,530532,15586.06,Married,No,Teacher,None,Yes,0,Urban,High School,9,None,Short-Term,Child Education,auto
+941dce39-3aee-4f24-aaae-3ab0b434e9ab,60,Female,793563,23792.37,Married,No,Freelancer,None,No,2,Urban,Graduate,8,Diabetes,Long-Term,Retirement,auto
+7407f12d-5ce7-4fa8-b6cc-c846c9973711,67,Male,2063019,139897.73,Divorced,Yes,Teacher,None,Yes,1,Urban,Graduate,8,Cancer,Short-Term,Wealth Creation,term
+3bd14a4d-be83-4db5-8344-00fb910fead9,30,Female,1176452,91557.99,Single,No,Retired,Mild,No,3,Rural,PhD,8,Heart Disease,Short-Term,Retirement,term
+f7d36f2d-31c3-453c-bfa1-9f1ed7c50ce7,37,Female,389397,8744.43,Married,Yes,Retired,None,No,2,Urban,High School,3,None,Lifetime,Child Education,term
+c5c3c1c3-2539-42d3-a6a5-af0cb13b2e81,70,Male,843411,75456.51,Divorced,No,Driver,None,Yes,2,Rural,PhD,6,Cancer,Short-Term,Child Education,term
+d602b506-226f-47a9-a28c-81569f09c8f9,49,Female,620688,12635.48,Divorced,No,Engineer,None,Yes,2,Urban,Postgraduate,4,None,Lifetime,Retirement,auto
+9ad60990-bac9-44f3-b02b-a580419cae34,49,Female,1812041,144490.95,Single,Yes,Driver,None,Yes,0,Urban,PhD,5,Heart Disease,Short-Term,Wealth Creation,term
+ebd0142a-986c-483f-a020-7cdb6cecbd25,43,Male,673747,52974.15,Divorced,No,Teacher,None,Yes,1,Rural,Graduate,3,Diabetes,Short-Term,Retirement,life
+ebde8f23-4d8d-45b7-9e4d-67883afa16b2,42,Male,1827695,134245.78,Single,No,Teacher,None,No,1,Rural,Graduate,1,Diabetes,Long-Term,Child Education,life
+9d9be911-ff8d-4d04-9812-3ee9fa93aee5,29,Male,311812,22937.58,Married,Yes,Engineer,Chronic,No,0,Urban,Graduate,1,Cancer,Lifetime,Retirement,life
+e10c43cf-27c6-4478-b669-50c6182355da,32,Male,2603876,116821.17,Single,No,Doctor,Mild,Yes,2,Urban,PhD,8,None,Short-Term,Retirement,health
+3b074629-4431-4b83-bde1-471dabc1b4bc,45,Male,873229,43778.34,Single,No,Retired,Chronic,No,0,Rural,Graduate,4,Cancer,Lifetime,None,term
+df218dbc-a5d5-4d08-94ee-caeb20ba1ebc,19,Male,1777272,69705.63,Married,No,Retired,Chronic,No,1,Rural,High School,3,None,Lifetime,Retirement,life
+62d951d2-36b8-4e5e-87bc-622f90fabf23,65,Male,886244,69694.96,Single,Yes,Driver,None,Yes,1,Urban,High School,10,Heart Disease,Long-Term,Retirement,term
+f089ba76-a575-4897-8039-eb8a7beb330d,54,Female,354429,18643.0,Divorced,No,Engineer,Mild,Yes,2,Rural,Postgraduate,1,None,Long-Term,Wealth Creation,health
+6901dc93-fdd8-47d2-8088-893e75c367b9,47,Male,738602,67783.84,Divorced,Yes,Freelancer,None,No,2,Urban,PhD,10,None,Long-Term,Child Education,life
+0c5cfc9e-ebef-4aa9-8cb2-0d665d421a75,26,Male,282491,28190.72,Married,No,Doctor,Mild,No,3,Rural,High School,1,Diabetes,Lifetime,Retirement,life
+e8840c1b-841a-4980-8847-7523a91601d5,54,Female,706495,17956.63,Married,Yes,Engineer,Mild,No,0,Urban,Postgraduate,5,Heart Disease,Lifetime,Retirement,health
+64b02eb6-45cb-4022-be30-abcb0c38864b,49,Female,265945,14591.82,Divorced,No,Freelancer,Mild,No,2,Urban,Graduate,2,Heart Disease,Short-Term,Wealth Creation,auto
+a594f184-b6bb-459e-9239-35709e718c34,66,Male,662177,52970.81,Single,Yes,Retired,None,Yes,3,Urban,Postgraduate,7,Heart Disease,Long-Term,None,life
+c2cdb83c-4b62-4e83-9697-b391fb290699,42,Female,756070,56807.18,Married,No,Driver,None,No,2,Rural,Graduate,4,None,Long-Term,None,health
+c22f2642-2d4e-49ae-a918-8d5dac1aac4a,48,Male,373144,19365.38,Married,Yes,Engineer,Mild,No,0,Rural,Graduate,1,Diabetes,Short-Term,Wealth Creation,term
+826023a2-8d99-46ab-a782-179d92b95fcc,21,Male,760692,16921.46,Divorced,Yes,Doctor,Mild,No,2,Rural,Postgraduate,6,Cancer,Short-Term,Wealth Creation,term
+b95dffeb-ed4c-400c-be81-db6ec075d960,54,Male,403121,11247.08,Married,No,Doctor,Chronic,No,3,Urban,Graduate,9,Cancer,Lifetime,Retirement,health
+37c5773f-4cd7-450c-958a-19935be0e7bd,48,Male,2419870,203440.26,Divorced,Yes,Doctor,Chronic,No,0,Urban,High School,5,Diabetes,Short-Term,Child Education,life
+897ecd4e-820c-44af-9ad3-9a98ae8c3a8a,45,Female,575429,12506.61,Single,No,Engineer,Chronic,Yes,3,Rural,PhD,7,Cancer,Long-Term,Retirement,health
+601cc676-813d-4baa-9ffa-73218b5662a2,36,Female,506287,47369.38,Single,No,Engineer,Chronic,Yes,3,Rural,PhD,8,Heart Disease,Short-Term,Wealth Creation,life
+1861d626-383d-491a-989d-06867d6f0b93,28,Female,600182,32616.42,Divorced,Yes,Doctor,None,No,2,Rural,Graduate,9,None,Long-Term,None,term
+9445af42-bd14-4021-b351-49177ee07f0f,66,Female,761503,25421.63,Single,No,Freelancer,None,Yes,3,Urban,Postgraduate,2,Cancer,Long-Term,Retirement,life
+800638fe-d08f-4e7f-ac15-2713b7c01b2c,52,Female,911268,82716.41,Married,Yes,Retired,Mild,Yes,0,Rural,PhD,7,Cancer,Short-Term,Wealth Creation,health
+5dfd1ca0-23c2-4ca5-ade8-a1face20e401,53,Female,1170356,114044.07,Single,Yes,Engineer,None,Yes,2,Urban,High School,4,None,Long-Term,Wealth Creation,term
+2535214e-e0e8-4366-9e89-f65fda2c2526,52,Male,644737,62841.72,Divorced,No,Engineer,None,No,1,Rural,Postgraduate,1,None,Long-Term,Retirement,health
+137e1079-f42a-4f6d-8be2-17b1eea85298,28,Male,533151,43247.6,Married,No,Retired,None,Yes,3,Urban,High School,5,Cancer,Long-Term,Child Education,auto
+f2af5407-d058-41da-b40a-fb49c21a946e,63,Male,1388522,66420.64,Married,No,Engineer,Mild,Yes,3,Urban,Graduate,2,None,Short-Term,Child Education,health
+c9ba0cb2-06dc-4bb3-910b-aaa4fa24747e,22,Male,778104,72664.77,Divorced,Yes,Retired,Mild,No,0,Rural,Postgraduate,5,Diabetes,Lifetime,None,life
+20cf0a94-11e1-4c4e-b9c6-b30f03eb6659,40,Female,1743288,145522.34,Divorced,Yes,Freelancer,Mild,No,0,Urban,High School,1,Diabetes,Short-Term,Retirement,life
+9353d155-637a-4d66-8c17-d2a319b9cf5c,23,Male,718173,43490.01,Married,No,Engineer,None,Yes,0,Rural,High School,5,Heart Disease,Long-Term,Wealth Creation,auto
+e7fb8f34-7578-48da-a8f6-5341cc4ae44c,20,Male,884118,45820.22,Married,Yes,Doctor,Mild,No,0,Urban,High School,2,None,Long-Term,Retirement,life
+9568d695-c9c8-4ab7-a78c-d6348b498504,21,Female,2441892,94776.85,Divorced,Yes,Doctor,None,No,0,Urban,Postgraduate,6,None,Long-Term,Wealth Creation,term
+a5f6395b-81cb-4ca7-8ad2-6597a7606695,44,Male,590446,52024.54,Single,No,Doctor,None,Yes,0,Urban,Postgraduate,9,None,Short-Term,Wealth Creation,life
+3a390a55-34a4-40c1-bf85-8b081b499207,19,Male,204560,10269.54,Married,No,Engineer,None,No,2,Urban,Postgraduate,4,None,Short-Term,Child Education,life
+a7e14ba7-a873-4633-a9e5-7b260690fd52,26,Female,357983,16473.74,Married,No,Teacher,Mild,Yes,3,Urban,PhD,8,Heart Disease,Short-Term,None,auto
+63bbbdd1-b288-4914-b6a9-f383b47970e9,70,Male,708405,53976.32,Married,No,Doctor,Chronic,Yes,0,Rural,High School,6,Heart Disease,Long-Term,None,health
+d450afcf-206e-43e9-a811-e116cdc13023,66,Male,2478613,87275.69,Married,Yes,Teacher,None,Yes,0,Rural,PhD,9,Cancer,Short-Term,Child Education,term
+92ae0d34-b7ca-44c1-bf5c-c1b6fe26bbd3,42,Female,713532,34395.22,Single,Yes,Retired,Chronic,No,0,Urban,Postgraduate,3,None,Long-Term,None,life
+f2dfb5db-c09d-4902-9963-1e0fd3790cad,60,Female,1773424,152709.2,Divorced,Yes,Doctor,None,No,2,Rural,Postgraduate,10,None,Short-Term,Wealth Creation,term
+12b63bc8-c565-4180-ad54-65f6cf3d0df0,18,Male,499463,42697.85,Single,No,Engineer,None,Yes,0,Urban,PhD,7,None,Short-Term,Child Education,auto
+c3dfdee6-c5dc-4d94-bf53-0923a5039c5b,61,Female,821949,42606.09,Divorced,No,Driver,None,Yes,1,Rural,High School,5,Heart Disease,Lifetime,Child Education,life
+30075d90-f5fd-4e84-8b84-9a9097100618,69,Male,772637,25033.5,Married,Yes,Retired,Chronic,No,0,Urban,Postgraduate,10,None,Short-Term,Wealth Creation,health
+0b19c3bb-bbaa-4ff7-ad43-bb27312239a4,51,Male,1124469,88330.36,Divorced,Yes,Retired,Chronic,No,0,Urban,Postgraduate,2,Heart Disease,Long-Term,None,health
+fd693614-f4f7-42d4-8cec-aba6351ff03a,23,Female,573379,40686.95,Divorced,No,Retired,None,Yes,3,Urban,Graduate,10,Diabetes,Lifetime,None,auto
+0d201b81-81d7-4956-8fbe-0d09bf9592a8,70,Male,923970,90176.23,Divorced,Yes,Teacher,Mild,Yes,1,Rural,PhD,7,Heart Disease,Short-Term,Child Education,health
+0cb834ea-551c-47b4-b42e-1ab6cb1a207c,33,Male,945835,65270.84,Divorced,No,Teacher,None,No,0,Rural,Graduate,1,None,Long-Term,Child Education,health
+1aed0519-8e4b-49be-a087-691e15b40b4c,43,Female,293267,16279.16,Divorced,Yes,Doctor,None,Yes,0,Urban,Graduate,10,Diabetes,Lifetime,Retirement,term
+6916feea-a842-4c73-a10c-9c435d76031a,44,Male,705341,32421.99,Divorced,No,Doctor,None,No,3,Urban,PhD,1,Heart Disease,Lifetime,Child Education,auto
+c0eb2002-5cb8-482f-996b-21332020201e,56,Male,286959,24176.4,Married,Yes,Retired,None,No,3,Urban,Postgraduate,10,Cancer,Long-Term,Retirement,life
+00679ffa-bd04-4450-b697-2b7a2706d98d,42,Male,684476,20653.96,Divorced,Yes,Teacher,Mild,Yes,2,Rural,Graduate,4,Heart Disease,Long-Term,Retirement,life
+c98ebb24-11fd-4782-9b2a-8853ca9c3536,26,Male,275616,8422.33,Married,No,Retired,Mild,Yes,0,Rural,PhD,7,Diabetes,Short-Term,Wealth Creation,auto
+be0d6478-3291-4bca-a0dd-2fb398fe2036,19,Female,2192174,141426.66,Married,Yes,Freelancer,None,No,1,Rural,High School,2,None,Lifetime,Wealth Creation,term
+464bde90-04eb-4564-9ba4-fc2e68262692,60,Female,953157,89208.74,Single,Yes,Driver,None,No,3,Urban,Postgraduate,5,Cancer,Long-Term,Wealth Creation,term
+cbe9af41-ea5f-419d-b6ad-8b91de84e204,41,Male,250567,7697.9,Single,Yes,Engineer,Chronic,No,2,Rural,Postgraduate,10,None,Long-Term,Child Education,term
+c4f632de-4ecc-4529-ae5e-6d31320ce2b3,55,Female,745223,48350.45,Single,No,Doctor,None,No,3,Rural,Graduate,1,None,Lifetime,Wealth Creation,life
+73c11a49-75c4-4b8d-b7fe-ac75375be1af,67,Female,670566,51121.78,Married,Yes,Freelancer,Mild,No,1,Urban,Graduate,5,None,Lifetime,Retirement,health
+ce54984f-bbc6-4071-9302-22e434a64233,18,Male,456909,34904.24,Married,No,Retired,Chronic,No,2,Urban,PhD,8,Diabetes,Long-Term,None,life
+c19c28fc-da8c-4b34-bf27-b1b010bf3946,52,Female,665304,26044.72,Single,Yes,Engineer,None,No,2,Rural,Postgraduate,4,Diabetes,Lifetime,Wealth Creation,life
+1efd5245-21bc-4acd-aa2e-b5114a851c46,69,Female,627329,55671.65,Married,No,Driver,Mild,Yes,2,Urban,PhD,9,Heart Disease,Short-Term,Retirement,health
+7d015070-9a59-4307-871a-02d49e24a114,48,Male,1000182,43645.72,Single,No,Teacher,Chronic,No,0,Urban,High School,3,Diabetes,Long-Term,Child Education,term
+b1ae3f7d-249a-4523-a633-b422a8bfbf43,45,Male,2672155,164304.35,Divorced,Yes,Driver,Mild,Yes,3,Urban,High School,4,Heart Disease,Short-Term,Wealth Creation,term
+320b97ff-b426-4e71-8fef-4606e810ad54,22,Female,2364501,52139.2,Married,No,Driver,Chronic,No,3,Urban,Postgraduate,5,Heart Disease,Long-Term,Retirement,term
+98e0420b-13eb-4fc7-b30f-f2473292fd17,37,Female,398668,16976.25,Married,No,Retired,None,No,1,Rural,PhD,2,None,Long-Term,Wealth Creation,term
+baf363ae-a36b-40da-b3ac-3520e47dbdb1,39,Male,2594344,245157.8,Married,No,Engineer,Mild,No,1,Rural,High School,5,Diabetes,Short-Term,None,health
+7c3b81c3-1295-414a-a357-0c048c358d14,33,Female,960766,84880.78,Married,No,Engineer,None,No,1,Urban,Graduate,6,Heart Disease,Lifetime,Child Education,life
+6b714aad-7805-4e25-839b-4a36018334bc,62,Female,273092,17939.53,Single,No,Driver,Chronic,No,1,Urban,Postgraduate,8,Diabetes,Lifetime,Wealth Creation,health
+4d61deb7-3c56-4acf-97e1-583c49665153,67,Male,908898,43334.59,Divorced,No,Retired,None,Yes,2,Urban,High School,7,None,Long-Term,Wealth Creation,term
+f583a53a-9ed8-4f94-a9e6-29f8507188e0,32,Male,2939920,92283.9,Single,Yes,Doctor,Mild,No,2,Rural,Postgraduate,3,Heart Disease,Long-Term,Child Education,term
+7d4a9475-7129-4fe8-af6d-409aa110f810,56,Male,460663,12099.97,Single,Yes,Teacher,Chronic,Yes,1,Rural,Graduate,7,Diabetes,Lifetime,None,health
+ace6d5e8-019f-4dda-a84e-cc9d4c4038fc,23,Female,917519,49680.83,Married,No,Doctor,Mild,Yes,2,Rural,High School,4,None,Long-Term,Retirement,auto
+b0271987-47a0-4e7f-98f7-f7d12fdc7099,54,Male,201253,5400.96,Divorced,No,Driver,Mild,No,0,Rural,High School,10,Heart Disease,Long-Term,Wealth Creation,health
+e59e18cb-d68b-4c8e-9c6b-a92312a2c5aa,59,Male,598478,47425.33,Married,No,Freelancer,None,Yes,1,Rural,Graduate,6,None,Long-Term,Child Education,term
+922ff9c2-c6a5-4a52-8f09-2edc0cb5e85f,20,Female,1265872,120225.5,Divorced,Yes,Driver,None,No,3,Rural,High School,7,Heart Disease,Short-Term,Retirement,life
+07323835-f918-486d-8504-cd8e882dd818,40,Male,1748914,146807.95,Married,No,Doctor,Chronic,No,0,Rural,Graduate,7,Heart Disease,Long-Term,Wealth Creation,health
+3a211ade-c725-430d-916c-9ab115fbf541,43,Male,247711,16956.71,Single,Yes,Teacher,Mild,No,0,Rural,PhD,5,Heart Disease,Lifetime,Wealth Creation,life
+6ade4cf9-89e1-4b9a-87e0-61288355b26b,48,Female,500880,39255.96,Single,No,Retired,None,No,2,Urban,High School,8,Cancer,Short-Term,Child Education,life
+aefab99b-56ac-423c-aa83-ca48dc017f5d,68,Female,296894,14307.39,Single,No,Freelancer,Mild,Yes,2,Urban,High School,5,None,Short-Term,Wealth Creation,health
+6572d131-edcb-4d72-844d-8b58b0e7fde7,45,Female,988621,49559.39,Divorced,Yes,Engineer,None,Yes,0,Urban,High School,9,None,Long-Term,Child Education,term
+3bbb3f6d-79ec-4709-adb9-629a7692b133,39,Male,275445,26511.4,Divorced,No,Freelancer,None,Yes,1,Rural,PhD,5,Heart Disease,Lifetime,None,auto
+66675a3b-f5a6-43f5-b99b-b13f2e7eca71,21,Female,2676496,181068.76,Divorced,Yes,Driver,None,Yes,1,Urban,High School,3,Heart Disease,Short-Term,Child Education,auto
+87cf1ab1-1a26-4d52-bc9d-284ff5e237e3,47,Male,214508,20195.57,Married,No,Driver,None,No,0,Urban,Graduate,7,Cancer,Short-Term,Retirement,auto
+7e76bd5d-5abb-4c30-90e4-1c3297a41c23,50,Male,333484,29504.81,Single,Yes,Teacher,Chronic,No,0,Rural,Graduate,8,None,Long-Term,Wealth Creation,term
+42d2ffe3-9c41-4504-923f-d064ad3bfa76,54,Female,607612,54660.85,Married,Yes,Freelancer,None,Yes,2,Urban,High School,2,Cancer,Lifetime,None,term
+33080d2b-b9f0-45a6-b503-9e1b38968582,33,Male,552273,40373.21,Married,No,Engineer,None,No,3,Urban,Graduate,2,Diabetes,Lifetime,Retirement,term
+b18b962e-092b-4fd0-957a-dfe9be41b485,27,Female,1301086,127074.84,Single,No,Teacher,Mild,No,2,Rural,Postgraduate,1,Heart Disease,Lifetime,Retirement,term
+c271f49b-04ca-491c-8b4d-d3856f88b0ac,46,Female,215270,19619.46,Single,No,Retired,None,Yes,2,Urban,Graduate,8,Cancer,Long-Term,Retirement,health
+f028f573-d063-402b-8fe8-21b65909b88e,60,Female,659922,31904.55,Married,No,Driver,None,No,0,Urban,Postgraduate,6,Diabetes,Long-Term,None,auto
+922e149d-2038-4ed2-91bf-c22e566495f9,22,Male,481862,44878.52,Married,No,Teacher,Chronic,Yes,2,Rural,PhD,2,Diabetes,Short-Term,Wealth Creation,auto
+b645e6a4-28ab-4f43-8fd7-520c9d536be5,27,Female,2764016,226570.27,Single,No,Doctor,Chronic,No,0,Rural,PhD,10,None,Short-Term,Wealth Creation,health
+d8a71e4a-255b-478f-9320-d8e08e0cc472,65,Male,399672,9793.82,Married,Yes,Teacher,None,No,1,Urban,Graduate,7,Diabetes,Long-Term,Child Education,term
+5a5dbd12-7b51-401f-b3d8-490b7e7d9364,66,Female,924308,84700.71,Divorced,Yes,Driver,None,No,2,Urban,High School,1,None,Lifetime,Wealth Creation,life
+1872db5a-6630-4561-8163-8ea95f677138,40,Male,223362,19988.69,Single,No,Teacher,None,No,3,Urban,Postgraduate,8,Heart Disease,Short-Term,Wealth Creation,auto
+0ff8b923-19fc-4607-a8d9-68ec1efb3c98,63,Male,681909,24324.92,Single,Yes,Freelancer,Mild,Yes,3,Rural,High School,4,None,Long-Term,Retirement,health
+c79d8037-d48e-48cc-aa14-729deb3642d8,26,Male,779326,36848.57,Married,Yes,Freelancer,None,No,2,Rural,Graduate,8,None,Long-Term,Child Education,term
+7c1c2ef6-0a0d-46ab-a4e4-7bff988a7473,19,Female,259866,23576.26,Married,Yes,Retired,Chronic,Yes,0,Rural,High School,3,Cancer,Lifetime,Wealth Creation,auto
+05d7210c-0479-4a89-8024-02b0de4c31a1,42,Male,485033,38836.01,Divorced,Yes,Retired,Mild,No,0,Rural,Postgraduate,3,None,Long-Term,Retirement,term
+77f49f03-7763-4617-849b-0dd27c9c8e48,32,Male,2679901,156160.59,Divorced,Yes,Freelancer,None,No,1,Rural,PhD,7,None,Long-Term,Wealth Creation,term
+a3356d8d-4616-41b8-aec5-a147ee05d4ff,48,Male,723480,71743.7,Married,No,Driver,None,No,3,Rural,Graduate,2,None,Long-Term,Wealth Creation,auto
+b6d1aaba-ca80-431b-88f8-4b9086128e90,36,Male,477216,42721.45,Single,Yes,Freelancer,Mild,Yes,0,Urban,PhD,4,Diabetes,Lifetime,Wealth Creation,life
+869e028f-f79c-428f-af6a-c52bd1ba644a,68,Male,832221,23881.88,Married,Yes,Doctor,Chronic,Yes,1,Urban,High School,3,Diabetes,Lifetime,None,health
+5dd5e992-43b9-4d34-8952-f5609fd7de2f,26,Male,724495,26419.13,Divorced,No,Engineer,Mild,No,1,Rural,Graduate,10,Heart Disease,Short-Term,Retirement,auto
+5967c17d-d9ac-409c-ad8d-64a07f603731,46,Female,322904,24622.24,Single,Yes,Freelancer,None,No,3,Rural,High School,4,None,Long-Term,Retirement,life
+973f29ce-83b7-492d-b53b-8b30e087aa04,63,Male,2606499,91383.14,Married,Yes,Freelancer,Mild,No,0,Rural,High School,2,Diabetes,Short-Term,Wealth Creation,health
+0537af4d-02b3-474d-a1bb-22f5c5a0838b,35,Female,556650,32720.96,Married,No,Engineer,Chronic,No,1,Urban,Postgraduate,1,Heart Disease,Long-Term,Child Education,life
+6b214062-2246-46bf-ae85-74d2523cdbde,67,Male,817415,64749.65,Married,Yes,Doctor,None,Yes,1,Urban,High School,10,Diabetes,Long-Term,Retirement,term
+37c2af74-985d-4fab-a68d-5c1eeae1aa34,27,Male,899329,86699.07,Married,No,Doctor,Chronic,Yes,2,Rural,PhD,8,Cancer,Long-Term,Retirement,auto
+8d46e22d-f9b2-4ffe-adba-7475ff0c6dba,43,Male,658990,38357.49,Single,Yes,Retired,None,No,0,Rural,Postgraduate,6,None,Long-Term,Child Education,term
+aca35723-0827-4b38-b9fc-450ed8b1c6ed,37,Female,624660,22004.56,Single,No,Freelancer,Mild,No,1,Rural,PhD,5,Heart Disease,Long-Term,Wealth Creation,auto
+da3ac182-5eaa-41a8-b2e6-b34d5016d7de,40,Female,2339472,64230.74,Single,No,Teacher,Chronic,No,1,Rural,PhD,10,Heart Disease,Lifetime,Wealth Creation,term
+18d458bd-5daf-41ba-b593-4bbe6b048129,22,Female,291502,27445.97,Single,Yes,Freelancer,None,No,0,Urban,High School,5,Diabetes,Long-Term,Child Education,life
+df8665c4-0ae4-43cd-8786-5c03d9b43891,61,Female,791733,22971.44,Divorced,No,Freelancer,None,No,1,Urban,Graduate,4,Heart Disease,Short-Term,Child Education,term
+a643501e-82ef-4648-8ced-d1751df9d96d,37,Male,217251,11169.71,Single,Yes,Retired,Chronic,Yes,0,Urban,PhD,1,None,Short-Term,Child Education,term
+0c04d9d0-5828-48eb-95a3-23ecf7eae18a,18,Male,355911,27613.35,Divorced,Yes,Teacher,Chronic,Yes,0,Urban,High School,6,Heart Disease,Short-Term,Retirement,auto
+09f81992-5b84-4256-9c87-59bfc8ff62c4,48,Male,884404,59665.21,Single,No,Teacher,Mild,Yes,1,Rural,PhD,5,Cancer,Long-Term,Wealth Creation,term
+d6e645ac-1056-473d-b956-f7298ff5603e,24,Male,2199790,69754.87,Single,Yes,Freelancer,None,Yes,3,Rural,High School,3,Heart Disease,Short-Term,Retirement,auto
+2a93acec-5e84-4b4b-af91-e7465f720341,66,Male,680156,36029.31,Single,Yes,Engineer,Mild,No,2,Rural,Graduate,7,None,Lifetime,None,health
+88da36f3-cd98-4c0b-a6e3-3cad945a265b,32,Female,681123,63032.83,Single,No,Retired,Mild,No,0,Urban,Graduate,1,Diabetes,Short-Term,Wealth Creation,health
+b6ebc66f-1659-4af1-9cdb-509d5c9b320b,45,Female,764580,39722.69,Married,Yes,Driver,Mild,No,1,Rural,Postgraduate,9,None,Lifetime,Retirement,life
+a33b9880-589f-47be-82a8-f2d4c0a1aa90,69,Male,660903,29289.8,Divorced,No,Doctor,Chronic,Yes,2,Urban,PhD,1,None,Short-Term,Child Education,health
+141a8c4a-2535-42fb-8a2c-55909f1741e8,56,Male,671159,44557.53,Divorced,Yes,Teacher,Mild,No,3,Rural,High School,10,None,Long-Term,Wealth Creation,health
+f7a49528-6479-446f-8697-fcc1220c4a4a,58,Female,458507,12324.62,Single,No,Engineer,None,Yes,1,Rural,Graduate,7,Diabetes,Lifetime,Retirement,life
+6ace6343-63e8-4a12-a27b-b7a9f0972e8d,62,Female,803710,29460.85,Divorced,Yes,Engineer,None,No,3,Rural,Postgraduate,2,None,Lifetime,Child Education,life
+bc0e3cca-fbf9-4b5e-9ce0-75c7cec75373,70,Male,231397,6979.64,Single,No,Freelancer,Chronic,No,2,Rural,High School,2,Heart Disease,Short-Term,Retirement,health
+a094b7d3-d61c-4edd-abcb-1491ad404109,69,Male,625488,28324.55,Single,No,Retired,None,No,0,Rural,PhD,5,None,Lifetime,Child Education,term
+d4f202fd-4b51-404f-bd46-3ffda950f925,58,Female,774595,43980.17,Married,Yes,Driver,None,Yes,3,Urban,PhD,4,Heart Disease,Short-Term,None,life
+f00affc2-3e1f-4734-94ba-367d74e19f03,29,Female,321001,20952.99,Single,Yes,Driver,None,Yes,3,Rural,PhD,6,Heart Disease,Lifetime,None,auto
+67da3094-f8c7-4f12-a07d-7aa11049906c,48,Female,520036,38635.96,Single,No,Teacher,Chronic,Yes,1,Rural,Graduate,8,Heart Disease,Long-Term,Child Education,life
+f238fd78-abb3-49fe-ba95-8ad204c59193,49,Male,439356,42307.14,Single,No,Teacher,None,No,3,Urban,Postgraduate,1,Diabetes,Long-Term,Retirement,health
+ef40b37b-41b0-4c2b-b70b-8e0e39f2244a,69,Female,611229,41115.23,Married,No,Driver,Mild,No,0,Urban,Graduate,6,None,Short-Term,None,health
+1ba1f8b1-51d8-45b3-8955-405773f3abb8,36,Female,781885,75908.35,Married,Yes,Teacher,Chronic,No,1,Rural,PhD,3,Heart Disease,Short-Term,Retirement,life
+62cf0e85-3e04-4395-8f04-9327f319ec4e,27,Male,817206,22968.87,Single,No,Driver,None,No,1,Urban,High School,7,Heart Disease,Short-Term,None,health
+85cc72ca-d47d-43d6-bc26-5c2c978c9ffe,54,Female,2878167,117876.36,Married,No,Retired,Mild,No,0,Urban,High School,9,None,Long-Term,Child Education,health
+a60287ad-a3df-4c3a-8746-4003196c2232,37,Male,684523,18968.94,Divorced,Yes,Engineer,Chronic,No,2,Urban,PhD,6,Heart Disease,Lifetime,Retirement,life
+a811f6e7-4df4-4947-a2de-a0cfd8951d58,68,Female,1533171,137031.17,Married,No,Retired,Mild,No,2,Rural,PhD,8,None,Long-Term,Wealth Creation,health
+57867a3a-8fab-48d2-afbe-a2a4c23b195c,33,Male,2562466,220470.22,Married,Yes,Freelancer,Chronic,Yes,0,Urban,High School,10,Heart Disease,Lifetime,Child Education,life
+5b678bfd-2ce5-4744-9fb4-f4b26db1df3b,21,Male,817243,32063.31,Divorced,Yes,Freelancer,Mild,Yes,3,Rural,High School,10,None,Short-Term,None,auto
+1578a5dd-aa6c-4af9-92e0-277d6bbfbf7f,41,Female,391546,32089.5,Divorced,Yes,Doctor,None,Yes,0,Urban,Postgraduate,8,Diabetes,Lifetime,None,life
+d89d0ac3-0ef9-4beb-b636-c7491988e020,32,Male,909624,57085.15,Single,No,Freelancer,None,Yes,2,Rural,PhD,6,None,Lifetime,Child Education,term
+dd25f109-aff5-4de1-ae8c-3a1ff1576e42,69,Male,2259926,114293.68,Married,Yes,Engineer,Mild,Yes,1,Rural,Postgraduate,6,Heart Disease,Long-Term,Retirement,health
+a008fb2e-3b33-4ed5-ac92-7eeada315a17,25,Female,575663,29828.94,Single,No,Freelancer,None,Yes,0,Urban,High School,9,None,Short-Term,Wealth Creation,auto
+5a3dccd4-9f8b-45c7-a2cb-b0ab6e62abf7,21,Male,633594,16567.0,Single,Yes,Teacher,Chronic,Yes,3,Urban,High School,7,Heart Disease,Short-Term,Retirement,auto
+e6ef2ae0-083e-4a5e-9f66-fe84062ae9e1,21,Male,386124,17560.11,Single,Yes,Engineer,None,Yes,1,Rural,High School,5,None,Short-Term,Retirement,auto
+67e7f577-84ed-4b36-8472-ea7955cd5a7f,36,Male,241909,20596.62,Single,Yes,Driver,None,No,0,Urban,Postgraduate,10,Cancer,Long-Term,Wealth Creation,life
+a0b4a544-62a0-4560-8904-37ff7a11083f,46,Female,296331,27725.04,Single,Yes,Engineer,Chronic,No,1,Urban,Postgraduate,8,Diabetes,Lifetime,Child Education,term
+43b5b9b7-6d36-4c0d-83ee-b080ab8eb0db,64,Female,563672,55242.46,Single,No,Doctor,Mild,Yes,1,Urban,Graduate,5,None,Long-Term,Wealth Creation,health
+280e0f7d-c53b-4279-a141-7a6ee0431360,57,Male,890680,72472.58,Divorced,Yes,Teacher,None,Yes,1,Urban,Graduate,9,Diabetes,Lifetime,Child Education,term
+0239cafe-57b6-468d-917d-bd557c362fbb,44,Male,2987468,209294.1,Married,No,Teacher,None,Yes,0,Urban,High School,7,Cancer,Long-Term,None,life
+f055e4e1-750d-4368-aaf6-defa7b895744,25,Female,245714,5975.65,Single,No,Freelancer,Chronic,Yes,3,Rural,Postgraduate,10,Cancer,Lifetime,Wealth Creation,auto
+b93f8bf3-0c7e-4b33-b596-f6b5e7c86ae9,69,Female,402349,14079.78,Married,No,Engineer,None,No,0,Rural,PhD,3,Heart Disease,Short-Term,Wealth Creation,term
+2670ae33-041e-468c-92d1-a48a01cdab2d,41,Female,261938,10993.71,Divorced,No,Doctor,None,Yes,0,Rural,High School,10,Diabetes,Lifetime,Retirement,term
+91cbb5ee-d8ba-4da1-b253-7973fcf08dd7,42,Female,342375,20849.69,Divorced,Yes,Engineer,None,Yes,0,Urban,PhD,3,Cancer,Short-Term,Child Education,term
+8de1fc41-8e5f-4933-b75e-c0fce391bffe,40,Female,259720,6289.74,Married,No,Freelancer,None,Yes,2,Urban,High School,8,Diabetes,Lifetime,Retirement,auto
+7be81f32-9d15-4f59-ae33-cdbd773e1fc4,67,Male,2387698,49854.78,Single,Yes,Doctor,Mild,No,3,Rural,Postgraduate,4,None,Long-Term,None,health
+9fef53d8-755e-4e79-bb7f-b0d7a2c8f654,22,Male,364280,31439.64,Divorced,No,Engineer,Mild,No,3,Rural,Postgraduate,3,None,Long-Term,Child Education,term
+60aadcd7-a672-4856-a7cf-3ad7371b4bc3,47,Female,707889,43854.83,Married,Yes,Driver,None,Yes,0,Urban,PhD,9,Diabetes,Lifetime,Retirement,term
+0136d3af-3fbe-437a-be41-fe020837c7e6,40,Female,690152,23470.85,Single,Yes,Doctor,Mild,Yes,0,Rural,Graduate,4,Diabetes,Short-Term,Retirement,term
+1229f056-8b96-466b-afa9-da90b306dc99,27,Female,997749,86359.81,Single,No,Retired,Chronic,No,2,Urban,PhD,5,Cancer,Lifetime,Wealth Creation,health
+f2063941-4ba7-43e4-9ae5-f840e43042f5,61,Female,2626202,80945.89,Divorced,No,Doctor,None,Yes,1,Urban,High School,9,Cancer,Short-Term,None,auto
+feeda5be-cc45-4ece-b92b-f80e43b08f50,25,Female,769850,32315.82,Married,No,Driver,None,No,1,Rural,Postgraduate,6,Cancer,Short-Term,Wealth Creation,term
+0e6b6f5f-0e92-4363-b9de-013322105d54,44,Female,886516,84685.57,Divorced,Yes,Driver,None,Yes,2,Urban,PhD,9,Heart Disease,Short-Term,Wealth Creation,life
+ea0a0f53-1716-47b1-8657-a7ba4edf7117,20,Male,2888735,116924.74,Divorced,Yes,Teacher,None,Yes,3,Rural,Graduate,1,Diabetes,Lifetime,None,auto
+6ab477a6-f901-4199-b8a1-1f780ce392ea,60,Female,786532,21931.48,Married,No,Engineer,Mild,No,1,Rural,PhD,6,Diabetes,Lifetime,None,health
+a516b007-2fb5-44db-9f92-66e938ecdf2f,28,Male,842436,62191.28,Divorced,Yes,Freelancer,Chronic,No,1,Rural,Postgraduate,3,Cancer,Short-Term,Child Education,life
+30ea51df-b92f-491d-8b70-032ba0a5dbf0,70,Female,395604,33591.13,Married,Yes,Doctor,Chronic,Yes,1,Urban,High School,6,None,Short-Term,Wealth Creation,health
+77b364ac-1277-4f3f-915f-c57d0d0094f6,20,Female,340011,8456.49,Married,Yes,Teacher,None,Yes,3,Urban,High School,6,None,Lifetime,Child Education,auto
+8139ca6e-6106-40c9-9636-1a6fa4e25c20,56,Female,240381,12890.53,Married,No,Driver,Mild,No,0,Urban,Postgraduate,8,None,Lifetime,Retirement,health
+0f06eb96-e6d2-40a1-9869-45088af35e36,64,Female,991843,68325.15,Divorced,No,Retired,None,No,2,Rural,PhD,5,Cancer,Short-Term,Child Education,life
+424ca61d-ea35-42ac-a032-3099ea70f1d4,38,Male,458228,31595.44,Married,Yes,Driver,Mild,No,2,Rural,High School,6,Heart Disease,Lifetime,Wealth Creation,term
+0d2877d3-0204-4876-a283-9b02c613c3fc,56,Female,981597,42448.65,Single,Yes,Engineer,None,No,3,Rural,High School,2,Diabetes,Short-Term,Wealth Creation,term
+315b4e0b-6a29-45dc-91f0-6d39774df54d,50,Female,1469524,122743.16,Married,Yes,Freelancer,Mild,No,0,Urban,Graduate,7,None,Short-Term,Retirement,life
+8b6c5160-f04f-4cdb-ad21-5688d7e8b960,65,Male,2419254,184812.36,Divorced,No,Freelancer,Mild,Yes,1,Rural,Graduate,10,Heart Disease,Short-Term,Child Education,health
+60f85014-9c05-4f40-b1ab-5ce4ac08c000,67,Female,329346,32746.25,Single,No,Retired,None,Yes,0,Rural,High School,9,Diabetes,Short-Term,None,auto
+9b832c4f-c238-4318-afe2-6234010ff24f,50,Male,289180,20733.85,Divorced,Yes,Teacher,Chronic,Yes,2,Rural,Graduate,7,None,Short-Term,None,life
+17529564-7acc-43d8-bb4f-2ee20f17c1a1,31,Male,281883,22687.99,Single,Yes,Teacher,None,Yes,3,Urban,Postgraduate,7,None,Long-Term,None,life
+48cf9570-646d-444f-8d6e-ef2ae7119179,65,Female,2760873,156382.11,Divorced,No,Doctor,None,No,1,Urban,High School,9,Heart Disease,Short-Term,None,term
+a910f60d-4f13-40f2-84a5-314be8372295,65,Female,546157,49663.27,Divorced,Yes,Freelancer,Mild,Yes,2,Urban,PhD,2,Heart Disease,Long-Term,None,health
+fb9e94fc-65c0-40ea-a6a9-119f3142db5b,61,Male,231744,17819.83,Married,No,Engineer,Mild,Yes,0,Rural,PhD,9,None,Short-Term,Retirement,health
+2e423756-5d6f-4b3a-b07f-22957fd0edf8,50,Male,374332,25416.68,Single,Yes,Engineer,Mild,Yes,3,Urban,High School,4,Diabetes,Short-Term,Child Education,term
+8ecf68f5-cbbd-4fe9-aa87-452e80a9d9df,32,Male,574199,16294.57,Divorced,No,Doctor,Mild,No,0,Rural,Postgraduate,8,None,Lifetime,Retirement,auto
+b27f0650-3f9f-4c01-b685-176bff99ed10,58,Female,1301242,106925.81,Married,Yes,Doctor,Mild,No,0,Rural,High School,4,None,Long-Term,None,health
+dbc548d0-be5c-44a0-9c6f-a4ef2b9aa93b,28,Female,340189,31487.97,Divorced,Yes,Teacher,Mild,Yes,1,Urban,PhD,6,Cancer,Long-Term,Wealth Creation,auto
+7aeb23bc-deb4-43bf-8b2a-9deb872f7b83,31,Female,838459,36762.22,Divorced,No,Engineer,Mild,Yes,2,Urban,Postgraduate,3,None,Short-Term,Retirement,health
+dbb34f60-04f6-4fab-a73a-0a9ba1c0958f,48,Female,912762,51880.1,Single,Yes,Freelancer,None,Yes,3,Rural,Graduate,7,Heart Disease,Lifetime,Retirement,term
+6357e6af-d5b0-4660-a98a-9f433123a005,54,Female,917751,77809.02,Single,No,Engineer,Mild,No,3,Urban,Graduate,5,Heart Disease,Long-Term,Wealth Creation,health
+bccf7855-1d21-4b64-bc0c-5d8a1591a22c,25,Male,649723,48283.79,Single,Yes,Freelancer,None,No,0,Rural,Graduate,10,Cancer,Lifetime,Wealth Creation,term
+00b45c0f-e2e6-4fdb-9599-affd805eefc1,51,Male,1928402,90949.03,Divorced,Yes,Retired,None,Yes,3,Rural,PhD,6,None,Short-Term,None,life
+56e0635b-ed8c-4edf-8d5d-21503eb92c12,45,Male,474249,44347.03,Divorced,Yes,Engineer,Mild,Yes,2,Rural,Graduate,10,None,Short-Term,None,term
+d2a80d18-63bd-43b7-8bdb-93c0ea027d04,35,Female,769114,63635.27,Married,Yes,Teacher,Chronic,No,1,Urban,Postgraduate,5,Heart Disease,Lifetime,Retirement,life
+2452271e-3869-4979-8d0f-b6a09b873e95,47,Female,263599,14099.19,Married,Yes,Driver,None,Yes,0,Rural,Graduate,9,Heart Disease,Long-Term,Wealth Creation,life
+1c926fa2-e672-411c-988f-341ace8c8845,45,Female,507210,14217.5,Divorced,No,Teacher,None,No,1,Urban,PhD,3,Heart Disease,Lifetime,None,health
+e570e3b5-fca4-4725-b389-a4469a61538f,30,Male,829813,42620.44,Married,Yes,Freelancer,Mild,Yes,1,Urban,PhD,9,Cancer,Long-Term,Wealth Creation,term
+31053d7f-f731-4801-9a25-e7a300c8662d,66,Male,767050,67310.46,Divorced,No,Retired,None,Yes,0,Urban,High School,6,None,Long-Term,Wealth Creation,health
+de48c4af-7909-4acb-baab-a6e78255a78a,43,Male,556794,44724.9,Divorced,No,Retired,None,No,0,Rural,Graduate,2,Diabetes,Long-Term,None,term
+5bfd850d-1b57-4210-b4e8-30481dfb9682,50,Female,781741,44168.57,Divorced,Yes,Teacher,Mild,Yes,2,Urban,High School,9,Cancer,Short-Term,Child Education,term
+1f9ee72f-5859-4744-9ebc-222819cf9015,25,Female,202929,12087.91,Divorced,Yes,Engineer,None,Yes,3,Urban,Postgraduate,3,Heart Disease,Short-Term,Wealth Creation,auto
+1bd3016b-b0e5-4c8b-bfdc-108e80543638,38,Female,362819,7451.49,Married,No,Engineer,None,Yes,2,Urban,Graduate,3,Heart Disease,Lifetime,Child Education,term
+ec483ada-b3d6-49d8-8187-dec9a7411fec,40,Female,271090,7831.86,Married,No,Engineer,None,Yes,3,Rural,Graduate,3,Heart Disease,Lifetime,Wealth Creation,auto
+519d4ab3-a38a-4e31-bdae-353a6137f02c,67,Female,379185,15608.94,Single,No,Teacher,Mild,Yes,2,Urban,Postgraduate,6,Heart Disease,Lifetime,Wealth Creation,health
+fee5f34b-66d9-425a-84c9-e1e4753209ea,20,Male,356794,7981.56,Married,No,Driver,Mild,Yes,0,Rural,PhD,6,Diabetes,Long-Term,Wealth Creation,auto
+86e098e5-a310-416d-9d34-82f4cf0399ab,70,Male,498205,39874.84,Divorced,No,Teacher,None,Yes,1,Urban,Postgraduate,2,Diabetes,Short-Term,Child Education,auto
+216862f6-4699-45a2-bc36-a3ddde281cc7,25,Male,979291,38367.26,Single,No,Teacher,None,Yes,1,Rural,High School,3,None,Short-Term,Wealth Creation,auto
+6c8b1f02-8b47-4420-94dc-afcea954dcb0,36,Female,318094,28181.24,Single,No,Driver,Mild,Yes,3,Urban,Graduate,1,None,Short-Term,None,life
+cd543800-8400-4d2f-9eb5-f88c1550577c,42,Male,305819,26775.68,Divorced,No,Retired,None,Yes,0,Rural,Postgraduate,7,Heart Disease,Short-Term,Wealth Creation,term
+5e419af4-f86b-4ffd-8f57-4344c0dbc33c,32,Male,2385586,113151.11,Single,Yes,Engineer,Chronic,No,3,Rural,Graduate,4,Heart Disease,Short-Term,Child Education,life
+2efa2183-bb33-476d-a653-c87f17d33a47,28,Female,447918,43620.09,Divorced,No,Teacher,None,No,3,Urban,High School,3,None,Short-Term,Child Education,auto
+51aff8bd-95ce-47fe-bcca-b6d638387371,47,Female,2597330,177903.14,Married,No,Driver,None,Yes,2,Urban,High School,4,Diabetes,Short-Term,Retirement,health
+e617a82a-2844-48dd-846a-af66395d382c,31,Male,734244,61479.84,Single,No,Doctor,None,No,2,Rural,PhD,7,Heart Disease,Lifetime,None,health
+70fb54e0-df2c-4a23-aa9b-0b1e270496e4,33,Female,786654,51698.53,Divorced,No,Teacher,Chronic,No,3,Urban,PhD,2,Cancer,Long-Term,None,term
+b9650fc0-0d36-4b75-bb48-569086405551,58,Female,367600,36347.65,Married,Yes,Retired,None,No,0,Urban,Graduate,5,Cancer,Short-Term,Retirement,life
+1b67766e-3e52-4c41-81e0-85613301156c,48,Male,1742338,125710.33,Single,No,Retired,Mild,No,3,Urban,Graduate,6,Cancer,Short-Term,Child Education,life
+548f4c13-ace3-4363-904c-88f031b9b8b5,19,Female,1167327,78972.12,Single,No,Retired,None,No,1,Urban,Postgraduate,6,Diabetes,Lifetime,Retirement,auto
+9b2d5564-a2f9-4616-869d-8613d2e017d9,61,Male,2294388,119293.35,Married,Yes,Driver,None,No,1,Urban,High School,2,Heart Disease,Lifetime,None,term
+dcc3219c-7bd5-4933-9258-820af549f6d2,43,Female,597628,36605.74,Single,No,Teacher,None,No,0,Rural,High School,3,Diabetes,Short-Term,Wealth Creation,life
+e58e0960-df16-4edd-a600-334c7b841ce7,63,Male,2178514,54070.05,Married,Yes,Freelancer,Chronic,Yes,3,Urban,PhD,5,Cancer,Lifetime,None,health
+9ea7fe1b-8514-42f8-a686-3c343c24eabd,65,Male,720852,15102.24,Divorced,No,Freelancer,None,No,0,Urban,Graduate,9,Diabetes,Long-Term,Child Education,term
+9ce6e15f-cfe4-472d-89c2-346eb862a555,39,Female,757485,66316.87,Single,Yes,Teacher,Chronic,No,0,Rural,Graduate,9,None,Long-Term,Wealth Creation,life
+96fb58b6-3171-4c92-8d5c-7cd25e14bf96,58,Female,684667,17281.99,Single,No,Engineer,Chronic,Yes,2,Rural,PhD,8,None,Long-Term,Child Education,health
+3f7eaa14-5bb0-43c3-b9b9-21a6ef82bf38,50,Male,918689,61050.98,Married,No,Retired,Mild,Yes,0,Urban,High School,3,Diabetes,Lifetime,None,health
+0e833963-aa88-4970-b6d4-17fb25add679,55,Male,1712893,92960.51,Divorced,Yes,Retired,Chronic,No,3,Urban,PhD,10,Heart Disease,Short-Term,Retirement,health
+2d810bf5-5fb1-4ca7-b59a-f650e7b9e98f,39,Male,421664,37739.9,Married,Yes,Retired,None,No,3,Rural,Graduate,3,Heart Disease,Long-Term,Wealth Creation,term
+22ebe52b-28e3-4cb2-9a3c-aaeeafe8596c,44,Male,276264,13572.57,Married,No,Engineer,Mild,No,2,Rural,Graduate,8,None,Lifetime,Child Education,auto
+da1ef7d3-8c0f-4e3b-a35c-62673b34468f,28,Male,670778,36868.95,Single,Yes,Teacher,Mild,Yes,3,Rural,PhD,8,Diabetes,Short-Term,None,auto
+56434f2d-99da-4361-97f9-f31bba7203d5,27,Male,944618,39559.95,Single,Yes,Engineer,None,Yes,2,Rural,Postgraduate,8,Diabetes,Short-Term,None,auto
+66c5afd3-47be-445c-b2dc-013313adc330,43,Male,770324,63984.16,Single,No,Freelancer,Mild,Yes,0,Urban,Graduate,8,Heart Disease,Long-Term,Retirement,auto
+b89f65e0-f385-4375-9866-822041112078,21,Female,802269,27133.21,Divorced,Yes,Retired,Mild,No,3,Rural,PhD,1,Heart Disease,Lifetime,None,term
+07f88d57-0fcd-4c42-81d3-9e54ce6deafe,62,Male,462510,44888.62,Married,Yes,Doctor,None,Yes,0,Urban,Postgraduate,1,Diabetes,Lifetime,Child Education,life
+ea41960b-692e-4618-9639-f59a0b02e273,38,Male,525153,13896.06,Divorced,Yes,Engineer,Mild,Yes,1,Rural,Graduate,10,None,Long-Term,Retirement,term
+20bb9f5c-7b8d-41c7-9726-d5de613d439a,25,Female,294123,28750.37,Divorced,Yes,Doctor,Mild,No,2,Rural,PhD,7,None,Short-Term,Retirement,term
+1f772c18-d04d-42dd-aeb6-f79824ff5ff7,24,Female,914712,89687.39,Divorced,Yes,Retired,Mild,Yes,1,Urban,Postgraduate,1,Heart Disease,Short-Term,Retirement,auto
+480705ba-142b-4a50-8b73-e7d6bcacec09,63,Female,2091997,202439.9,Married,No,Driver,None,No,3,Urban,PhD,10,None,Lifetime,Wealth Creation,life
+a4e6655b-860f-4e98-b4f0-1d7cce3c8102,25,Male,718248,63076.93,Single,Yes,Teacher,Mild,Yes,0,Urban,Graduate,7,None,Lifetime,Child Education,auto
+5c309efa-cbe6-4a54-bb50-72b81cb2df35,64,Male,657084,58376.21,Married,Yes,Driver,None,Yes,3,Rural,Postgraduate,6,None,Lifetime,Wealth Creation,term
+51f45e19-28dc-462c-8530-b471a4fb0461,41,Female,481795,14338.13,Divorced,Yes,Freelancer,None,Yes,1,Rural,Postgraduate,1,Diabetes,Long-Term,Retirement,life
+e5c94dbc-7913-4c60-b51a-9a956f6a0b43,68,Male,358198,32698.33,Married,No,Doctor,Chronic,No,2,Urban,Postgraduate,3,None,Short-Term,None,health
+6f5ffb55-0b77-461a-8bc7-e6a94984c511,21,Female,528585,27548.69,Single,No,Doctor,None,Yes,0,Rural,High School,9,Heart Disease,Lifetime,Wealth Creation,auto
+0386d39a-8a1c-4090-a8f1-cd74baf4e2de,48,Male,219821,5086.24,Divorced,No,Doctor,None,Yes,1,Urban,Graduate,1,None,Long-Term,Retirement,health
+d73afa76-c55a-46b8-a1e5-47fb22c3f1ce,68,Male,261899,14572.1,Single,No,Driver,Chronic,No,0,Urban,Graduate,2,Diabetes,Short-Term,Retirement,health
+6406e7d5-e566-4618-9fc6-fc09d7d8778e,46,Female,2709240,180219.39,Married,No,Engineer,None,No,0,Rural,High School,2,Heart Disease,Short-Term,Retirement,term
+35df69d2-82f2-4a98-be06-72d06ee55e2d,28,Female,728749,25627.83,Single,Yes,Driver,Mild,No,0,Urban,Postgraduate,6,None,Lifetime,Child Education,life
+e5abe8a4-3f17-4efd-82ef-d2094cd07045,38,Male,279811,17224.68,Married,No,Doctor,None,No,1,Rural,Graduate,10,Heart Disease,Long-Term,Child Education,auto
+faa1488e-81a6-477c-b1e3-bd39d8e0eb82,27,Female,771583,29780.87,Married,No,Freelancer,None,Yes,0,Rural,High School,10,Cancer,Long-Term,Retirement,auto
+bac90702-599e-42c2-89a7-dbd2c2481279,46,Male,393667,32535.22,Single,Yes,Teacher,None,Yes,2,Urban,PhD,4,Diabetes,Lifetime,None,term
+3034a2c8-4686-457f-8233-193737fb520a,24,Female,924209,21168.71,Married,Yes,Driver,None,Yes,1,Rural,Graduate,3,Heart Disease,Lifetime,None,auto
+f515d0d9-d032-4f64-9a12-b01fa0b50c03,68,Male,646828,57867.22,Single,No,Driver,None,No,3,Urban,PhD,8,Heart Disease,Short-Term,None,term
+bb9d192b-533a-40ef-badf-9252481b92c5,29,Male,270033,15990.91,Divorced,No,Freelancer,None,No,0,Rural,Graduate,2,Heart Disease,Long-Term,Child Education,auto
+fef45ee6-cad3-404f-b272-28d384322fb2,45,Female,2616784,89262.27,Single,No,Teacher,Chronic,Yes,3,Urban,Graduate,1,Cancer,Short-Term,Child Education,term
+d8f53d53-1bb7-4ae9-9590-c24144c999fc,48,Male,230974,12034.88,Divorced,No,Teacher,Chronic,Yes,1,Urban,Graduate,1,None,Long-Term,None,life
+f07e8e13-06b2-4466-bb10-9cb71cbe6cb3,48,Male,684625,49280.07,Single,Yes,Freelancer,Chronic,Yes,3,Urban,High School,5,Cancer,Short-Term,Wealth Creation,life
+6b498487-74f6-442d-8144-e4e9f125608e,56,Male,933405,29895.97,Divorced,Yes,Engineer,Mild,No,1,Rural,Graduate,10,Cancer,Short-Term,Wealth Creation,health
+35ad54b6-b00d-469f-8802-2cf766284482,20,Female,206653,10117.97,Divorced,No,Doctor,None,No,1,Urban,High School,9,Heart Disease,Long-Term,None,life
+df3a7b78-14d7-427f-9a71-e84d9ffb1a6f,36,Male,2664889,162903.8,Divorced,No,Freelancer,Chronic,No,1,Rural,Graduate,3,None,Short-Term,None,health
+aefcd9ac-89e9-4ece-ad1a-621fe08238bb,39,Male,858545,81262.53,Divorced,Yes,Engineer,Chronic,No,0,Rural,Graduate,1,Cancer,Long-Term,Retirement,term
+dfa37ea2-6c7c-407f-b187-10f480268c0a,65,Female,1840298,57221.15,Divorced,No,Teacher,Mild,No,2,Urban,Postgraduate,10,Heart Disease,Lifetime,Wealth Creation,health
+f30e1361-80ca-435a-a8ff-5f054625da93,47,Male,218713,9386.78,Single,Yes,Teacher,Mild,Yes,1,Rural,Graduate,10,Heart Disease,Short-Term,None,term
+4b7e276b-010b-49d8-ad9e-09a9592eac04,28,Male,454117,17871.82,Married,Yes,Driver,None,Yes,1,Urban,PhD,6,Diabetes,Long-Term,Child Education,auto
+0bb9f5a1-9122-412e-94ba-9c3f88e2b9d6,68,Male,811934,33579.72,Divorced,Yes,Freelancer,None,Yes,0,Urban,PhD,6,Diabetes,Short-Term,Retirement,term
+63ba3f97-fc51-40fa-a88a-99e6c9b77407,42,Male,671111,48203.94,Single,Yes,Driver,None,Yes,3,Urban,PhD,5,None,Long-Term,Wealth Creation,life
+6231db72-12f5-49ca-b72a-4f75581d90bf,58,Male,467085,19259.09,Married,Yes,Teacher,None,Yes,0,Urban,High School,4,Heart Disease,Long-Term,Wealth Creation,life
+27c01a69-a586-4b01-b02e-d61a8da4472f,19,Female,411985,37853.7,Married,No,Freelancer,Mild,No,3,Urban,PhD,9,None,Short-Term,Child Education,auto
+d5ebd598-3dfa-4662-a5c9-56ed2c19a0e3,61,Female,959045,90031.07,Single,No,Engineer,None,No,1,Rural,Postgraduate,4,Heart Disease,Long-Term,Wealth Creation,term
+21b2de99-efb3-435d-beab-d0da04539afc,36,Male,265560,24720.04,Single,No,Driver,None,Yes,1,Urban,Postgraduate,3,Cancer,Long-Term,Child Education,health
+6125a503-f98a-441d-aa95-df93772803bf,61,Male,2784489,73871.4,Married,Yes,Retired,None,Yes,3,Urban,PhD,5,None,Long-Term,None,term
+571dcb9c-c126-4468-b744-c65c72d9f61f,70,Male,331763,28424.77,Married,Yes,Driver,None,No,3,Urban,High School,8,None,Lifetime,Wealth Creation,term
+e1d3927c-ae84-44cb-9ad1-64a0ea05104c,68,Male,2301389,121158.77,Divorced,No,Driver,None,Yes,3,Urban,Postgraduate,5,Heart Disease,Long-Term,Retirement,auto
+0ed04281-645f-4b4f-b4b1-bb45efe8cdf1,23,Male,302935,24640.8,Married,No,Doctor,Chronic,Yes,3,Urban,Graduate,2,None,Lifetime,Child Education,auto
+46e4326b-dcb2-4cb8-b845-f90154f23fda,37,Female,200017,5821.27,Divorced,No,Retired,Chronic,No,3,Rural,PhD,1,Heart Disease,Short-Term,Wealth Creation,life
+42b4baf6-1fb2-4240-a0aa-130c40c1eb58,52,Male,537355,52210.43,Divorced,Yes,Doctor,None,No,2,Urban,Graduate,7,Heart Disease,Long-Term,Wealth Creation,term
+60ab4973-43d2-41ca-9acf-cc1860dcb93a,53,Female,1028376,54913.85,Married,Yes,Doctor,Mild,No,0,Rural,Postgraduate,1,Heart Disease,Short-Term,Child Education,health
+b35586a1-2bae-4525-bf68-130bc862faa7,20,Male,1243369,49904.16,Divorced,Yes,Freelancer,Chronic,No,2,Rural,Postgraduate,4,Heart Disease,Lifetime,None,life
+3f91298a-8c93-4437-954a-650f95f4392e,63,Male,718097,23553.26,Divorced,Yes,Retired,Chronic,Yes,2,Urban,Postgraduate,8,None,Long-Term,None,health
+acaf14d8-4378-4d97-9502-c885b71c0eb5,61,Female,358568,12873.91,Single,Yes,Freelancer,None,No,3,Rural,High School,5,Heart Disease,Long-Term,None,life
+cdd6c8de-4e4e-4905-a514-a40dd80ce547,62,Male,630315,22627.45,Married,Yes,Teacher,None,Yes,1,Rural,High School,8,Heart Disease,Long-Term,Child Education,term
+23578e59-eab5-42a0-9d03-9d624826c3dd,59,Female,512503,13890.36,Divorced,No,Doctor,None,Yes,1,Rural,High School,2,None,Lifetime,Child Education,auto
+d9c453f5-3c11-42a6-b5b9-569a645668cc,27,Female,834869,58522.43,Divorced,Yes,Retired,Mild,Yes,3,Urban,PhD,2,None,Lifetime,Wealth Creation,auto
+ce30a381-eb02-46ac-855b-68f5a9985111,38,Female,462625,37287.62,Married,No,Doctor,None,No,1,Urban,PhD,8,Diabetes,Lifetime,Retirement,health
+7887ff64-d0ba-4e02-8a6d-91123b19be8c,25,Female,299588,11159.73,Single,No,Freelancer,Mild,Yes,2,Rural,PhD,8,None,Lifetime,Child Education,auto
+bd8429ea-3cc6-4ecd-a22c-1471b0fda5f2,58,Female,243033,21185.86,Married,No,Teacher,Mild,No,0,Urban,Postgraduate,7,Heart Disease,Short-Term,Retirement,health
+0dbfcbcc-d9bd-4e4f-8637-66738869e969,51,Female,2208766,207719.35,Single,No,Doctor,Chronic,No,0,Urban,Postgraduate,3,Cancer,Long-Term,None,health
+104bfd7e-3cb9-47de-93cb-3b1ac0ce9b75,20,Male,321089,9829.63,Single,Yes,Teacher,Chronic,Yes,0,Rural,High School,6,None,Lifetime,None,auto
+6921c86b-7c56-47d3-bf3d-96bc67518d89,56,Female,882911,65520.08,Single,Yes,Engineer,Chronic,No,2,Rural,Graduate,8,Diabetes,Short-Term,Child Education,health
+6a1dc766-d083-4cab-9fe5-b28e02c62463,41,Female,2919947,103420.97,Single,No,Freelancer,Chronic,Yes,3,Rural,High School,4,None,Long-Term,Retirement,health
+21b3d3ff-d085-4b4f-84fb-037a6c702f05,34,Male,784086,60510.87,Married,Yes,Driver,Mild,Yes,2,Urban,Postgraduate,6,None,Lifetime,Wealth Creation,life
+4838126c-45d7-41ed-984e-b1f3c5882b9d,44,Female,883834,80127.67,Married,Yes,Driver,Chronic,Yes,2,Rural,High School,6,None,Short-Term,Wealth Creation,term
+600b5b4c-4787-4548-8e03-dada3099d680,37,Female,646871,53582.32,Single,No,Freelancer,None,No,3,Rural,PhD,2,Diabetes,Short-Term,Retirement,term
+95302c6f-9159-4fb1-9c26-b7ce8dadb6d3,52,Male,1533790,72025.28,Married,Yes,Freelancer,Mild,Yes,1,Rural,High School,7,Diabetes,Short-Term,Child Education,health
+fab7e082-4681-4109-b80f-4c2615dbbd8b,26,Female,480425,10391.09,Divorced,Yes,Retired,Mild,No,3,Rural,Graduate,9,None,Lifetime,Retirement,life
+cec5f972-963a-41e7-b799-04ff053f78ff,18,Female,314193,7941.2,Married,No,Doctor,Chronic,No,1,Urban,PhD,9,Heart Disease,Lifetime,Wealth Creation,auto
+c41cc36a-2ca3-479f-8a96-53d365fdbca4,44,Male,381648,18928.29,Married,No,Doctor,Mild,No,0,Rural,High School,1,None,Short-Term,Child Education,life
+6daedeca-0582-46c0-a637-374fe91f2a42,33,Female,617219,60187.27,Married,Yes,Doctor,Mild,No,3,Urban,Postgraduate,8,Diabetes,Short-Term,Child Education,life
+3b81fe10-7639-4412-8f58-c650c7f9fcff,45,Male,398362,12261.44,Divorced,Yes,Doctor,None,No,3,Rural,PhD,8,None,Lifetime,Wealth Creation,term
+9baef339-d363-4672-a8d7-1cc4c537a2fb,55,Female,816013,67822.87,Single,No,Retired,Chronic,Yes,1,Rural,Postgraduate,5,None,Long-Term,Wealth Creation,health
+8c288ce8-364f-4a83-b285-a651cae71fc7,26,Male,2721949,139392.6,Married,Yes,Freelancer,None,No,3,Urban,Graduate,10,Cancer,Long-Term,None,term
+f877a4c2-bde5-49ca-accd-04dc95376fee,27,Male,232847,5284.46,Divorced,No,Driver,Chronic,Yes,2,Urban,Graduate,7,Cancer,Long-Term,Child Education,auto
+eabef41c-a947-429b-b796-f628187525fd,51,Male,850565,68486.81,Married,No,Doctor,None,Yes,2,Urban,PhD,10,Diabetes,Long-Term,None,life
+f7141f95-d7ac-481f-9c0e-6305ec226867,66,Male,508388,18305.86,Married,No,Driver,None,Yes,0,Urban,Postgraduate,2,Heart Disease,Lifetime,Retirement,term
+aa102802-d2ea-4089-a440-da31b531fe33,61,Female,1088968,83425.71,Divorced,No,Freelancer,Mild,No,2,Rural,High School,8,None,Short-Term,Wealth Creation,health
+cb17a38a-13d3-4cd7-96c4-799259a3c1df,33,Female,568912,26608.97,Divorced,Yes,Retired,Mild,No,3,Rural,PhD,5,None,Lifetime,Wealth Creation,life
+8bbde682-f70a-4689-8d2f-c436c368653c,24,Female,2027851,100316.12,Married,Yes,Freelancer,None,Yes,0,Rural,Graduate,8,Heart Disease,Short-Term,Retirement,auto
+5d97cf0c-2e66-40a7-aa7c-df35f4aa352a,22,Female,1851921,151579.83,Single,No,Doctor,None,Yes,0,Urban,High School,7,Heart Disease,Short-Term,Retirement,auto
+0a4bb2e9-8b54-42e4-91d4-4e4f685b99bb,18,Female,1444284,118724.15,Married,Yes,Doctor,None,No,1,Urban,Graduate,8,None,Long-Term,Wealth Creation,term
+8db46a16-8d3e-4bb7-8309-580a0f19d1a0,30,Female,264797,18459.0,Divorced,Yes,Retired,None,No,1,Rural,Postgraduate,10,Diabetes,Short-Term,Child Education,term
+5b43f8fc-015f-48a4-a7e5-6cca97b5e8de,21,Male,941764,35499.19,Single,Yes,Retired,None,Yes,0,Rural,High School,7,Heart Disease,Short-Term,Child Education,auto
+18664384-9a41-4bba-9890-c56f03a6a8a3,44,Female,630957,52353.61,Single,Yes,Doctor,None,No,0,Rural,Postgraduate,5,Heart Disease,Short-Term,Retirement,term
+cc1e15d6-804f-4f4e-a843-39c1cf028f06,69,Male,284898,8015.09,Married,No,Driver,None,No,3,Rural,Graduate,8,Heart Disease,Short-Term,Retirement,term
+44a4cdc1-e8e3-42a3-9126-bc954155abce,19,Female,263296,22012.8,Single,Yes,Teacher,Mild,No,3,Rural,High School,7,Heart Disease,Short-Term,Child Education,life
+a38fe117-29af-4b60-9629-479fc9d6c61b,27,Male,232198,14642.62,Single,No,Freelancer,None,No,2,Rural,Postgraduate,7,None,Short-Term,Wealth Creation,term
+895f98cb-5ad5-42a6-960c-5651df4d3f5e,35,Male,850939,58965.01,Single,Yes,Retired,None,No,0,Urban,Postgraduate,1,None,Short-Term,Retirement,term
+2352fcc3-8573-4b7f-bdc4-81205aab2367,42,Male,2668870,134124.05,Divorced,No,Freelancer,None,Yes,1,Urban,Postgraduate,9,Heart Disease,Short-Term,Child Education,auto
+b096039c-3c30-4dfb-aeeb-0349f23067c4,64,Female,2510598,103106.75,Divorced,No,Engineer,Mild,No,1,Urban,Postgraduate,2,Diabetes,Short-Term,Wealth Creation,health
+f5b6a17c-1f9c-4c7c-94ad-9315939aef77,47,Female,491495,46480.8,Single,No,Freelancer,Chronic,No,1,Urban,PhD,1,Heart Disease,Short-Term,Retirement,term
+33e50c83-4cce-43af-a03b-d303b6065d60,58,Male,289018,15042.81,Divorced,No,Driver,None,Yes,1,Urban,Postgraduate,10,Cancer,Lifetime,Wealth Creation,health
+c1ddc7b5-58b2-47a0-bce4-f0e0e0fabeb9,27,Female,209551,14673.06,Single,No,Engineer,None,No,3,Rural,High School,4,None,Lifetime,Retirement,term
+2306fa5e-3f37-42a5-acb7-00c5761210a8,43,Female,287564,12806.84,Married,Yes,Freelancer,Chronic,Yes,0,Rural,High School,2,Heart Disease,Short-Term,Retirement,life
+cbda9690-1d9e-47b7-91bc-270e9ce67fc1,31,Female,548524,18689.1,Single,Yes,Teacher,Chronic,Yes,0,Rural,PhD,5,Diabetes,Short-Term,None,life
+4a1ffd60-b7eb-470f-9bb8-d8b6d50695dc,51,Male,891165,50019.21,Married,No,Teacher,None,No,3,Urban,High School,7,None,Short-Term,None,health
+16de3702-7746-496a-a83e-91cc5642a923,65,Male,200876,15937.24,Single,Yes,Engineer,None,No,1,Urban,Graduate,6,Heart Disease,Long-Term,Wealth Creation,life
+eaf61d3c-5242-4ada-b1fc-21595e13aacc,18,Male,783552,57555.02,Single,No,Freelancer,Mild,Yes,0,Urban,Graduate,9,None,Lifetime,Wealth Creation,auto
+32f4ea0b-2da2-4bd8-839a-0eb2cef71065,45,Male,404567,18608.48,Single,Yes,Engineer,Mild,No,0,Urban,Postgraduate,1,Heart Disease,Long-Term,Retirement,term
+429757a0-23d3-4cd6-a690-54898c424aa9,19,Female,920671,74789.41,Divorced,No,Engineer,None,Yes,2,Urban,PhD,7,None,Lifetime,None,auto
+204fd1cc-f0db-45df-b27c-c6950a06797e,65,Female,956365,19265.83,Married,No,Engineer,None,No,1,Urban,High School,3,None,Short-Term,Child Education,term
+6e9a4668-1707-4620-bffa-688caa190dce,32,Female,641616,55287.21,Married,Yes,Doctor,None,Yes,1,Urban,Graduate,10,Cancer,Long-Term,Child Education,term
+71fe7d15-ade1-4214-9156-1249ad58f24e,43,Male,397129,32206.58,Married,No,Engineer,None,No,1,Urban,High School,9,None,Short-Term,Retirement,auto
+99c3e8bc-9388-46db-b6c3-42a78cbafc7e,45,Male,2491633,187529.44,Divorced,No,Teacher,Mild,No,2,Rural,High School,3,None,Long-Term,Child Education,life
+1469412b-ebcb-4a6e-b682-4c5c578be287,65,Male,836419,52978.52,Married,No,Freelancer,Mild,Yes,1,Urban,Graduate,4,Heart Disease,Long-Term,None,health
+141cc93e-ad03-4415-b210-c94867c19f43,48,Female,263248,6869.45,Single,Yes,Engineer,None,No,1,Rural,Graduate,5,Diabetes,Short-Term,Retirement,life
+04c9aae5-a27d-4685-8f62-d374ac04877b,38,Male,377527,29328.33,Single,No,Engineer,Mild,No,2,Rural,Graduate,9,Diabetes,Long-Term,Child Education,life
+20fdcb05-38cc-4809-be24-48fe64f89783,49,Female,756194,59345.59,Divorced,Yes,Retired,None,No,3,Rural,High School,3,None,Long-Term,Wealth Creation,life
+843a0a4c-9881-4546-9d50-ee7d32a1bde3,53,Male,2714689,111974.39,Single,No,Doctor,None,Yes,0,Rural,PhD,4,Heart Disease,Long-Term,Retirement,health
+94140ce3-ac6b-496f-a9b8-81fabcd932d1,64,Male,213013,7720.06,Divorced,Yes,Teacher,None,Yes,0,Urban,Postgraduate,6,Cancer,Lifetime,Child Education,term
+f54640df-2e6a-494e-8406-8230d33832b4,52,Male,1426079,30541.21,Married,No,Retired,None,No,0,Rural,Graduate,1,None,Short-Term,Wealth Creation,health
+0c35d036-825b-4673-ba20-1080e537e588,64,Male,2720140,254232.3,Married,Yes,Doctor,None,Yes,3,Rural,Postgraduate,8,None,Short-Term,None,life
+0450ba1b-0492-4f4d-b076-cc6aa041e902,48,Male,2807560,120544.28,Divorced,No,Teacher,None,Yes,3,Urban,PhD,7,Diabetes,Short-Term,Wealth Creation,auto
+7eb33b2e-08be-42a7-b493-0a0c3626275a,65,Male,390381,27657.35,Married,No,Teacher,None,Yes,3,Rural,Postgraduate,1,Diabetes,Short-Term,None,health
+97bd9a6f-13c1-48d1-b45c-97d2837e5ea9,28,Male,2309075,137578.88,Single,No,Doctor,Chronic,Yes,3,Rural,PhD,5,Heart Disease,Long-Term,Wealth Creation,auto
+0dd0a980-e403-4580-ae97-19cf66187536,24,Female,222132,16024.12,Married,No,Retired,None,No,0,Urban,Graduate,4,Heart Disease,Long-Term,None,auto
+8719b135-8a9f-4f6c-b020-c9c279f3b471,56,Female,250589,10370.85,Single,No,Teacher,None,No,1,Urban,High School,3,Heart Disease,Long-Term,Retirement,auto
+a25c6428-b256-4caf-a7b8-ec3a9697202c,36,Male,1362723,34132.21,Divorced,No,Doctor,Chronic,Yes,3,Rural,High School,2,None,Long-Term,Retirement,auto
+1adf3191-6ea3-494a-ba95-18a7f1c2bed7,66,Male,458958,33438.18,Single,Yes,Doctor,None,No,2,Rural,PhD,6,Diabetes,Short-Term,Retirement,life
+59aaebf3-a6c1-4fe5-b886-7ecd456ca2bc,53,Female,479118,25417.02,Married,No,Retired,None,No,3,Rural,Graduate,9,Heart Disease,Short-Term,None,auto
+df716ede-be6d-4c44-8a06-a29f3aac66d2,57,Male,437753,11243.05,Divorced,Yes,Teacher,None,No,2,Urban,Graduate,4,Cancer,Long-Term,Wealth Creation,life
+8fda716c-2f2a-4ffe-b3a3-5a1e1035e453,59,Male,588350,32547.43,Divorced,Yes,Doctor,None,No,3,Rural,PhD,6,None,Long-Term,Wealth Creation,life
+8f25b2a3-bba7-4412-bd4d-1acc9a3b8a8d,37,Male,985728,67893.64,Divorced,No,Engineer,Chronic,Yes,2,Urban,PhD,5,Heart Disease,Long-Term,Retirement,term
+aa00c4bb-7b28-461d-beed-7d8561f0da9a,55,Female,693470,36100.48,Divorced,No,Retired,Mild,No,0,Rural,Postgraduate,9,Cancer,Long-Term,Retirement,health
+182ee7a3-1aef-4c21-a84d-0a9f160644ca,57,Female,394739,38711.23,Single,No,Freelancer,None,No,1,Urban,Graduate,7,Diabetes,Long-Term,Wealth Creation,term
+fc0a0b74-ceff-4657-88ef-65fdd9d9dd31,43,Female,1665081,113648.42,Single,Yes,Engineer,None,No,2,Rural,PhD,7,Cancer,Short-Term,Child Education,life
+268c1be9-6a0c-4ae1-879e-3f4e7a7b4849,38,Male,882117,51771.85,Divorced,No,Freelancer,None,Yes,0,Urban,High School,8,Cancer,Lifetime,Retirement,term
+8816a77c-1123-418c-a1e7-89aa69873ab5,62,Female,244860,19556.35,Married,No,Driver,None,Yes,3,Urban,PhD,1,Diabetes,Lifetime,Retirement,life
+7db0945d-6969-4a97-91da-157a13b58a09,57,Male,430914,39203.47,Single,No,Teacher,Mild,Yes,0,Rural,Graduate,10,Cancer,Long-Term,Wealth Creation,health
+b257d3c8-8a29-49b6-8dd3-a660296375ce,67,Male,585753,48055.29,Divorced,Yes,Retired,None,Yes,1,Urban,High School,8,Heart Disease,Short-Term,Wealth Creation,term
+75e43963-3cd5-4093-8f70-030421f76dab,62,Female,520109,31063.65,Married,Yes,Doctor,None,Yes,2,Rural,Postgraduate,4,Diabetes,Short-Term,Child Education,term
+fc114e3d-5d66-4cc7-8f98-3a4cada18ba6,31,Male,2384148,53245.85,Single,No,Engineer,None,Yes,1,Rural,Postgraduate,8,Cancer,Long-Term,Child Education,auto
+c70ba1ea-6387-49f7-8282-d18d0469e3a9,27,Female,1133831,52238.65,Single,Yes,Engineer,None,Yes,1,Rural,PhD,7,None,Lifetime,Child Education,auto
+ff922423-b30c-4ea1-aba8-6d0f0b090eb7,69,Male,421082,40383.65,Divorced,No,Driver,Mild,No,0,Rural,Graduate,4,Heart Disease,Long-Term,Child Education,health
+979f869b-a9fe-415a-94f2-32b68a8d67e8,59,Male,450101,28750.37,Single,No,Retired,Chronic,Yes,3,Urban,Graduate,1,Heart Disease,Lifetime,Retirement,health
+91d9c183-5216-4f58-80da-9ac2db0e2455,41,Female,350534,32226.87,Married,No,Freelancer,Mild,No,1,Urban,PhD,8,None,Short-Term,None,term
+615cff1c-904f-40dd-bd53-b5b7dce2fc0e,22,Female,221498,20246.43,Divorced,Yes,Driver,Chronic,Yes,3,Urban,Graduate,5,Cancer,Lifetime,Wealth Creation,auto
+b4354810-7c4b-4676-be01-3cb35d513f06,32,Female,1613104,32644.69,Single,Yes,Engineer,None,Yes,1,Rural,Graduate,4,Diabetes,Long-Term,Retirement,life
+669a20c8-bb79-4db5-b9ae-c4e2ca61136c,63,Male,1029124,84427.69,Married,No,Doctor,Mild,No,0,Urban,Postgraduate,5,Heart Disease,Long-Term,Retirement,health
+34a4c92f-3969-45d5-9d34-3069f695e746,30,Male,642407,32625.37,Single,Yes,Driver,Mild,No,1,Rural,High School,7,None,Long-Term,None,life
+2b05651e-c865-4836-ba22-07d876109f8e,60,Male,554970,23003.83,Single,Yes,Engineer,None,Yes,0,Urban,Graduate,7,Heart Disease,Lifetime,Wealth Creation,life
+2906f2a5-bf63-441e-90cb-42b6542d63a6,20,Female,1309809,28820.69,Single,No,Freelancer,None,No,0,Urban,Postgraduate,7,Heart Disease,Long-Term,Wealth Creation,health
+052c52d8-e8b4-452e-9032-11d8d2476cf6,55,Female,575274,49221.37,Married,No,Retired,Mild,Yes,0,Urban,Postgraduate,9,Cancer,Long-Term,None,health
+6cf43562-6445-41f2-b394-158882b33887,31,Male,686081,53527.43,Single,No,Freelancer,Chronic,Yes,3,Urban,PhD,6,Heart Disease,Lifetime,None,life
+f524f7ed-135a-4aec-8259-c271ce6a59dd,31,Male,209202,17222.48,Single,Yes,Freelancer,None,No,1,Urban,Graduate,5,None,Short-Term,Child Education,term
+df83897e-af53-4e06-a2e1-c7cec7329b3c,40,Female,327373,11210.3,Married,Yes,Engineer,Chronic,Yes,0,Rural,Postgraduate,7,None,Lifetime,None,term
+580a133e-d847-497a-b303-5fd4332f0af4,20,Female,688476,22195.08,Single,No,Freelancer,Mild,Yes,1,Urban,Postgraduate,9,Cancer,Long-Term,None,auto
+296e134a-91f8-4dbe-b39c-cad810c9ecbd,30,Male,226935,17898.26,Single,No,Doctor,Mild,No,1,Rural,High School,7,None,Lifetime,Child Education,health
+13c3d2fe-100a-446f-a13f-5acea2ffb821,62,Male,2315498,192577.02,Married,No,Freelancer,None,Yes,3,Urban,Graduate,6,Heart Disease,Lifetime,None,term
+0a910f0b-2e05-4e15-8421-32e774ddb4a0,64,Male,819327,70923.37,Married,Yes,Driver,Mild,Yes,3,Rural,High School,7,None,Long-Term,Child Education,health
+116e9630-268e-46b4-85a5-49c465842eef,45,Male,611521,55265.8,Married,No,Teacher,None,Yes,3,Urban,Postgraduate,7,None,Lifetime,None,life
+4b1b53f4-a647-4dae-bd09-9b0cd15a70bd,52,Female,2565466,216857.72,Single,Yes,Retired,Chronic,No,3,Urban,Postgraduate,7,None,Long-Term,Wealth Creation,health
+f336f0b7-7102-4c5d-970c-985c38030b9e,52,Male,410839,38950.54,Divorced,No,Engineer,None,Yes,0,Rural,PhD,7,Cancer,Lifetime,Retirement,auto
+4cd10d59-b539-417f-aa8f-3fff1ea3f2e9,34,Female,2583272,83952.82,Married,No,Teacher,None,No,3,Rural,Graduate,1,Heart Disease,Lifetime,Child Education,life
+d4c868aa-a916-4aa8-a67c-59cb311afe84,58,Male,740229,69023.28,Married,No,Retired,Chronic,No,3,Urban,High School,1,None,Short-Term,Wealth Creation,health
+df295b4a-9cc0-496e-a015-1095e9bb109d,53,Male,296736,18339.3,Divorced,Yes,Engineer,Mild,No,2,Rural,Graduate,10,Cancer,Lifetime,Retirement,health
+439777d1-c672-4393-ba49-87d5593d9630,69,Female,612014,37853.6,Single,No,Driver,None,No,0,Rural,Graduate,1,Diabetes,Lifetime,Retirement,auto
+d54ef3f3-8cac-487c-b342-0efc7b58aaac,31,Female,921296,40392.68,Single,No,Freelancer,Mild,Yes,1,Urban,PhD,6,None,Short-Term,None,life
+ba64442c-ba20-46ec-9029-c83e64e5ba5a,40,Male,523969,47901.13,Married,Yes,Freelancer,None,No,0,Rural,PhD,7,Diabetes,Lifetime,Wealth Creation,term
+e9305231-8c68-426e-83c9-26d5b2242dee,67,Female,782890,26860.4,Single,No,Engineer,Chronic,Yes,1,Rural,High School,1,None,Short-Term,Wealth Creation,health
+bc064d7a-015e-4863-9b83-4ac09109f1de,40,Male,489233,24416.53,Married,No,Engineer,None,No,2,Urban,High School,8,Heart Disease,Lifetime,Wealth Creation,life
+9043e218-dc42-424b-b02e-0e5dae053421,56,Female,2285321,227382.46,Married,Yes,Engineer,Chronic,Yes,0,Urban,Graduate,2,Heart Disease,Lifetime,Wealth Creation,health
+e151e8b7-53e2-46d5-8acb-9e7fe3530a08,56,Female,819194,78779.26,Married,Yes,Freelancer,Mild,No,0,Rural,Postgraduate,9,None,Short-Term,None,health
+40c6b36f-7ba7-47b3-8624-1d7a7c433ab6,39,Male,372294,32566.4,Single,No,Doctor,Chronic,Yes,1,Urban,High School,5,Diabetes,Short-Term,None,term
+387e2430-584c-4210-8dae-f68a52cddb46,28,Male,369850,13083.16,Married,No,Freelancer,Chronic,Yes,0,Urban,High School,2,Diabetes,Short-Term,Child Education,auto
+d3f7000b-6f22-4428-acee-e2ba7eacbdd8,53,Male,1516789,33102.77,Divorced,Yes,Engineer,Mild,Yes,1,Urban,PhD,3,Cancer,Lifetime,None,health
+ac2f7577-86f3-4f47-b607-e190f366f001,68,Female,231981,7628.42,Married,No,Retired,Chronic,No,1,Urban,Graduate,9,None,Short-Term,Retirement,health
+7fc08b79-e9e7-4946-88b3-23b5b2e172e0,35,Female,867799,61037.96,Single,Yes,Doctor,Mild,Yes,0,Rural,Postgraduate,1,None,Long-Term,Wealth Creation,life
+f87cc92b-9b72-4c9c-bc1b-f4f5eb9b13d8,36,Male,1651153,119743.85,Single,No,Driver,None,Yes,0,Rural,High School,8,Diabetes,Long-Term,None,term
+b8a8ddbc-a6b1-4e91-b11d-6daa8d4409b1,23,Female,656308,23399.41,Married,No,Freelancer,Mild,No,0,Rural,PhD,10,None,Short-Term,None,term
+18884fec-5936-4928-beb6-17375cd20f35,53,Male,287600,10400.61,Married,No,Engineer,Chronic,Yes,1,Urban,Graduate,2,Heart Disease,Lifetime,Wealth Creation,health
+cb97d5ed-ffd2-40b5-bd3c-f584ab9cab47,36,Female,709585,60419.81,Divorced,Yes,Engineer,Mild,Yes,1,Urban,PhD,8,Diabetes,Short-Term,None,life
+ce6d38a9-8c60-49d8-9ae7-8bbbe9406ed7,18,Male,226091,21313.92,Single,Yes,Retired,Chronic,Yes,3,Urban,Graduate,5,Cancer,Lifetime,Child Education,auto
+c8f0dfc0-4e0a-48ad-99f3-71c02227df4b,38,Male,272191,11392.0,Married,Yes,Retired,None,No,1,Rural,Postgraduate,2,None,Long-Term,Retirement,term
+719d590a-14d8-43e3-80e8-3aa921421931,50,Male,723239,49766.68,Single,Yes,Doctor,None,Yes,0,Urban,High School,10,Heart Disease,Lifetime,Retirement,life
+4300eedf-231e-41ba-a061-46e87f106b2e,70,Male,321741,8753.07,Single,No,Doctor,None,No,2,Urban,Graduate,1,None,Long-Term,Wealth Creation,health
+1e0db8ee-bc29-4ebd-91ce-eeba8235adb8,22,Male,777421,56752.94,Single,Yes,Retired,Chronic,No,2,Urban,Postgraduate,2,Cancer,Lifetime,None,term
+4aee2e19-7a70-450d-bf8c-1fbf0e4f336d,19,Female,732281,46917.32,Single,Yes,Teacher,None,No,3,Rural,High School,3,Diabetes,Short-Term,None,term
+06feaa0f-c71f-4ecc-9464-123faa39292c,50,Female,200316,18520.66,Single,No,Freelancer,None,Yes,1,Rural,PhD,1,None,Long-Term,None,health
+3beb578b-79a3-4c69-a89e-327a3c2d2fc0,51,Male,315269,26772.12,Divorced,Yes,Engineer,Mild,No,2,Urban,PhD,8,None,Long-Term,Wealth Creation,health
+e8cbabd8-bf8d-4216-9f34-97e76e20163b,50,Male,864386,23601.8,Married,Yes,Engineer,Mild,No,1,Rural,High School,4,None,Lifetime,None,life
+0b3fc357-0f46-4dd6-916d-61d8b3a9db54,38,Male,585714,45580.25,Married,No,Doctor,Mild,No,3,Urban,PhD,7,Diabetes,Short-Term,Retirement,health
+28d37c4d-6534-4956-98c5-fb2da20f44a2,46,Female,684011,52112.27,Single,Yes,Teacher,None,No,3,Rural,Graduate,5,Heart Disease,Short-Term,Retirement,term
+4a7f6285-f5b5-4310-83fb-cad74de8c248,44,Male,223990,10745.76,Divorced,No,Driver,None,No,2,Urban,PhD,9,Heart Disease,Lifetime,Child Education,life
+9fc3c3fe-121f-4cb1-8d25-51a144843042,54,Female,2282015,154945.42,Divorced,No,Doctor,None,No,2,Urban,Postgraduate,1,Heart Disease,Lifetime,None,auto
+d4f2f167-29bc-4e7d-bb8c-56a6ab7c6d8f,46,Female,337066,32955.27,Married,No,Retired,Mild,Yes,1,Rural,High School,8,Heart Disease,Long-Term,Wealth Creation,health
+81ac9f35-b929-4df0-8730-5abec4a263ce,19,Male,952070,45188.92,Married,No,Teacher,None,Yes,1,Urban,PhD,8,Diabetes,Long-Term,Wealth Creation,auto
+0e04a7c2-1996-49a4-a6d1-687e5156f7a5,46,Male,349564,10765.54,Married,No,Driver,None,Yes,1,Urban,PhD,6,Heart Disease,Short-Term,Wealth Creation,auto
+0c809752-6003-44f0-b42a-2887a59b4020,40,Male,2819300,185754.04,Married,Yes,Driver,Chronic,No,1,Rural,Postgraduate,8,Cancer,Long-Term,None,life
+25fa714f-2a97-4be1-b7ab-494cb4718272,48,Male,341565,17401.74,Divorced,Yes,Teacher,Chronic,Yes,2,Rural,Postgraduate,3,Heart Disease,Long-Term,None,life
+a7e10054-3ee7-4b2f-aa46-ac0e0b946e54,68,Male,401774,31204.73,Married,Yes,Freelancer,None,Yes,1,Urban,Graduate,2,None,Lifetime,Retirement,life
+4933e1e4-df9d-4341-9d85-fc09265bebb2,55,Female,275617,19352.58,Single,No,Driver,Chronic,Yes,0,Rural,PhD,4,None,Long-Term,Wealth Creation,health
+a2e1583b-9bfb-4c25-b666-e577c3398af2,23,Female,364086,10864.57,Married,No,Retired,None,Yes,2,Rural,Graduate,1,None,Lifetime,Wealth Creation,auto
+1dd41532-0d82-4e9e-ac93-2cd4c1106f0c,50,Male,765511,16860.83,Married,No,Retired,Mild,Yes,2,Urban,Postgraduate,1,Cancer,Lifetime,Retirement,term
+9dea252d-12f7-4896-b5f1-422a806137b4,55,Female,621551,47036.26,Married,No,Retired,None,Yes,1,Urban,Postgraduate,1,Cancer,Long-Term,Retirement,auto
+ef0db8db-2ac9-4b19-aa1a-90dd1917ad84,35,Female,348768,25453.23,Single,Yes,Retired,None,No,1,Urban,Graduate,9,None,Short-Term,Wealth Creation,term
+6234fa3a-8e91-4f53-931b-0ec71bafd3c0,63,Female,2318306,48221.63,Divorced,No,Driver,Mild,No,3,Rural,Graduate,6,None,Long-Term,None,health
+e6a67d7e-b549-44b7-948d-925d2a566534,56,Male,914608,85935.69,Single,Yes,Teacher,None,No,0,Rural,High School,7,Cancer,Long-Term,Retirement,term
+3731a8bf-4061-4390-9f61-ece1fafcdf20,40,Male,532342,28999.57,Married,Yes,Freelancer,None,No,0,Rural,Graduate,10,Heart Disease,Long-Term,Child Education,term
+5c055e45-35c4-450f-b528-ed50328b2df0,20,Male,804964,53522.69,Single,Yes,Retired,Mild,Yes,2,Rural,High School,1,None,Long-Term,Child Education,auto
+b0f61dbf-80bf-4b74-a2d2-ea2b607e4831,58,Female,823277,23763.22,Divorced,Yes,Teacher,None,No,3,Urban,Graduate,3,None,Short-Term,Wealth Creation,life
+54274643-9649-42ec-9976-800227a6ed33,25,Male,316611,25417.67,Married,Yes,Doctor,None,Yes,2,Urban,Graduate,3,Diabetes,Short-Term,None,auto
+337daf54-5b85-4d16-a885-c7398f60be6f,47,Male,305218,15356.93,Single,Yes,Teacher,Chronic,No,1,Urban,PhD,6,None,Long-Term,None,term
+da9eefee-ba2e-4a5a-9298-a552b20aeecc,19,Male,226495,7385.5,Single,Yes,Driver,None,Yes,2,Rural,PhD,8,None,Lifetime,None,auto
+9611dc85-5820-46bc-ad5b-22c0052932e0,49,Male,1070344,50625.19,Single,No,Doctor,Mild,Yes,1,Rural,Postgraduate,8,Heart Disease,Lifetime,None,term
+5cee510c-5a4e-48a7-ac1e-e50db9ad46c2,67,Female,2163480,52050.63,Married,Yes,Retired,Mild,Yes,3,Rural,Graduate,5,Heart Disease,Lifetime,None,health
+dd4e4de4-d210-439c-be27-101d87012741,67,Female,372201,23216.96,Single,No,Engineer,Chronic,No,2,Rural,High School,4,Heart Disease,Short-Term,Retirement,health
+40656c50-c948-4649-8fb7-9f579420bf4e,19,Female,603322,56090.58,Single,No,Freelancer,None,Yes,3,Rural,High School,2,None,Short-Term,None,auto
+cb02fffd-9422-412f-b908-e7fffc3e58ac,25,Female,231364,22152.48,Married,Yes,Engineer,None,Yes,3,Rural,Postgraduate,5,Diabetes,Lifetime,None,auto
+22a3440c-e20c-46bf-854b-f4090cf89679,55,Male,2129112,155697.85,Married,Yes,Driver,None,Yes,0,Rural,PhD,8,Cancer,Short-Term,None,life
+d491879d-191a-4be9-8a7b-58fe197cc3f9,45,Male,604796,17760.45,Divorced,Yes,Engineer,None,No,1,Urban,Graduate,3,None,Lifetime,Child Education,life
+355fef01-0e76-420a-b49b-17b4d123880d,61,Female,383146,19251.79,Married,No,Doctor,Chronic,No,1,Urban,High School,4,None,Lifetime,Wealth Creation,health
+ea402f49-685c-423c-94b1-0a2d3bb44ab0,60,Female,283970,23285.95,Divorced,No,Doctor,Chronic,No,3,Urban,PhD,4,Cancer,Lifetime,Wealth Creation,health
+ae9dd3ed-c93d-46fe-b684-ca509021a7b2,35,Male,596064,53560.82,Single,Yes,Doctor,None,Yes,0,Rural,High School,1,None,Short-Term,Child Education,life
+3261abd8-a9d4-450d-80ff-1a31622b3190,55,Female,204054,19499.74,Married,No,Teacher,None,Yes,2,Urban,High School,8,None,Long-Term,Wealth Creation,term
+18b9f827-94fa-4a3d-b96a-b646efe1ed71,42,Male,322061,18479.45,Married,Yes,Doctor,Chronic,No,1,Rural,PhD,3,Cancer,Lifetime,Wealth Creation,life
+5396e790-735f-4032-9837-17d39a29a8d4,29,Male,2761697,56122.07,Single,No,Freelancer,Mild,Yes,3,Rural,High School,2,Heart Disease,Long-Term,Retirement,auto
+452930a6-598d-47e1-8f62-8a20e30cc398,47,Female,612721,42504.84,Divorced,Yes,Retired,None,No,2,Urban,Graduate,4,None,Lifetime,None,life
+a367dff3-9fdb-4dbe-a5f4-3758f445622c,46,Female,814038,49294.36,Divorced,No,Teacher,Mild,No,3,Rural,PhD,5,Cancer,Short-Term,Retirement,auto
+a744c8a4-8d05-4b13-a38d-7e82cf74a4e0,24,Female,2192954,171954.67,Divorced,No,Driver,None,Yes,0,Rural,Graduate,9,Heart Disease,Long-Term,Retirement,auto
+5a90aac4-4f1a-40bf-92d4-e7fb614c41c4,64,Male,1254775,94880.82,Married,No,Doctor,None,Yes,1,Urban,Graduate,6,None,Short-Term,Child Education,auto
+30ce6f7e-51bc-4211-abbb-cade547ca95d,47,Female,274266,6084.98,Divorced,Yes,Driver,Mild,No,1,Urban,PhD,1,Diabetes,Long-Term,None,term
+5d570b55-fb4f-4cf2-837a-272a35ff81e5,36,Male,564993,21411.02,Divorced,No,Teacher,None,No,2,Rural,High School,8,Cancer,Long-Term,Child Education,health
+dacc3b8f-5717-4e18-aef9-1a7889d52ea8,57,Male,435653,19627.06,Single,Yes,Doctor,Mild,Yes,1,Rural,Graduate,5,None,Long-Term,Retirement,health
+20125d31-7570-4cea-8efe-46521c2d6ba9,47,Male,232196,4727.73,Single,No,Doctor,Chronic,Yes,0,Rural,High School,2,Heart Disease,Short-Term,Retirement,health
+370574a8-af33-4668-8bac-2e32fdfa7b6c,39,Female,264077,21668.41,Married,Yes,Doctor,Mild,Yes,2,Rural,PhD,3,None,Lifetime,None,life
+f70b54d1-9df3-45db-b582-6b93e2f85210,69,Female,265685,23572.6,Married,Yes,Freelancer,None,Yes,2,Rural,Graduate,5,Diabetes,Lifetime,Child Education,term
+bf286555-000c-42ed-a34f-6e63f1e66e92,51,Female,2547064,55078.07,Married,No,Teacher,Mild,Yes,2,Urban,Graduate,7,Diabetes,Long-Term,Retirement,health
+dfb61bb2-3cd1-474d-b3fe-617f1e603c2b,23,Female,305416,9527.95,Divorced,Yes,Retired,None,Yes,0,Rural,PhD,4,Heart Disease,Lifetime,Child Education,auto
+0d2d3d79-bf99-4c7b-bb71-36cc2de2484d,53,Female,282327,14851.21,Married,No,Engineer,None,Yes,2,Rural,Postgraduate,10,Heart Disease,Lifetime,None,health
+900db05c-81e6-4355-b5d4-d7f67d34991e,46,Female,457972,33028.83,Single,No,Teacher,Mild,Yes,0,Urban,High School,3,Diabetes,Long-Term,Wealth Creation,life
+247a3cc2-891b-4203-8139-4d6199363f5d,29,Female,286492,19072.49,Single,Yes,Retired,None,Yes,3,Rural,Graduate,6,Diabetes,Short-Term,Retirement,auto
+08312922-bce6-44ac-88a7-658d96615ab8,58,Female,220584,8310.73,Married,No,Teacher,Mild,No,3,Rural,Postgraduate,8,Heart Disease,Lifetime,Wealth Creation,health
+d19a57eb-6fe0-48bb-988d-ce0c4e7902cf,61,Male,443954,26703.46,Married,No,Driver,None,No,1,Urban,High School,2,None,Lifetime,None,life
+ed79e9b5-6d86-49fc-af0f-d5379b294521,48,Male,853581,60528.67,Single,Yes,Teacher,None,Yes,0,Urban,Postgraduate,4,None,Long-Term,Wealth Creation,life
+d71e48d3-b597-42a1-a9eb-3d6ef71a18b5,38,Female,291140,26176.49,Divorced,No,Teacher,None,No,2,Rural,Postgraduate,2,Heart Disease,Long-Term,None,auto
+37ddf0f7-6b32-4740-ab3d-5c9625221888,36,Female,1409779,78239.68,Divorced,Yes,Retired,Chronic,Yes,0,Urban,Postgraduate,10,Diabetes,Lifetime,Child Education,term
+c81d4fe0-975f-4c40-ac8c-06aaf8922a6a,27,Female,1761772,54978.87,Single,Yes,Freelancer,Mild,Yes,1,Urban,Graduate,4,None,Lifetime,None,auto
+18a9fbe7-2825-4587-9917-50fb67dba22c,23,Female,1580008,68230.98,Divorced,No,Freelancer,None,Yes,0,Urban,High School,3,Cancer,Long-Term,Retirement,auto
+79b2a0bd-68c2-4e8e-8e46-9d9fb9721f6c,33,Male,463594,29054.16,Single,No,Engineer,Mild,Yes,3,Urban,High School,5,Diabetes,Long-Term,Retirement,term
+4d60ab36-3ddc-4845-b69a-d47ce3e9c232,65,Male,227789,10365.6,Divorced,No,Engineer,None,No,2,Urban,High School,6,Diabetes,Lifetime,Child Education,health
+f5f9ccd0-749b-4f5c-b6b8-cd1576292e0c,45,Male,2227575,189654.7,Single,No,Freelancer,None,No,3,Urban,Graduate,4,Cancer,Long-Term,Child Education,life
+ec2feceb-6bb2-474d-b33c-a5d138022f46,63,Female,210787,8471.01,Married,Yes,Engineer,None,Yes,2,Rural,Graduate,5,None,Short-Term,Retirement,term
+09a22a3e-7403-4f59-9d2f-2a385dcdc421,50,Male,1056159,24388.26,Single,No,Doctor,None,Yes,0,Rural,Graduate,4,None,Long-Term,Wealth Creation,health
+9c0ee6a8-5740-4e58-b462-5241989ac1cd,25,Male,220160,19814.26,Single,No,Teacher,Mild,Yes,2,Urban,PhD,7,None,Short-Term,Child Education,auto
+26b55202-d3fa-4e59-a656-59dec2b9b59a,52,Female,955645,30652.24,Single,Yes,Retired,Chronic,No,3,Urban,High School,10,Heart Disease,Short-Term,Wealth Creation,health
+512758c8-1b9f-449e-b898-532631908e5d,66,Male,911572,56231.69,Married,Yes,Doctor,None,No,2,Urban,PhD,7,None,Short-Term,Retirement,term
+6a706f72-9cc0-4768-8e2d-7a53c6f82be7,49,Female,997503,61431.12,Married,No,Retired,Mild,Yes,1,Rural,High School,3,None,Long-Term,Wealth Creation,term
+202428ea-9895-4eec-a6da-119fd8e1eefc,49,Female,362817,19783.85,Single,Yes,Doctor,None,No,2,Urban,PhD,7,Diabetes,Lifetime,Wealth Creation,life
+ae52b1e9-7fb7-43e1-8d4d-f2751b8723fb,28,Female,962077,41022.25,Divorced,Yes,Engineer,None,No,1,Rural,High School,6,Heart Disease,Short-Term,Child Education,life
+b06f6eb9-d247-482c-a046-f4cef3c2b7b9,51,Male,685411,59855.1,Single,Yes,Teacher,Chronic,Yes,1,Urban,PhD,7,None,Short-Term,Wealth Creation,health
+b9f0d724-22a9-4187-9c9d-fb36be8cd690,31,Female,283340,22856.78,Single,No,Driver,Mild,Yes,3,Urban,PhD,9,None,Long-Term,Child Education,auto
+6c9395e2-9350-469f-a131-3a337c585d25,41,Female,575809,48646.86,Single,No,Freelancer,None,No,0,Urban,Postgraduate,8,Heart Disease,Long-Term,Wealth Creation,term
+2b9980ab-0478-4560-b352-57863bae4bf9,19,Female,685609,39873.48,Divorced,No,Freelancer,Mild,Yes,3,Urban,Postgraduate,2,Heart Disease,Long-Term,Child Education,auto
+4063891b-6291-42a8-8d93-8390ae507b89,29,Male,224134,19971.43,Divorced,Yes,Freelancer,Chronic,No,2,Rural,Graduate,10,None,Lifetime,None,life
+6ae88e9e-dd64-45a1-a7cf-dda352229067,42,Male,634493,14739.66,Married,No,Freelancer,None,No,2,Urban,High School,9,Cancer,Long-Term,Wealth Creation,term
+567a8614-77f5-4d96-a923-2e82cd64bec6,37,Male,244478,17079.19,Married,Yes,Retired,Mild,Yes,0,Urban,High School,10,Heart Disease,Lifetime,Child Education,life
+133cc899-af58-4533-b2b4-464687645136,56,Male,950556,81814.14,Single,Yes,Freelancer,Chronic,No,3,Urban,PhD,1,Heart Disease,Short-Term,Retirement,health
+48146153-3697-4393-a2aa-626273cf51eb,56,Female,465386,13155.58,Single,No,Freelancer,None,Yes,2,Rural,High School,4,None,Short-Term,Retirement,auto
+15f9908b-5d80-47c4-b3da-0f1466bcf3b5,29,Female,613207,19047.67,Married,Yes,Retired,None,Yes,3,Rural,PhD,8,Heart Disease,Short-Term,Retirement,auto
+cc1a1a7c-56ae-42ba-9c4e-ae8c30e33d7b,46,Male,561230,45268.11,Single,No,Driver,None,No,2,Rural,PhD,9,Diabetes,Long-Term,Retirement,health
+d05ec34a-0b39-4193-bd2e-fd15cdc5f448,50,Male,321225,17169.11,Married,Yes,Engineer,Chronic,Yes,3,Urban,PhD,5,None,Short-Term,Child Education,term
+f7727143-ffc5-49ed-903e-91b6fe2e90d7,57,Female,305643,10294.39,Divorced,No,Freelancer,None,Yes,2,Urban,Graduate,1,Heart Disease,Short-Term,Retirement,health
+9497c24f-11db-4695-a28d-356fe2e78c1f,65,Female,626235,30575.5,Married,Yes,Engineer,Mild,Yes,3,Urban,Postgraduate,3,Diabetes,Short-Term,Wealth Creation,health
+cd3183dc-1b2d-4aea-ad41-4f7851a2714f,48,Male,1823073,95821.88,Divorced,No,Retired,Mild,Yes,0,Rural,Graduate,8,None,Lifetime,Child Education,auto
+2e288170-337b-4c90-90a2-ac7532c3edc7,44,Male,1465735,127867.64,Single,No,Retired,None,No,2,Urban,Graduate,6,Cancer,Lifetime,Wealth Creation,auto
+1bebe937-1974-40f7-a1bc-723958630bd2,66,Male,220709,12737.26,Single,No,Teacher,None,No,0,Rural,Postgraduate,4,Diabetes,Lifetime,Retirement,life
+5de0da7d-1e70-4531-b831-54d8ebfeaad2,24,Male,201751,11533.98,Married,No,Engineer,Mild,Yes,3,Rural,High School,1,None,Short-Term,Wealth Creation,auto
+ccdea38a-739b-47be-929d-ba4443454fb8,45,Male,1998354,47880.41,Single,Yes,Engineer,None,Yes,1,Rural,High School,10,Heart Disease,Short-Term,Wealth Creation,life
+91498553-b77e-4f8e-8204-95a70f70df49,35,Female,2979757,198522.25,Divorced,Yes,Engineer,Chronic,Yes,3,Rural,Postgraduate,10,Diabetes,Long-Term,Wealth Creation,life
+5e0924c0-dd59-40dc-b768-6a722ca1b0fb,63,Male,395982,17652.81,Divorced,No,Driver,Chronic,No,1,Urban,High School,1,Diabetes,Lifetime,None,health
+3534facb-0f01-49b3-8467-7021137c8f64,29,Female,893550,35799.89,Single,Yes,Doctor,None,Yes,0,Urban,Graduate,2,Heart Disease,Long-Term,Wealth Creation,auto
+21c244aa-8771-4b6c-8ad0-d6db90a57319,20,Female,2618864,73249.9,Married,No,Engineer,None,No,0,Rural,PhD,7,Heart Disease,Long-Term,Retirement,health
+27b36f6d-d5cf-4d99-860f-dcb21d79d423,45,Male,841592,23545.02,Single,Yes,Engineer,None,No,2,Rural,Graduate,8,None,Short-Term,None,term
+8b25a88e-8d10-45f2-8ebb-4e947b6014a1,25,Female,430609,30913.03,Divorced,Yes,Engineer,Mild,No,3,Rural,High School,1,Diabetes,Long-Term,Child Education,term
+452c8e0a-5bbb-4e01-92a6-088bcb81d8fa,33,Male,730466,48495.84,Single,Yes,Freelancer,None,No,3,Urban,PhD,2,Cancer,Long-Term,Retirement,term
+ff2383f0-6fa6-469d-98f1-af0860631bf6,34,Male,1740696,168900.28,Married,No,Teacher,Mild,Yes,3,Urban,High School,9,None,Short-Term,Child Education,health
+96936f27-0a91-4309-821a-7ce5337f9c23,64,Male,249712,15071.86,Divorced,Yes,Freelancer,None,Yes,3,Urban,PhD,9,None,Long-Term,Retirement,term
+db46e2b8-9b3c-45b7-b12e-4ec147eff38d,60,Female,439476,32378.61,Married,Yes,Teacher,None,Yes,0,Urban,High School,2,Cancer,Lifetime,Child Education,term
+408999d3-5439-42d3-a923-2c8b22c66e93,22,Female,426600,41453.78,Single,No,Retired,Mild,Yes,3,Rural,High School,9,None,Long-Term,Retirement,auto
+6d3d26c7-c4c4-4190-af29-ac9352e68c39,33,Female,491698,37220.15,Single,Yes,Teacher,Mild,Yes,0,Rural,High School,5,Diabetes,Lifetime,Wealth Creation,life
+20ad27db-dada-4438-a687-b2e33168bbd4,24,Male,971818,43980.18,Married,Yes,Teacher,None,Yes,0,Rural,Postgraduate,3,Heart Disease,Lifetime,None,auto
+3f19154b-a80b-4ace-8545-ac446156e6d1,58,Male,2151110,103079.12,Married,No,Freelancer,Chronic,No,0,Urban,Graduate,6,None,Lifetime,Retirement,health
+262fa512-2123-4aee-976c-b1d7d62a2a19,27,Female,626974,15815.47,Single,Yes,Doctor,Chronic,No,3,Urban,Postgraduate,8,Diabetes,Lifetime,Child Education,life
+09a136d9-e0ce-4b74-810e-d6c2e0bcc250,58,Female,577320,28385.13,Divorced,Yes,Freelancer,Chronic,No,2,Rural,Postgraduate,1,None,Short-Term,Child Education,health
+8afca6e1-5dad-4493-af75-b673f925210a,49,Female,1767335,57482.59,Married,No,Doctor,Chronic,No,1,Rural,Graduate,9,None,Long-Term,Wealth Creation,auto
+0022b2f5-1304-4937-b11f-e4c033f52081,27,Female,630074,17517.94,Married,Yes,Retired,None,Yes,0,Urban,PhD,7,None,Short-Term,None,auto
+3bc93f32-2f9e-4e2d-a42d-c721c86a8ccc,18,Female,1710814,50043.09,Divorced,No,Driver,Chronic,Yes,1,Rural,Graduate,2,Heart Disease,Long-Term,Child Education,auto
+58fad264-405f-45df-951d-9809874e9863,31,Male,361006,9481.11,Single,Yes,Engineer,Chronic,Yes,2,Rural,High School,2,None,Long-Term,Child Education,life
+8be03485-328c-4ee7-b630-27a8354a2044,50,Male,2557348,75087.47,Married,No,Engineer,Chronic,No,3,Urban,High School,7,Cancer,Lifetime,None,term
+dfc4ad98-78f0-410f-b11b-569e170caea9,50,Male,819075,74000.6,Divorced,No,Teacher,Mild,No,3,Rural,PhD,3,Heart Disease,Short-Term,Wealth Creation,health
+fc9c324f-2917-425d-918d-c319be625c5f,23,Male,840468,60265.5,Single,No,Engineer,Chronic,No,1,Urban,High School,6,Heart Disease,Long-Term,None,health
+58c48758-45d8-4f07-bf49-c3f19088ce87,59,Male,581324,49335.78,Single,Yes,Driver,Chronic,No,0,Urban,Postgraduate,7,None,Short-Term,Wealth Creation,health
+f99fc7d3-e95d-45d0-b684-559fe4f67f74,65,Female,518775,48698.52,Divorced,No,Retired,Chronic,Yes,2,Rural,Postgraduate,3,Heart Disease,Short-Term,Wealth Creation,health
+6a5c81b5-a30c-455a-a783-4902635ead13,20,Female,381789,18607.73,Married,Yes,Freelancer,None,No,2,Urban,High School,7,Heart Disease,Long-Term,Child Education,life
+431a6073-1782-4bae-82ea-fb33fa841a8d,41,Male,801081,79128.15,Single,No,Doctor,None,Yes,2,Rural,Postgraduate,3,Heart Disease,Long-Term,Retirement,life
+83ce682d-71d8-45c1-b30c-d9e3a4463afe,46,Female,541229,17335.02,Divorced,No,Teacher,Mild,No,3,Urban,Graduate,2,Heart Disease,Lifetime,None,auto
+29567969-5960-4b44-a539-3f564a56710d,28,Female,796663,39578.79,Single,No,Teacher,None,No,2,Rural,Postgraduate,4,Heart Disease,Long-Term,Retirement,health
+79819bf3-d41b-49a1-a293-e59ff8837438,50,Male,1664904,158894.94,Divorced,Yes,Driver,None,No,1,Urban,PhD,6,Heart Disease,Short-Term,Wealth Creation,term
+07a40311-7395-4ca3-87e2-f0e82deddf93,38,Male,724494,48726.33,Divorced,Yes,Freelancer,Chronic,Yes,0,Urban,Postgraduate,10,Diabetes,Long-Term,Retirement,life
+ae9da534-f13b-484a-b150-cd9018cd2eba,38,Female,404227,12820.21,Divorced,Yes,Freelancer,None,No,2,Urban,Graduate,9,Diabetes,Lifetime,Wealth Creation,term
+6764e77b-eb10-41a0-b025-59e8e26dc5f9,37,Male,412865,15407.31,Married,Yes,Retired,None,No,3,Rural,Graduate,1,Diabetes,Short-Term,Child Education,life
+e3af4f55-ad35-4f7c-aa84-1a3a2d429f91,32,Female,315976,24648.29,Single,No,Freelancer,Chronic,Yes,1,Rural,Postgraduate,7,Heart Disease,Short-Term,Wealth Creation,health
+1552f2c2-0991-4364-8ae6-c1690dacd5fd,60,Female,232762,20067.04,Divorced,No,Freelancer,None,Yes,2,Urban,Graduate,8,None,Short-Term,Retirement,health
+4ec85a7d-daff-4c9f-b9f3-fa1bb102f498,34,Male,531679,48164.97,Single,Yes,Freelancer,Mild,Yes,2,Urban,PhD,6,None,Long-Term,None,life
+e9a3b07c-2d98-41db-9025-4643d9abfe74,44,Male,409371,15958.74,Divorced,Yes,Retired,None,Yes,3,Rural,Postgraduate,10,None,Lifetime,None,term
+78087ab7-7815-458d-8a2f-74ccba3b87f7,45,Male,933218,30472.17,Married,Yes,Driver,None,No,0,Urban,Graduate,6,None,Short-Term,None,life
+efeff0ce-e73e-4774-9db9-140c19a33910,57,Male,1158486,77779.41,Single,Yes,Engineer,None,No,1,Urban,High School,10,None,Lifetime,Child Education,term
+3b3e1355-a30a-4e6e-b332-95e6dec325e7,58,Male,1694690,141509.02,Married,No,Engineer,None,No,3,Urban,Graduate,10,None,Long-Term,None,term
+1d7cdee5-a87f-47e6-9ae2-9eab1ef3fa6d,47,Male,736912,54661.05,Married,Yes,Teacher,Chronic,No,1,Rural,High School,8,Cancer,Short-Term,None,term
+f3f43010-4944-4799-9062-1150d5ee964a,19,Male,577134,22337.68,Divorced,No,Teacher,None,Yes,2,Rural,PhD,5,None,Lifetime,Retirement,auto
+0e5eafce-64dd-4674-bc9e-5f848daf2bd7,28,Male,623584,17384.48,Single,No,Freelancer,None,No,1,Urban,High School,4,Heart Disease,Short-Term,Child Education,term
+5b3308a7-32b6-4613-bbb4-fcd29507993b,67,Female,454423,31962.12,Divorced,No,Teacher,Chronic,No,1,Rural,Postgraduate,4,None,Long-Term,None,health
+c26ee905-2d55-438f-81ec-907b919cedf2,46,Male,379097,29287.97,Married,Yes,Teacher,None,Yes,3,Rural,Postgraduate,8,None,Long-Term,Retirement,life
+ff13dee6-1639-41c2-9fcc-916d3d0043f8,27,Female,334365,7554.22,Married,No,Teacher,Mild,Yes,2,Rural,High School,1,Heart Disease,Long-Term,Retirement,auto
+b7a29d75-ec8b-410a-a001-1ec5ff17efde,49,Female,755365,27334.21,Single,Yes,Doctor,Mild,Yes,1,Urban,Graduate,10,None,Lifetime,None,term
+13d3d267-21a1-4529-9998-c7d871167cfe,51,Female,892762,76512.82,Divorced,Yes,Teacher,Chronic,No,3,Urban,Postgraduate,9,Diabetes,Long-Term,Wealth Creation,health
+3dd16423-7b1c-41f0-9f4b-16ae6f9caed3,45,Male,240461,13324.44,Divorced,No,Doctor,Chronic,No,0,Rural,High School,6,None,Long-Term,Child Education,life
+6ef64fb2-4639-432b-b579-f655dac023c8,19,Male,480024,20397.44,Divorced,Yes,Freelancer,None,No,3,Urban,Graduate,3,Cancer,Long-Term,Retirement,life
+75961379-5b6b-4b23-8d5f-f82ffbd56cbc,33,Male,885602,26552.61,Married,Yes,Freelancer,None,No,0,Rural,PhD,1,Cancer,Long-Term,Wealth Creation,term
+571fc850-6fec-450f-bcbd-270dc7ca0e8e,44,Male,902648,18435.88,Married,No,Freelancer,Mild,Yes,2,Urban,PhD,1,None,Short-Term,Retirement,life
+2e616dca-e337-4fa6-8f3e-c01e8dac53c3,63,Female,536769,29184.73,Single,No,Teacher,None,No,3,Rural,Postgraduate,4,Heart Disease,Short-Term,Child Education,life
+4905b4a7-1f37-4a40-a4dc-72c455075f54,29,Female,674670,25056.53,Divorced,No,Doctor,Mild,Yes,1,Urban,Postgraduate,1,None,Short-Term,Retirement,auto
+8e6bbfe1-dd94-47e5-8d4a-09a7d6419b4a,69,Female,477294,30924.18,Married,Yes,Engineer,None,No,3,Rural,Graduate,8,Cancer,Long-Term,Child Education,life
+fd4a9802-b67c-4349-967b-92139f753179,70,Female,282279,25173.07,Divorced,Yes,Driver,Chronic,Yes,3,Rural,PhD,9,Diabetes,Short-Term,None,health
+0c1c269b-8058-49a9-bf69-7f15ae2a7cdf,60,Male,2284943,149359.56,Single,No,Teacher,None,Yes,2,Urban,Postgraduate,2,Diabetes,Lifetime,None,term
+36e04bf2-3366-48bf-b956-42f62ea9ae41,59,Male,593565,50433.7,Married,No,Engineer,Mild,No,3,Rural,Postgraduate,2,Cancer,Long-Term,Child Education,health
+8b3a57bf-8772-411a-b9a5-eb4af83bf94a,33,Female,583753,38327.56,Single,Yes,Driver,Mild,Yes,2,Urban,Graduate,1,Diabetes,Short-Term,Wealth Creation,term
+d4e12c20-e04c-468c-a68c-f3f97dfed846,45,Male,804421,76177.46,Married,Yes,Doctor,Chronic,No,0,Urban,PhD,8,Cancer,Lifetime,None,term
+b1488fdf-8b2a-40a7-8687-1f4639842cd0,49,Male,2712718,128720.88,Single,Yes,Retired,Chronic,No,1,Urban,High School,2,Heart Disease,Lifetime,Wealth Creation,life
+ff17e200-99e3-4e46-ad19-00cfc91dc6ff,20,Female,641492,17346.05,Married,No,Freelancer,Mild,Yes,0,Rural,Postgraduate,4,None,Long-Term,None,auto
+6eac5a6b-72ca-4c3a-a118-6f0ed7320ec7,44,Female,535275,30939.62,Divorced,No,Freelancer,None,No,3,Urban,PhD,6,None,Long-Term,Retirement,auto
+e3b99eff-ed11-42f3-bdea-a28ee7db48f0,44,Male,375960,19825.06,Single,No,Retired,None,Yes,3,Urban,PhD,1,Heart Disease,Long-Term,Wealth Creation,health
+6c84b7c5-ea39-452e-a980-169c273ab5d4,48,Female,367916,31339.08,Married,Yes,Freelancer,None,Yes,3,Urban,High School,2,Diabetes,Short-Term,None,term
+0f996135-01ed-4669-90d4-4adde9f6d944,26,Male,464988,15055.91,Single,No,Doctor,Chronic,No,2,Rural,Postgraduate,1,Diabetes,Long-Term,None,auto
+9a2fdff9-51aa-45b2-99ea-a10ba2f67359,31,Female,598886,34755.89,Married,Yes,Engineer,None,Yes,0,Rural,High School,3,None,Lifetime,None,life
+18e8ddac-9f34-4e49-955f-7479a6d14fe2,41,Female,2695464,188583.75,Single,Yes,Freelancer,None,Yes,1,Rural,Graduate,5,Diabetes,Lifetime,Wealth Creation,life
+bce506e7-f2b9-40a3-bf13-54efc478990f,22,Male,228460,18810.88,Married,No,Engineer,None,Yes,0,Rural,High School,8,Heart Disease,Lifetime,None,auto
+dd413884-3348-445e-8a93-99aee5d201b8,20,Male,472486,15642.12,Married,Yes,Freelancer,Mild,Yes,3,Rural,Graduate,3,None,Long-Term,Wealth Creation,auto
+2da7a9c2-ea65-49d0-8ff6-994fd4859829,18,Male,535305,53354.68,Single,Yes,Teacher,Chronic,Yes,3,Urban,Postgraduate,9,Cancer,Long-Term,Child Education,auto
+6281403e-dea0-4dff-907c-ca6b6741d9e1,60,Female,689164,20782.37,Single,Yes,Engineer,None,No,2,Urban,Graduate,6,Cancer,Short-Term,Wealth Creation,life
+2902d0b9-6c34-4951-bd7c-3a910cc3c8d3,65,Male,621837,53934.8,Single,No,Teacher,Chronic,Yes,1,Rural,PhD,7,Diabetes,Short-Term,Child Education,health
+aada0b32-57d2-4ecc-9aea-1556ad2c0295,22,Female,462219,22988.82,Single,Yes,Retired,Chronic,Yes,1,Urban,High School,10,Cancer,Lifetime,Wealth Creation,auto
+53e39a44-bcc7-4a64-95fa-5a61df1f1f25,46,Female,980542,31955.21,Single,No,Driver,None,No,2,Urban,Postgraduate,4,Diabetes,Lifetime,None,health
+eb1d0d40-b3ed-4b82-8e29-3c38cd99beca,67,Female,2470591,81025.05,Divorced,Yes,Doctor,None,No,0,Rural,PhD,6,Heart Disease,Long-Term,Wealth Creation,term
+c621f3cf-7d16-4e0e-b2b5-50c796beee7b,47,Male,566114,53843.62,Married,Yes,Freelancer,None,Yes,2,Rural,Graduate,3,Cancer,Lifetime,Retirement,life
+360f8bb2-4cb4-4dcf-b21a-29099b499f30,37,Female,2796037,142944.42,Divorced,Yes,Teacher,Chronic,Yes,0,Urban,Graduate,10,None,Long-Term,Child Education,life
+294e7cc3-e842-44e4-aae0-f311527c06ba,42,Female,401937,28953.59,Single,Yes,Engineer,None,No,2,Urban,Postgraduate,3,Heart Disease,Short-Term,Retirement,life
+f08d7c6b-8d0b-43e2-a624-683c49ea45be,39,Male,318664,26467.65,Married,Yes,Teacher,Mild,Yes,0,Rural,Postgraduate,6,Heart Disease,Lifetime,Wealth Creation,life
+c5ff95e0-8d7f-4ad5-adfe-0671a32bce58,67,Female,930574,19666.92,Married,No,Retired,None,No,1,Urban,Graduate,2,Heart Disease,Lifetime,Wealth Creation,health
+25c0ec5d-ebb7-47b2-816b-a441652bbb5f,56,Male,811727,61722.37,Married,Yes,Driver,Chronic,Yes,2,Rural,PhD,3,Heart Disease,Long-Term,Child Education,health
+fb2c4dfb-f9f6-40d3-a1bf-88aa5a783791,47,Female,2974459,167064.29,Single,No,Doctor,Mild,Yes,3,Rural,PhD,7,None,Long-Term,Retirement,term
+0fd76f8a-3b55-42fb-b732-dd708cfd5df6,64,Male,426760,19150.31,Married,No,Teacher,None,Yes,0,Rural,PhD,3,None,Lifetime,None,term
+f5eabea4-bf60-40ad-8057-6c10732757d6,45,Female,650907,51864.16,Divorced,Yes,Engineer,Chronic,No,2,Rural,High School,7,Heart Disease,Short-Term,Child Education,term
+810aae73-a825-4205-9048-48ca12386603,61,Male,680376,58853.46,Divorced,No,Engineer,None,No,3,Urban,Postgraduate,7,None,Short-Term,Retirement,term
+e5941953-5107-4139-9796-c0fde57390ea,61,Female,298122,7344.22,Married,Yes,Driver,Chronic,Yes,3,Urban,PhD,6,Heart Disease,Short-Term,Wealth Creation,health
+7745a6fc-b427-47b0-8024-89223bc95e24,44,Female,491023,31390.55,Divorced,No,Teacher,Chronic,Yes,0,Urban,PhD,3,None,Long-Term,Child Education,health
+029afedf-7a56-4923-bbed-1189271e9eec,57,Male,595773,27241.38,Single,No,Retired,None,No,0,Rural,Graduate,6,Heart Disease,Short-Term,Retirement,life
+ebbede89-6e0d-416d-9612-4b92e5c62b55,70,Male,389520,30908.53,Single,No,Doctor,None,No,2,Rural,PhD,6,None,Long-Term,Child Education,auto
+8adfd03d-f742-468a-b596-2f7cef4ad3fa,68,Male,896781,69441.34,Single,Yes,Retired,None,No,3,Urban,High School,3,Heart Disease,Long-Term,None,life
+1a71b719-a178-4308-8d23-025b612bc798,44,Female,706342,51479.79,Married,No,Doctor,Chronic,No,3,Rural,Graduate,1,Heart Disease,Short-Term,Retirement,term
+ce03789e-a77a-4eca-a757-71ef8e99750d,63,Male,268840,13912.15,Divorced,Yes,Freelancer,None,No,2,Urban,Postgraduate,5,None,Lifetime,Wealth Creation,term
+85df01e4-dff3-4d73-a3bc-25def381a460,59,Male,993319,70393.1,Single,No,Teacher,None,No,3,Urban,Postgraduate,2,None,Long-Term,Retirement,health
+4a4456f8-61af-47f3-8dc5-be34f422a192,56,Female,945408,73450.09,Single,Yes,Freelancer,Chronic,No,0,Rural,Postgraduate,8,None,Long-Term,Retirement,health
+e4c61005-bac1-4e5b-8f71-5bfdbbbde95a,69,Male,412030,26411.74,Married,No,Doctor,None,Yes,2,Urban,Graduate,4,None,Long-Term,Wealth Creation,term
+6304ee43-2dcc-49bb-a394-b11ef07b1359,55,Male,280239,13505.66,Married,No,Doctor,Chronic,Yes,3,Urban,Graduate,9,Diabetes,Short-Term,Child Education,health
+7ec453e2-2838-46a8-be96-7802364538b2,19,Female,258304,17716.44,Divorced,No,Doctor,None,Yes,2,Rural,High School,3,None,Short-Term,Retirement,auto
+b0efe6a0-5239-4981-8f3d-e645fbd99a77,58,Female,2616718,78423.76,Divorced,Yes,Retired,None,No,3,Rural,Postgraduate,7,Heart Disease,Short-Term,Child Education,term
+56d4d1db-e8c5-4d8d-b13e-c290f5d48216,50,Male,496008,36737.27,Single,No,Retired,None,Yes,0,Rural,Postgraduate,9,Heart Disease,Short-Term,None,auto
+36d0c165-2798-4e61-9d1c-e3e163e2cd7f,56,Male,453268,27486.65,Divorced,Yes,Freelancer,None,Yes,2,Rural,Postgraduate,2,Cancer,Long-Term,Retirement,life
+a7775b28-11e9-4b0d-9a89-ddc4f2500813,25,Female,252466,15940.12,Married,Yes,Engineer,None,Yes,2,Urban,PhD,10,Cancer,Long-Term,Retirement,auto
+c4f3e6c1-6f6d-45bd-8539-170a11dedbe7,41,Male,286641,25560.17,Divorced,No,Engineer,Mild,No,0,Urban,Graduate,9,None,Lifetime,Retirement,life
+f7f6542b-d753-44fa-8797-ecffee70157f,31,Female,2897765,219650.42,Divorced,Yes,Teacher,None,Yes,3,Rural,High School,9,None,Lifetime,Retirement,term
+882680aa-3ee1-4594-8080-5869aa200e83,51,Male,624721,41771.02,Married,Yes,Teacher,None,Yes,1,Rural,Graduate,4,None,Long-Term,Child Education,life
+0f473077-7e0d-4288-a45b-cb05c935c82a,52,Female,659437,55413.27,Divorced,Yes,Engineer,Chronic,Yes,3,Rural,PhD,1,Cancer,Short-Term,Wealth Creation,health
+3d0c3401-1879-4feb-a052-cf5127289cf8,67,Female,342098,7326.79,Single,No,Freelancer,None,Yes,1,Rural,PhD,9,Heart Disease,Long-Term,Wealth Creation,auto
+7d9e6eba-e76b-44bf-bff5-22b1d6db2ba0,70,Female,2202617,209932.81,Married,No,Freelancer,None,No,3,Rural,High School,1,Heart Disease,Short-Term,Child Education,health
+68125d28-2df1-460d-9d6f-2710f7dcc9cd,57,Female,2074663,108130.28,Single,No,Retired,Mild,No,0,Rural,PhD,4,Cancer,Lifetime,Retirement,health
+5ec2ce8b-1248-4cc0-9138-f275c236a5a6,38,Male,550223,26028.13,Single,Yes,Doctor,None,No,0,Rural,Graduate,2,None,Short-Term,Wealth Creation,life
+10353406-976c-48a3-b9a4-a603b5d187e4,27,Male,571629,15228.68,Married,Yes,Engineer,None,No,2,Urban,Postgraduate,1,None,Short-Term,Child Education,term
+5bc3f394-d670-4b74-8751-1c0f801b940c,45,Male,2597014,139878.02,Divorced,Yes,Engineer,Chronic,No,0,Urban,PhD,5,Diabetes,Lifetime,Child Education,life
+79a280a3-57ca-4656-8466-881dfc146fed,31,Male,2842083,155651.16,Divorced,No,Driver,Mild,Yes,2,Urban,Postgraduate,2,Cancer,Long-Term,None,health
+743d5c18-4e57-4640-aeef-7fde4f5454a3,62,Female,293140,11249.52,Single,Yes,Driver,None,No,0,Urban,PhD,10,None,Long-Term,Child Education,life
+5c6d8146-d794-4669-91a6-4db1b75dee2c,41,Female,348231,25555.56,Single,No,Teacher,Chronic,No,0,Rural,High School,4,None,Lifetime,Retirement,life
+4f8a9801-e336-4e53-abab-9719ec6f7db1,39,Male,704503,65244.86,Single,Yes,Driver,None,No,1,Urban,High School,2,Heart Disease,Short-Term,Retirement,term
+36f58dac-a0ae-47e3-9c95-a5342e3a49dc,62,Female,345256,19711.21,Married,No,Doctor,Chronic,Yes,1,Urban,Graduate,2,Heart Disease,Long-Term,Retirement,health
+db975f9c-4dac-4a40-95d7-32c76c3f7069,23,Male,425105,13993.46,Married,Yes,Driver,None,No,1,Urban,PhD,3,Diabetes,Lifetime,None,life
+b510e1df-0a9f-408c-bd70-234977c6d12f,35,Female,288619,19266.58,Single,Yes,Retired,None,Yes,3,Rural,PhD,1,None,Lifetime,Retirement,life
+7af39352-7e60-4706-8a16-92871e7d674c,47,Female,244295,19308.82,Single,No,Engineer,Mild,Yes,0,Rural,Graduate,7,Cancer,Short-Term,Child Education,life
+8bde77d8-e4c5-4fa6-b081-3cf620c74812,51,Female,443325,35042.09,Divorced,Yes,Retired,Mild,No,3,Urban,Graduate,3,Cancer,Short-Term,Wealth Creation,health
+8e387b87-fbff-46e7-805f-63b9f688d324,18,Female,435625,36986.36,Married,No,Freelancer,Chronic,No,0,Rural,Graduate,2,Diabetes,Lifetime,Retirement,health
+f440cb5d-e01e-4417-bd85-4791e23b55a5,68,Male,642430,20929.71,Married,No,Driver,Mild,Yes,3,Urban,High School,7,Heart Disease,Lifetime,None,health
+155178a5-adf3-4c8e-9aa0-f8b602efd5ef,44,Female,979138,46181.13,Divorced,Yes,Teacher,Mild,No,0,Rural,PhD,4,Heart Disease,Lifetime,Wealth Creation,life
+2fd4dfc0-e40a-40ee-a044-809e28a4e0ca,40,Male,248651,5706.37,Divorced,No,Doctor,None,Yes,2,Urban,PhD,10,None,Long-Term,Wealth Creation,health
+bd789643-6a35-49bc-99d8-b43c03e21845,48,Male,505680,39982.21,Single,No,Retired,Chronic,Yes,0,Urban,High School,6,Heart Disease,Short-Term,None,health
+8fe496dc-0a89-4317-96e4-d2ea5e53c219,48,Male,758217,52010.62,Married,Yes,Freelancer,None,Yes,1,Urban,Graduate,10,Heart Disease,Lifetime,Retirement,term
+deb3da97-9f7c-40c3-a740-f8c994759fc2,53,Male,303690,22877.53,Divorced,No,Freelancer,Chronic,No,1,Rural,High School,3,Heart Disease,Short-Term,None,health
+300b86c2-e33c-4106-a101-57aa847c83f6,27,Male,439532,32925.53,Single,No,Engineer,Mild,Yes,0,Rural,Postgraduate,4,None,Short-Term,Child Education,auto
+12214536-8e02-4fc0-82c8-d137d11acdce,20,Male,450200,35856.48,Divorced,Yes,Engineer,Mild,No,0,Rural,Postgraduate,2,None,Long-Term,Child Education,term
+b68a2e75-1353-41b2-9ef8-64a3fea3e63d,45,Male,932539,43949.37,Single,Yes,Teacher,None,Yes,1,Urban,High School,5,Heart Disease,Short-Term,None,term
+0ee8018c-f934-48e4-93fa-f9265dd2f6ce,69,Female,517514,24283.92,Divorced,Yes,Doctor,Mild,Yes,2,Urban,High School,2,None,Lifetime,Retirement,health
+31dd7fb6-23a3-4e31-99fb-65945bc221a7,63,Female,1175269,54751.69,Married,Yes,Driver,None,Yes,3,Rural,Graduate,5,None,Lifetime,Retirement,term
+98bc73e8-549f-4429-82da-51c8c37cff7c,29,Female,227184,11534.26,Married,No,Driver,None,Yes,1,Urban,PhD,4,Cancer,Short-Term,Retirement,auto
+1b981ce8-f65e-48d1-bf5f-f050b02ad969,60,Male,796111,66073.21,Divorced,Yes,Engineer,Chronic,No,2,Rural,Graduate,2,Cancer,Long-Term,Wealth Creation,health
+aaedab72-2e34-45ac-9dad-a0f291882cd6,28,Female,355949,18158.88,Married,No,Freelancer,Mild,No,2,Urban,Postgraduate,5,Heart Disease,Short-Term,None,auto
+5cef1104-8784-449e-8dc4-319e5f6c0a34,63,Male,1845433,56917.16,Married,No,Engineer,Mild,Yes,2,Urban,High School,3,Heart Disease,Short-Term,Wealth Creation,health
+c20b82ce-0828-4f44-a1db-5ae22c024da1,42,Male,2952349,195587.51,Single,No,Freelancer,Mild,No,0,Urban,Postgraduate,10,None,Long-Term,Child Education,auto
+66183550-1906-4bc0-84e8-39b37b0b4891,60,Female,683140,53117.58,Married,No,Driver,None,Yes,1,Urban,Postgraduate,1,Heart Disease,Short-Term,None,life
+20fe10ff-50be-41fc-bd16-100eeee5e2ca,30,Female,606071,18374.0,Divorced,Yes,Freelancer,None,No,0,Rural,PhD,1,None,Short-Term,Wealth Creation,term
+650a5f13-1420-4d11-80a3-d6f02145a9c4,35,Male,942969,45767.68,Single,No,Doctor,None,No,1,Rural,PhD,9,Diabetes,Short-Term,Retirement,life
+24e83000-9cb6-4dfb-b2bc-3a95689c7e11,57,Female,837528,52120.91,Divorced,Yes,Driver,None,Yes,0,Urban,PhD,3,Cancer,Long-Term,Wealth Creation,term
+a0868298-9cc8-4f58-808b-5d5210846b98,27,Male,365119,22793.33,Divorced,Yes,Teacher,Mild,No,2,Urban,High School,10,None,Lifetime,Retirement,term
+d69d918f-ef79-42ad-ae95-4e28e0689aae,35,Male,508864,12477.47,Divorced,Yes,Doctor,None,No,2,Rural,Postgraduate,3,Diabetes,Lifetime,Wealth Creation,term
+fb674b7e-183b-4bc1-b6b0-5927a49b78f1,28,Female,891709,24461.75,Divorced,No,Retired,Chronic,Yes,1,Urban,Postgraduate,8,Heart Disease,Long-Term,Child Education,auto
+b5799bbe-97cd-47a1-8375-68b9ac1a0110,36,Male,653533,41439.83,Divorced,Yes,Engineer,None,Yes,3,Urban,PhD,1,Cancer,Lifetime,Retirement,term
+41eb1033-77d8-4b63-a44b-0fe7010f2f24,20,Female,288550,19595.49,Married,No,Driver,None,No,1,Rural,High School,7,None,Lifetime,Child Education,auto
+a3ed78f5-f48b-42dc-9106-d59a527e3789,70,Female,2945635,137847.48,Married,No,Teacher,None,No,3,Urban,Graduate,4,Heart Disease,Lifetime,Retirement,auto
+6eb69ae1-90f3-4b57-bd46-0da00d497eee,55,Female,549939,28074.71,Married,No,Engineer,None,Yes,1,Urban,Postgraduate,5,None,Short-Term,Child Education,term
+8f2b4899-a345-4040-a43a-4d5dfdc479d7,52,Female,617185,26839.06,Single,Yes,Retired,Chronic,Yes,3,Rural,PhD,10,Heart Disease,Short-Term,None,health
+98a534a9-f96c-45fd-a161-de2f8fc1e127,42,Female,2575508,186058.76,Single,No,Engineer,Mild,No,2,Rural,Graduate,8,None,Lifetime,Wealth Creation,health
+06314b42-ce5f-4eff-b013-edcc84eadb22,66,Male,1044409,40483.99,Divorced,No,Driver,Chronic,No,2,Rural,PhD,10,None,Short-Term,Child Education,health
+0c270762-698c-4aaa-8a0a-e687af973aaa,68,Male,361482,33408.76,Divorced,No,Retired,Chronic,Yes,0,Rural,PhD,1,Diabetes,Short-Term,None,health
+d1036035-1862-463c-b33e-e5d2f98a527b,50,Female,275123,5999.31,Married,No,Retired,None,No,1,Urban,Graduate,6,None,Short-Term,Child Education,life
+4de6b545-8f80-4d38-868e-905a41a1c7a5,31,Male,673197,50117.07,Single,No,Doctor,None,Yes,1,Urban,PhD,9,Cancer,Lifetime,Retirement,life
+2773ddb5-689a-40ea-bde5-0693aaa6cddb,68,Male,224889,13210.39,Single,Yes,Driver,Mild,Yes,0,Urban,Graduate,10,Heart Disease,Lifetime,Retirement,health
+be63a67f-2040-4cbe-b4fe-07eb3355e919,31,Male,543243,31109.82,Divorced,No,Driver,Mild,Yes,0,Urban,Graduate,10,Diabetes,Lifetime,Child Education,life
+5ca82ab0-f99c-4b97-ba54-da57fb80b192,54,Female,572385,33525.12,Single,No,Retired,Chronic,Yes,0,Urban,Postgraduate,10,None,Lifetime,None,health
+ae9813ae-2833-47f3-993f-18c1a6b1eb1f,33,Male,921857,87236.87,Married,Yes,Doctor,None,Yes,2,Urban,High School,1,Heart Disease,Short-Term,Retirement,life
+0de9b967-3063-4c41-9f7c-45a8013065ff,56,Male,498532,19190.63,Single,No,Engineer,Mild,Yes,3,Urban,Postgraduate,10,None,Long-Term,Retirement,health
+f511f57a-2c97-41f3-98e9-46a81e36404f,34,Female,651125,56911.72,Divorced,No,Driver,None,Yes,0,Urban,PhD,2,None,Long-Term,None,term
+8c14fda6-c1cf-4633-9e8b-261c839c77fa,28,Female,1861985,149998.96,Married,No,Retired,None,No,3,Urban,High School,6,Diabetes,Long-Term,Retirement,auto
+78e8737f-85e3-4d3e-b7ac-401e11550d9e,31,Female,654228,20069.41,Divorced,Yes,Driver,Mild,No,0,Rural,PhD,1,Heart Disease,Short-Term,Wealth Creation,life
+03f1eb94-76ac-41bc-b9b2-e96a33056a1e,40,Female,430596,22447.12,Married,Yes,Engineer,Chronic,Yes,3,Rural,High School,6,Diabetes,Lifetime,Retirement,life
+e949f79a-c9b2-4379-9b22-3a3b4f3a0073,49,Male,752869,65820.22,Single,Yes,Engineer,None,Yes,2,Rural,Postgraduate,4,Diabetes,Long-Term,Retirement,life
+e6124277-8911-471c-905b-9cdb578fe924,30,Female,230625,12552.97,Single,No,Driver,Mild,Yes,0,Urban,PhD,5,None,Short-Term,Retirement,auto
+20a71bb0-bf17-4b0f-9569-0ba6954160ca,24,Female,223637,10492.46,Divorced,Yes,Engineer,None,Yes,0,Urban,PhD,1,None,Short-Term,Wealth Creation,auto
+b5fea332-9b99-4829-9881-4601bd9bf5a9,67,Female,1476845,31184.38,Divorced,No,Driver,Mild,No,1,Urban,Postgraduate,7,Cancer,Long-Term,Wealth Creation,health
+a8a3f1cb-bdab-41f6-aafc-1c90e66f6428,48,Male,1548129,145532.3,Married,No,Teacher,None,No,3,Urban,Postgraduate,3,Heart Disease,Lifetime,None,term
+2d38d278-c89a-45a2-baf9-19350664ce1e,50,Female,423897,36887.85,Single,No,Teacher,Mild,Yes,1,Urban,Graduate,10,None,Short-Term,Retirement,auto
+1664869d-043b-475c-b680-e5ef29efe851,68,Male,698809,47787.6,Married,No,Freelancer,Mild,No,1,Rural,PhD,9,Cancer,Short-Term,Child Education,health
+3aafb760-8691-41e1-8032-d3e332b13674,35,Female,790984,58554.9,Divorced,Yes,Doctor,Mild,No,2,Rural,Postgraduate,10,Diabetes,Lifetime,Retirement,term
+e6c7f0dd-680e-4306-9353-52ff45d5e698,52,Female,295408,22090.35,Married,Yes,Doctor,Mild,Yes,3,Urban,Postgraduate,3,Diabetes,Short-Term,Wealth Creation,health
+714ac896-2561-4d77-8f63-5f6b165ebf4c,24,Female,489926,20823.75,Single,Yes,Retired,Mild,Yes,2,Rural,Graduate,9,Diabetes,Short-Term,Child Education,auto
+a26001d7-264b-480b-9c24-610e6c240667,67,Male,271115,5616.36,Divorced,Yes,Doctor,Chronic,Yes,3,Rural,Postgraduate,8,Diabetes,Long-Term,Child Education,health
+fd170c9d-6a06-45fe-9e30-3f43e00a5e79,47,Female,224959,13693.9,Married,Yes,Engineer,None,Yes,1,Urban,Postgraduate,7,Cancer,Short-Term,None,life
+70bc8470-e016-4395-a40f-11bfa49a707f,48,Female,1887544,108979.57,Divorced,Yes,Retired,Chronic,No,3,Rural,High School,2,Heart Disease,Short-Term,Retirement,term
+e1df6b9b-8799-44f4-8b44-2a568caa8290,43,Male,1878387,165704.7,Single,No,Driver,Chronic,No,2,Rural,Graduate,8,None,Long-Term,Wealth Creation,auto
+d9f3f20c-a3e3-4b0c-9a4d-abce50e5e0aa,23,Male,316154,18063.95,Divorced,No,Engineer,None,Yes,2,Rural,PhD,2,None,Lifetime,Retirement,auto
+3c1cc937-e412-4fbd-b96b-347b7fdc649f,25,Male,896472,50948.63,Divorced,Yes,Freelancer,Mild,No,2,Urban,Postgraduate,7,Diabetes,Lifetime,Wealth Creation,term
+7892df25-0511-4d6f-a106-d1b0e82220c0,49,Female,2713277,178502.31,Married,Yes,Teacher,Mild,No,2,Urban,PhD,8,Heart Disease,Long-Term,Wealth Creation,term
+f4a13e83-a890-4b00-a60d-17aaa1f2f54b,59,Male,224628,17332.94,Single,No,Engineer,Mild,No,1,Rural,Postgraduate,10,Heart Disease,Short-Term,Retirement,health
+da0e6670-1440-4917-9188-ecbdac3794c3,41,Female,750518,36043.53,Divorced,No,Doctor,Mild,No,2,Urban,Graduate,2,Cancer,Lifetime,Wealth Creation,health
+8bf2cdef-e973-4bdf-912a-ace4fc5afad5,66,Male,1418236,35725.89,Married,Yes,Retired,Mild,Yes,3,Urban,Postgraduate,4,Cancer,Long-Term,Wealth Creation,health
+943cf3a3-1a12-4a68-9ffb-eb6c7ad850a3,25,Male,928855,48393.55,Married,No,Retired,None,Yes,2,Rural,Graduate,4,Diabetes,Short-Term,Retirement,auto
+19ec2d87-fe8f-436a-a46d-f208a2a6e51e,67,Male,576257,50988.21,Single,Yes,Engineer,Chronic,No,0,Rural,PhD,5,None,Lifetime,Child Education,health
+bde762e8-3758-445d-b289-2141f5120d00,67,Female,230897,22393.05,Divorced,Yes,Doctor,None,No,3,Rural,Postgraduate,9,None,Lifetime,Wealth Creation,term
+4e96542e-4f15-46d2-b157-6a31b6595f69,49,Female,563641,24173.32,Married,Yes,Retired,Mild,No,1,Rural,Graduate,10,Heart Disease,Short-Term,Child Education,term
+b9749663-df87-474f-9720-329a2ed024dc,57,Male,356839,18302.41,Single,No,Teacher,Mild,No,3,Urban,Graduate,7,None,Short-Term,Wealth Creation,health
+3c705b3d-d678-4549-88b2-77e49cdd4850,36,Male,644716,21462.51,Married,Yes,Retired,None,No,3,Urban,Graduate,10,Heart Disease,Short-Term,Child Education,term
+2425a406-2ad8-413a-ae67-1217b425499f,54,Male,909078,89993.65,Married,Yes,Retired,None,Yes,1,Urban,High School,3,Heart Disease,Lifetime,Child Education,life
+533d28bd-0287-4f88-9fb3-4fba634714a5,43,Male,483731,15886.67,Divorced,No,Teacher,None,No,2,Rural,High School,8,Diabetes,Long-Term,Retirement,health
+20c7bd22-6704-4d4b-9a40-bde605e70745,25,Male,225979,11746.12,Married,Yes,Doctor,Mild,No,0,Rural,Graduate,9,Heart Disease,Lifetime,Retirement,term
+fcc26f64-6ade-4392-9284-441ac1855524,51,Male,1360097,87576.44,Single,Yes,Freelancer,Mild,Yes,3,Rural,Graduate,9,Diabetes,Lifetime,None,health
+88b7c895-edcc-44ac-9aee-b521894f81f6,21,Male,1974420,87377.49,Single,No,Freelancer,None,Yes,2,Urban,Graduate,8,None,Lifetime,Retirement,auto
+100277db-8c79-4585-b1b5-36f32d0cda96,31,Male,206192,7137.38,Married,Yes,Freelancer,Chronic,No,3,Rural,Graduate,6,Cancer,Lifetime,Wealth Creation,term
+f006a04c-a591-44b0-b31f-33a8b90e9488,68,Female,391906,35687.16,Divorced,No,Doctor,None,No,0,Urban,Graduate,3,None,Lifetime,None,term
+79fcd317-93d3-4d93-9ab2-d4516b8d6bd6,59,Male,313424,6673.95,Divorced,No,Driver,None,Yes,2,Urban,Postgraduate,8,None,Lifetime,Child Education,term
+e7764190-48e6-4c26-ae15-e37bab032c6b,45,Male,271632,14692.78,Single,No,Freelancer,None,Yes,3,Rural,Postgraduate,2,Diabetes,Lifetime,Retirement,health
+b22e7afc-05c5-4c3d-887c-12aa39a3e28e,35,Male,298171,24621.23,Single,Yes,Driver,None,No,0,Urban,Postgraduate,9,None,Long-Term,None,life
+7e3d4404-bef2-4792-9e02-13570dd4ebb1,30,Male,349295,9396.77,Married,Yes,Freelancer,None,No,0,Rural,PhD,8,Heart Disease,Long-Term,Child Education,term
+3de23cea-ba16-4333-8616-d76cfb030484,58,Male,360589,32860.97,Married,No,Driver,None,Yes,0,Rural,Postgraduate,10,None,Long-Term,Retirement,life
+b5783ea4-3725-4627-858d-c36caf5ce191,48,Male,922414,86009.87,Married,Yes,Retired,Mild,No,3,Urban,High School,5,None,Short-Term,None,term
+c89d06ab-6641-4319-9e0a-57f73155c2b6,56,Male,630463,24168.2,Single,No,Driver,None,No,0,Rural,Graduate,8,Heart Disease,Long-Term,None,life
+e5b2c725-e4d5-4c19-a95a-17f39db1d640,27,Male,858039,72199.37,Single,Yes,Engineer,None,No,2,Urban,High School,9,None,Short-Term,Wealth Creation,life
+0a2edd49-1f04-4d4a-b1f6-6304bd0765bc,39,Female,450943,23450.15,Divorced,No,Engineer,Chronic,No,2,Rural,PhD,4,None,Lifetime,Retirement,health
+9ca3a741-8cf8-4f2a-a67e-e3b2072bd425,36,Male,877538,48234.02,Single,Yes,Teacher,None,No,3,Urban,High School,6,None,Lifetime,None,term
+728323a5-6b62-461a-ba32-4a1941e2bfd7,49,Male,499192,45883.16,Married,No,Retired,None,Yes,0,Rural,PhD,10,None,Long-Term,Child Education,health
+d39ba5e3-e9c2-425e-a98b-71361610c1e4,21,Male,899130,86723.26,Divorced,No,Engineer,Mild,No,2,Urban,High School,5,None,Long-Term,None,life
+6a6b4027-816b-4b8b-b11b-0e40821a8dba,19,Female,1046738,63121.96,Divorced,No,Engineer,None,No,0,Urban,Postgraduate,10,None,Short-Term,Wealth Creation,term
+cb2a4755-f05f-4fd6-8317-ade8be34eeaa,28,Female,308794,9457.93,Single,Yes,Teacher,None,No,0,Rural,Graduate,9,Diabetes,Lifetime,None,term
+79a172b9-f970-4a81-ae5e-52ed34adfb1d,30,Female,415276,17716.61,Divorced,No,Driver,Chronic,Yes,3,Urban,Postgraduate,1,Heart Disease,Lifetime,Child Education,health
+11496bab-e3df-4e19-98c9-1de149b75769,52,Female,701363,44540.62,Married,No,Engineer,Mild,No,2,Urban,Graduate,8,None,Lifetime,None,health
+7d2c229b-12d4-4bbe-8695-f3f1d8af3a6e,70,Male,950589,71088.67,Married,No,Engineer,Chronic,No,0,Rural,High School,4,None,Lifetime,None,health
+feeaf2d5-1726-4be2-b6fc-79ac8d719086,67,Male,571946,38619.64,Married,No,Doctor,None,No,0,Urban,Postgraduate,2,Heart Disease,Short-Term,Retirement,life
+00de789c-b0e6-4cbd-9772-a2ac8990b80e,30,Female,1793605,119288.97,Divorced,No,Doctor,Mild,Yes,0,Urban,Graduate,5,Cancer,Short-Term,Child Education,health
+0c2b47dd-04db-4ee4-80d8-a550dc4b2e9f,68,Female,710040,16200.65,Divorced,Yes,Freelancer,Chronic,Yes,1,Urban,Postgraduate,4,Heart Disease,Long-Term,None,health
+c6d71bed-1e9e-4572-acb9-686760d0606b,28,Male,228671,4983.0,Single,No,Teacher,Mild,No,0,Urban,High School,8,Diabetes,Short-Term,Wealth Creation,health
+30fe29be-aafd-41b5-ad22-254c1f1f6ddd,37,Female,608592,31349.55,Single,No,Freelancer,None,Yes,2,Urban,Graduate,1,None,Lifetime,None,life
+54e1fc23-ff9f-40a3-b293-24b03c51ac52,66,Male,317104,17979.64,Married,Yes,Freelancer,Mild,Yes,3,Rural,High School,8,None,Long-Term,Wealth Creation,health
+93652ab8-63a8-4cf0-a492-e2e3ff45cba9,39,Female,255045,7815.95,Divorced,Yes,Engineer,Mild,Yes,3,Rural,PhD,9,Diabetes,Short-Term,Wealth Creation,life
+40c86d4e-6ef9-43df-aab7-3978baf5f873,56,Male,268706,8436.07,Married,Yes,Retired,None,Yes,2,Rural,Graduate,5,None,Lifetime,Wealth Creation,life
+feeb09c2-6564-47da-b4d7-e1c8a21aafb3,56,Female,507275,24434.68,Married,No,Retired,None,Yes,2,Rural,Graduate,3,None,Short-Term,Child Education,term
+7c0660cf-250b-47d9-8ebe-caa7cf880940,36,Male,705419,20143.78,Married,No,Teacher,None,No,1,Rural,Postgraduate,3,None,Short-Term,None,life
+6ca2beb4-f664-47f2-bcc6-46b877c28884,49,Male,1842232,165430.14,Single,No,Engineer,None,Yes,3,Rural,Graduate,3,Heart Disease,Short-Term,Retirement,life
+7f9393ae-17ab-49aa-948b-abb1f7c86391,60,Male,336160,23852.87,Married,Yes,Teacher,None,Yes,0,Rural,PhD,8,Diabetes,Lifetime,None,term
+de6b19e8-a12b-48e9-9ba8-088a4d4b8049,33,Male,632279,28587.74,Single,No,Retired,Mild,No,1,Urban,Postgraduate,2,Diabetes,Short-Term,None,life
+cf0ab42b-234b-4219-a414-3fbc92899ed7,41,Female,243219,18139.14,Married,No,Doctor,None,No,1,Urban,PhD,8,Heart Disease,Lifetime,Wealth Creation,term
+a23cbe0d-5a27-4b37-a296-2ccefafda637,29,Female,415475,22650.07,Single,No,Freelancer,None,Yes,0,Urban,Postgraduate,4,Diabetes,Short-Term,Wealth Creation,auto
+29231c62-1913-4eea-a179-70c79f970938,31,Male,452265,32612.29,Married,Yes,Doctor,Chronic,Yes,2,Urban,PhD,6,None,Short-Term,None,term
+7af3ac04-e6b3-427f-849f-12e277cec646,58,Female,1655599,40585.41,Divorced,Yes,Teacher,None,No,3,Rural,PhD,7,None,Lifetime,Retirement,term
+07da7767-6a8f-49ef-99b1-5809664e8ccd,24,Female,453410,21675.16,Married,No,Retired,Chronic,No,0,Rural,Graduate,4,None,Long-Term,Wealth Creation,auto
+b4fb055f-78f1-484e-82ca-cae1aca7601a,62,Female,1126016,67744.46,Divorced,Yes,Freelancer,Chronic,No,3,Rural,PhD,8,Heart Disease,Long-Term,Wealth Creation,health
+f68dbc4b-1298-46e8-963e-89ee20e35b83,69,Female,413940,14544.7,Single,No,Driver,Chronic,Yes,0,Rural,PhD,10,Diabetes,Long-Term,Retirement,health
+88b98c5f-eadc-4613-92a8-468b622e3498,55,Male,946817,37232.56,Married,Yes,Doctor,None,Yes,2,Urban,High School,5,None,Short-Term,None,life
+5c1a6eee-bba5-4abd-9351-aa39a06ad8dd,39,Male,899263,78843.56,Single,No,Freelancer,Mild,No,2,Rural,Graduate,5,Cancer,Lifetime,Retirement,health
+2c9d30ec-2cb1-4fda-b7e0-9a4d50575933,27,Female,861670,65978.1,Single,Yes,Retired,Chronic,Yes,0,Rural,Postgraduate,9,None,Short-Term,Wealth Creation,auto
+b39f8097-0153-4a83-8f25-6c8d964f32af,48,Male,1086010,35535.42,Single,No,Engineer,None,Yes,2,Urban,Graduate,10,Diabetes,Lifetime,Wealth Creation,health
+3b731e36-342b-4b39-af0f-0979655bd65d,19,Male,971716,84306.41,Single,Yes,Teacher,None,No,0,Rural,High School,2,None,Short-Term,Child Education,life
+3206090d-22b5-46e8-9ea9-243af3037408,31,Male,440989,23147.74,Single,Yes,Teacher,Chronic,Yes,2,Rural,Graduate,5,Cancer,Lifetime,Child Education,life
+3cf5712e-9cda-4c4a-af5b-cde6891de0e2,47,Male,534525,25298.09,Single,Yes,Doctor,None,No,3,Urban,Postgraduate,5,None,Long-Term,Retirement,life
+075fa072-d707-4835-b59c-11c4b16e37ec,48,Male,2005825,194382.14,Married,No,Engineer,Chronic,Yes,0,Urban,High School,6,Cancer,Long-Term,Child Education,auto
+f293910b-e66b-4ffd-b6a8-afdf591aebd9,59,Male,2138491,44172.59,Married,Yes,Retired,None,No,1,Urban,Postgraduate,7,Cancer,Lifetime,Wealth Creation,term
+f9b9ba8d-05e9-4d74-986a-dbc49de106ce,61,Male,915584,78531.23,Divorced,No,Freelancer,None,Yes,3,Urban,PhD,2,Cancer,Lifetime,None,life
+f32dc6f8-9f7d-4328-89db-513abee7a2e4,59,Female,577504,43022.45,Single,No,Doctor,None,No,0,Rural,Postgraduate,9,None,Lifetime,Wealth Creation,health
+a3ca3b81-dd5a-44db-bfda-5baf9369ec4a,67,Female,340371,21384.16,Divorced,Yes,Freelancer,Mild,Yes,2,Rural,Postgraduate,4,None,Long-Term,Child Education,health
+ef76c422-61d7-4591-8b0f-333904729cd1,50,Male,835423,30073.43,Married,No,Teacher,None,Yes,3,Rural,Graduate,6,None,Short-Term,Child Education,health
+2773a63d-bd83-4ea4-9f33-1c6b70bd24a1,41,Female,887066,71136.35,Married,No,Teacher,None,Yes,2,Urban,Graduate,7,Diabetes,Short-Term,Retirement,auto
+af35c1b1-387c-472b-8b30-ee26adc6ebba,51,Male,856589,41329.25,Divorced,No,Teacher,None,Yes,3,Urban,Graduate,5,Heart Disease,Short-Term,Retirement,auto
+eb423558-1553-4187-863e-79824780d84e,58,Male,385903,36764.99,Divorced,Yes,Freelancer,None,No,2,Urban,Postgraduate,10,Heart Disease,Lifetime,Wealth Creation,life
+778c10dc-d7e0-4fd8-a1b7-ca8472c20ea0,29,Female,2973794,101359.55,Single,Yes,Retired,Mild,Yes,0,Urban,Postgraduate,1,None,Short-Term,Wealth Creation,auto
+587df4e0-8253-43b6-9563-e77b0ccbe9b1,66,Male,229668,17516.72,Married,No,Doctor,None,No,0,Urban,High School,8,Diabetes,Lifetime,Retirement,term
+db7c7e45-d45f-4844-928f-1b5ca5a6f683,59,Male,957065,69220.47,Single,No,Driver,Chronic,No,1,Urban,Postgraduate,9,Diabetes,Short-Term,Wealth Creation,health
+e6f64fc1-7fbd-4402-a0f6-ca3a0dad4e17,47,Female,244770,10897.14,Divorced,No,Engineer,Mild,Yes,1,Urban,Graduate,10,None,Lifetime,Retirement,life
+df0cc350-b05d-40f2-9294-b2852ffba60f,50,Female,721807,34545.33,Single,No,Driver,None,No,3,Urban,PhD,7,Cancer,Short-Term,Wealth Creation,life
+841433a9-b8f2-488f-94b1-65edc9c25d68,57,Female,1995269,45765.95,Married,No,Engineer,Mild,Yes,1,Rural,Postgraduate,2,Heart Disease,Long-Term,Wealth Creation,health
+4002360e-f658-49c9-ac60-7457df24a1e6,47,Male,634270,33275.05,Divorced,No,Engineer,None,No,1,Urban,Graduate,4,None,Lifetime,None,life
+3bf5ea38-44ac-4bd3-b7e6-1ae5daaa4307,26,Female,1643167,91710.82,Single,No,Retired,Mild,No,1,Rural,Graduate,8,Diabetes,Long-Term,Retirement,auto
+db06f336-1a91-46c1-9fe3-4cfda6835d6b,64,Female,566538,39495.14,Single,Yes,Retired,Chronic,Yes,1,Urban,PhD,1,Heart Disease,Long-Term,Retirement,health
+d7821c8f-86f3-4664-89ca-c5c2e927b702,47,Male,963305,67590.07,Single,Yes,Driver,None,No,3,Rural,PhD,8,Heart Disease,Short-Term,Wealth Creation,term
+2d403e8f-1346-49cc-b70a-db5dcc404f01,44,Female,496946,34623.01,Divorced,Yes,Freelancer,None,No,3,Rural,High School,5,None,Short-Term,Child Education,term
+caf77e59-4fe8-4de0-b881-9d49d993f608,54,Female,2183878,214898.08,Single,Yes,Driver,Mild,Yes,2,Urban,Postgraduate,8,Diabetes,Short-Term,Wealth Creation,health
+7b894186-ca75-4537-ae0f-40b2277e5c44,51,Male,1774295,92225.24,Divorced,No,Teacher,None,Yes,1,Urban,Postgraduate,1,None,Short-Term,Retirement,life
+ccef3f40-c0d1-4df3-ba61-d037e68f1c28,65,Male,2903186,229866.23,Single,Yes,Teacher,None,No,1,Urban,Postgraduate,7,Heart Disease,Lifetime,Child Education,life
+29643925-f513-48d7-b833-057f4055dc65,45,Female,562488,28942.62,Single,Yes,Doctor,Mild,No,2,Rural,High School,9,Diabetes,Long-Term,Retirement,life
+69739361-2083-4c31-a590-51e3acecfafb,27,Female,712135,31263.09,Single,No,Driver,None,No,1,Urban,Postgraduate,3,Cancer,Lifetime,Wealth Creation,life
+b7d13656-d2b6-439c-a9eb-2b17323caf75,33,Female,376251,16705.06,Single,No,Teacher,None,No,1,Urban,Postgraduate,7,None,Long-Term,Wealth Creation,term
+fc180c0d-7ee5-44dd-abc2-930cecd17c34,20,Female,643305,28191.26,Single,Yes,Freelancer,None,No,1,Rural,Graduate,2,None,Short-Term,Wealth Creation,life
+7ddff101-a52d-4f76-aa34-268294c659c9,56,Female,1867871,104864.1,Divorced,Yes,Doctor,None,No,2,Rural,Postgraduate,5,Heart Disease,Short-Term,Wealth Creation,term
+c3c254c1-608d-47d8-8bfe-0ef288379aac,29,Male,880394,31498.2,Divorced,No,Retired,None,No,0,Rural,Postgraduate,7,None,Lifetime,None,life
+abae12e4-0d27-40f7-bd90-bde047e08b40,28,Male,488133,25541.51,Divorced,No,Driver,Mild,Yes,2,Rural,PhD,10,None,Lifetime,Child Education,auto
+c2519f57-5a7a-4389-98cf-539e06703aff,32,Female,520329,29027.69,Single,No,Teacher,None,Yes,3,Rural,Graduate,1,Heart Disease,Lifetime,None,life
+241029f3-8890-4ec7-8913-9d248293bfd5,52,Male,589041,15919.78,Single,No,Driver,None,Yes,2,Rural,Graduate,3,None,Short-Term,Wealth Creation,auto
+ba6bd063-1066-4832-8377-535a07cf4bcc,59,Male,233424,12402.96,Divorced,Yes,Retired,None,No,2,Rural,PhD,10,None,Long-Term,Retirement,term
+3bc2150a-e496-44b9-afb6-ada49381a1aa,54,Female,1864791,102420.18,Divorced,Yes,Doctor,None,Yes,2,Urban,Graduate,5,Cancer,Lifetime,Retirement,life
+affa0069-ddc3-48cf-b93d-81c3abc97c77,70,Male,655931,45674.16,Divorced,Yes,Engineer,None,Yes,1,Rural,Graduate,5,None,Short-Term,Child Education,life
+4b42b06b-77cf-47bf-a23f-6c09a6395138,22,Male,748219,47742.68,Single,No,Teacher,Mild,Yes,0,Urban,High School,2,None,Lifetime,None,auto
+37220553-0073-4239-8bf9-56e8505c2787,53,Female,2126104,159294.13,Married,Yes,Engineer,Chronic,Yes,3,Urban,Postgraduate,5,Heart Disease,Long-Term,Retirement,health
+764ff045-7dc9-4868-b4df-e217f05bb7bb,32,Male,683995,35858.7,Married,No,Driver,None,Yes,1,Urban,PhD,4,Cancer,Lifetime,Retirement,auto
+271f8b9d-4775-451d-8b71-d326f9674562,57,Female,351088,16423.8,Divorced,Yes,Teacher,None,No,1,Rural,High School,10,None,Lifetime,Child Education,life
+f49ca94d-a8c1-42a4-b385-df8c7ddfbbf8,30,Male,2923967,92325.06,Single,No,Retired,None,No,3,Urban,High School,3,Heart Disease,Short-Term,Retirement,term
+15e725d5-32be-45b4-8ee5-8943d7dde092,35,Female,825069,68895.96,Single,Yes,Retired,None,No,3,Urban,High School,8,Cancer,Lifetime,Retirement,term
+c2366b39-c150-4fcc-a6ea-6060589dbfdd,30,Male,340383,15428.05,Married,No,Engineer,Chronic,No,3,Urban,Graduate,4,Cancer,Long-Term,None,auto
+2e202d80-09d4-465a-b83f-dd6ba92c28e7,23,Male,683984,38615.42,Single,No,Retired,Mild,No,3,Rural,Graduate,1,None,Long-Term,None,life
+3afa8af2-0895-40ac-8358-ebf0fefed673,43,Female,1121170,34707.14,Divorced,Yes,Teacher,Chronic,No,3,Rural,PhD,9,Heart Disease,Lifetime,None,life
+bfc67def-30de-42a3-ac1b-8dd1ad74f3fd,24,Female,305061,23545.25,Divorced,Yes,Retired,Mild,Yes,1,Rural,Graduate,2,Heart Disease,Short-Term,Child Education,auto
+e4ebfed2-8a83-40a1-8ad4-ec6165082d15,21,Female,2041124,74232.11,Divorced,No,Freelancer,None,No,2,Rural,Graduate,6,Diabetes,Short-Term,Retirement,auto
+7b72e5e9-d15d-4f3d-8421-b1cfef7bcfbe,30,Female,2667664,195705.35,Married,Yes,Freelancer,Mild,No,3,Urban,High School,6,None,Short-Term,Wealth Creation,term
+f94b5a70-9493-4f5c-a0fa-4c5ea0a4af39,66,Female,963153,34697.31,Divorced,No,Driver,None,No,3,Urban,Postgraduate,2,Diabetes,Long-Term,None,life
+f089b8a1-d5dc-4635-ba57-b1e03aed7c9e,18,Female,978992,58558.52,Single,No,Retired,Mild,Yes,0,Urban,Graduate,2,Heart Disease,Long-Term,Child Education,auto
+bddd2a3e-4595-4943-b8d9-7a121b423cb2,42,Male,808477,45267.03,Married,No,Doctor,Mild,Yes,3,Urban,Postgraduate,3,Diabetes,Long-Term,Retirement,auto
+20bfafdf-cd50-48c8-a1cc-73876472fcb1,24,Female,283662,14701.0,Single,No,Driver,None,Yes,3,Urban,High School,4,Heart Disease,Short-Term,None,auto
+40e6760f-e0b0-4f1b-b29d-82c5ab4561c2,21,Male,467311,34611.32,Single,Yes,Engineer,Chronic,Yes,3,Rural,Postgraduate,9,Cancer,Short-Term,None,auto
+cb916f78-8c31-40e1-b071-6a849fa01417,67,Female,309647,13221.69,Married,Yes,Retired,Mild,Yes,0,Rural,Graduate,2,Cancer,Lifetime,Wealth Creation,health
+06d08b8f-15e4-4ae2-97dd-0ce9497b611e,31,Male,821597,53118.67,Single,Yes,Freelancer,Mild,Yes,2,Urban,Graduate,5,None,Long-Term,None,term
+b63b2585-1d29-4e89-a5b0-7976bc5e7ac8,36,Female,599110,15073.88,Single,No,Retired,Mild,No,3,Rural,Graduate,6,None,Lifetime,Retirement,auto
+e20ec5bd-e298-4f0b-a893-6c2d65eb00cf,60,Female,831748,78268.91,Married,No,Engineer,Mild,No,3,Rural,Postgraduate,9,None,Long-Term,Wealth Creation,health
+ee8d8ec1-12cf-4abd-9646-a606d849cfbf,67,Male,770060,69033.78,Married,Yes,Doctor,None,No,0,Urban,PhD,9,None,Lifetime,Retirement,term
+a733a809-3405-40f1-8721-8889dcd01466,40,Female,1574540,56261.14,Single,Yes,Freelancer,None,No,0,Urban,Graduate,9,None,Short-Term,Wealth Creation,life
+e559e5cb-d1fd-43c4-9016-3f5209db7385,27,Female,2762896,238554.37,Divorced,No,Doctor,Chronic,No,2,Rural,PhD,2,Heart Disease,Short-Term,Child Education,auto
+1bba4e71-0764-4360-8b88-24824042f74b,47,Male,2736864,202698.19,Divorced,Yes,Freelancer,None,No,3,Urban,Postgraduate,9,None,Lifetime,Child Education,term
+733d3a2c-2f89-42a1-b168-204d2472ff62,45,Female,656740,40682.48,Divorced,No,Retired,None,No,3,Rural,PhD,2,Cancer,Long-Term,Wealth Creation,life
+2a17160a-18af-453c-9424-75c7bbc509db,53,Female,236744,9648.57,Single,Yes,Teacher,None,Yes,1,Urban,PhD,1,Heart Disease,Long-Term,Wealth Creation,term
+f0a90233-044e-4222-bd7d-78c463502503,45,Male,389294,10411.52,Married,Yes,Doctor,None,Yes,0,Urban,PhD,3,Cancer,Long-Term,Wealth Creation,life
+8445eb09-b889-4065-bb9f-8d1fd0a3dffe,55,Male,340109,22876.7,Divorced,Yes,Freelancer,None,Yes,2,Rural,Graduate,4,None,Long-Term,None,term
+a4a2c164-996e-4d4e-b7e8-84c615760217,46,Male,944704,86120.42,Married,No,Driver,Chronic,Yes,1,Rural,Graduate,1,None,Short-Term,Wealth Creation,life
+ba09459e-4ebf-402e-b729-0003d0e3bace,43,Female,2575949,169323.9,Divorced,Yes,Teacher,None,No,1,Urban,High School,6,None,Long-Term,Child Education,life
+4f46d57c-7cf7-46e5-915d-a0c362a98fee,28,Female,1116959,77587.97,Single,No,Engineer,None,No,1,Rural,PhD,1,None,Long-Term,Retirement,term
+85e5ecdf-aa21-47cb-bea5-b4af1e505bbc,54,Female,528262,29565.03,Married,Yes,Engineer,None,No,0,Urban,PhD,10,None,Lifetime,Child Education,term
+0264f743-d7e7-4f50-a268-01925cbf211e,51,Male,2389511,203018.28,Married,Yes,Teacher,None,Yes,3,Urban,Graduate,8,None,Lifetime,Child Education,term
+8b5ca01f-e637-44a6-a463-3999b53dc3f4,40,Male,624772,23954.58,Single,No,Engineer,None,No,2,Rural,High School,4,None,Long-Term,Wealth Creation,term
+6061f4e6-4115-46a2-8cb3-03afb78bbafe,60,Male,667427,60140.64,Single,Yes,Retired,None,Yes,3,Rural,High School,1,Diabetes,Short-Term,None,term
+351d5518-30ee-43a4-b1b3-e908f4eeb8d9,57,Female,717412,60628.66,Divorced,Yes,Engineer,None,No,0,Rural,High School,5,Diabetes,Short-Term,None,term
+09ae9a5f-d428-4949-8f3d-bc2180022dae,23,Male,202272,12399.22,Single,Yes,Engineer,Mild,Yes,3,Urban,PhD,10,Diabetes,Long-Term,None,auto
+4a67184b-1a24-4b01-9ce5-6bb7a68a8079,45,Male,883585,52532.57,Single,No,Freelancer,None,No,2,Rural,Postgraduate,4,Diabetes,Short-Term,Child Education,auto
+b14b2731-f95a-46a6-9f3c-cbc67d1840b8,33,Female,840682,69870.06,Divorced,Yes,Retired,None,Yes,0,Rural,Graduate,7,Diabetes,Lifetime,Wealth Creation,term
+811cc7d1-c7ea-4443-987f-692c5dd2440d,46,Female,212643,10489.81,Divorced,No,Retired,None,Yes,3,Rural,PhD,7,None,Long-Term,Wealth Creation,term
+b85b3a5f-1587-4266-80ae-235f712de2c2,58,Female,729157,15218.18,Married,No,Freelancer,Mild,No,3,Urban,High School,8,Diabetes,Lifetime,Wealth Creation,health
+b889dd16-6b1f-4488-90d2-bd8db3f72167,47,Female,653596,62157.08,Single,No,Freelancer,Chronic,Yes,2,Urban,Graduate,5,None,Short-Term,Retirement,health
+30bf6d3a-dc4b-45c2-bb7c-72be642f4839,65,Female,1542500,120853.16,Married,No,Retired,None,No,2,Urban,Graduate,3,Cancer,Long-Term,Retirement,term
+91d6d2ef-f8d6-41e3-bc02-424470890d7d,61,Male,290016,7469.07,Divorced,No,Driver,None,Yes,1,Rural,Graduate,9,Cancer,Lifetime,Retirement,life
+152812c7-8304-47cd-9c97-8c1a7095da70,67,Female,246461,5914.1,Divorced,No,Engineer,Mild,No,1,Urban,Postgraduate,10,None,Lifetime,Wealth Creation,health
+debdbdbb-8d8c-47d2-9b4f-6d6ef98c01d3,31,Female,1529316,145890.05,Divorced,No,Doctor,None,Yes,2,Rural,PhD,3,None,Short-Term,None,life
+6b10bfdd-880a-4a8f-abbe-3e306b345eb9,66,Male,695564,17865.45,Single,Yes,Retired,None,No,1,Rural,High School,6,None,Short-Term,Wealth Creation,term
+27a75312-fb0c-4db0-b087-850bcee58092,64,Male,1352094,85901.14,Single,No,Doctor,Chronic,Yes,2,Rural,High School,10,Heart Disease,Lifetime,Child Education,health
+aeafbfd6-20a3-420c-997e-17e9a4bf0b6c,18,Male,296890,11813.57,Divorced,No,Driver,None,Yes,0,Urban,PhD,2,Diabetes,Lifetime,Wealth Creation,auto
+8e861075-434e-4129-be4c-c7c108dd5bdd,64,Female,960904,29890.98,Divorced,Yes,Engineer,None,No,2,Rural,Postgraduate,9,Diabetes,Long-Term,Retirement,life
+ae146719-7dac-4e08-bce1-88add85094a7,25,Male,2005868,192334.47,Divorced,Yes,Retired,Mild,Yes,3,Urban,High School,5,Diabetes,Short-Term,Wealth Creation,auto
+8a72f440-1e81-45d5-8cee-73ee76a6e3d1,30,Male,681170,52789.96,Single,Yes,Retired,None,Yes,3,Rural,High School,4,Diabetes,Lifetime,Retirement,term
+a209e0c3-c434-4a98-9d41-70641d5c0aae,67,Female,828964,36490.35,Divorced,Yes,Doctor,None,Yes,0,Urban,High School,6,Cancer,Long-Term,Retirement,life
+4ed74c4b-6597-47b2-9c50-fafaaeb3bfa1,24,Male,226244,17271.45,Single,No,Driver,Chronic,No,2,Urban,High School,1,Cancer,Short-Term,None,auto
+470a1fab-4b62-4187-a45a-fef50c525db3,69,Female,373065,12534.83,Single,Yes,Doctor,None,No,1,Rural,PhD,9,Cancer,Lifetime,None,term
+a52fb8e9-5cd3-454c-9556-7322588530f3,67,Female,286060,8139.46,Single,Yes,Retired,None,No,2,Urban,PhD,9,None,Long-Term,Child Education,life
+5bed0eab-4104-420c-8e7f-07da41f66978,65,Male,541966,52152.18,Divorced,No,Freelancer,Mild,No,1,Urban,Graduate,9,None,Long-Term,Retirement,health
+68aff432-a9f8-4994-ab0f-bc1c017f22ee,40,Male,467443,16018.07,Married,Yes,Driver,Chronic,Yes,3,Urban,Graduate,2,None,Lifetime,Child Education,term
+17c443ae-bf75-4d13-8a54-5a93c5679e60,19,Male,826371,77695.2,Married,Yes,Driver,None,No,3,Urban,Postgraduate,6,Diabetes,Short-Term,None,life
+705e6e8a-5169-4389-9f9f-3df203fb24f5,42,Female,363409,13936.2,Single,Yes,Freelancer,None,Yes,3,Rural,High School,7,Cancer,Short-Term,Wealth Creation,term
+721d6785-bda4-4216-88b8-1b2805916d5d,64,Female,352722,13957.88,Divorced,Yes,Doctor,Mild,Yes,1,Rural,High School,4,None,Lifetime,Retirement,health
+a2f7662f-711c-4852-977a-de4f92e122a4,40,Female,416092,38299.11,Single,No,Doctor,Mild,No,2,Urban,Postgraduate,2,None,Lifetime,Wealth Creation,health
+ebd0ef5b-92b6-4919-b186-aeb158ac0a26,39,Male,376469,21048.69,Divorced,Yes,Retired,Mild,Yes,3,Rural,Graduate,3,Cancer,Long-Term,Retirement,life
+75ed0ae5-d8a0-473f-8a7e-a9c6fa93c240,44,Male,266406,10863.82,Single,Yes,Doctor,None,No,3,Urban,Graduate,3,None,Lifetime,Retirement,life
+d17ce5dd-2fa4-4212-92e7-255dcd9f8441,63,Male,401783,19885.35,Married,No,Doctor,Chronic,Yes,3,Rural,High School,10,Diabetes,Short-Term,None,health
+d5ce70d2-978b-4574-8530-bbddd4aaa085,56,Male,381602,24376.5,Married,Yes,Doctor,None,Yes,0,Rural,PhD,9,Diabetes,Lifetime,Wealth Creation,life
+ca118950-2758-4d3b-b6c3-55b3a3798971,63,Male,875359,70095.68,Divorced,No,Doctor,None,No,0,Urban,PhD,7,None,Short-Term,Wealth Creation,term
+701e802d-b8a7-4483-92d0-63406bf5e513,57,Female,1071868,40722.19,Divorced,No,Engineer,None,No,3,Rural,Graduate,7,Heart Disease,Lifetime,Retirement,life
+910d14e4-6373-4eae-974d-b7497d94e4a8,25,Male,946066,36711.91,Divorced,Yes,Retired,Mild,No,1,Urban,Postgraduate,4,None,Short-Term,Retirement,term
+7666bcc1-8be0-413c-880c-d0ce12009bfb,48,Female,1679816,76428.24,Married,Yes,Freelancer,Chronic,Yes,2,Urban,Graduate,1,Cancer,Long-Term,None,term
+489bacdc-6a92-481d-bb5c-b925de400756,30,Female,299381,16571.85,Single,Yes,Teacher,Chronic,No,0,Urban,Graduate,3,None,Long-Term,None,term
+04195cbe-0d28-4af3-961d-5197df8b6c2d,41,Female,310401,8494.71,Married,Yes,Freelancer,None,No,1,Urban,Postgraduate,5,None,Short-Term,Retirement,life
+4c116d20-8c8d-4d76-91db-43da11ab9e95,23,Female,736540,37716.82,Single,No,Teacher,None,Yes,2,Rural,Graduate,7,None,Long-Term,None,auto
+f4e873d0-0244-4451-8b88-f320f5da5ea3,35,Female,590115,40500.01,Single,No,Driver,Mild,No,0,Urban,PhD,1,None,Short-Term,Child Education,life
+cf84fed2-eb25-4ddf-bc3b-e2515a78974f,63,Male,376094,16554.72,Single,No,Retired,None,Yes,2,Rural,Graduate,3,None,Lifetime,Wealth Creation,health
+93b73dcb-0183-470d-a0ee-62123dec8116,39,Female,913649,45209.7,Divorced,No,Retired,Mild,No,1,Urban,High School,10,None,Lifetime,None,term
+5a2864b2-33c2-4f7a-bc2d-f89cc45f3b20,66,Female,575145,35421.32,Divorced,No,Freelancer,None,No,3,Urban,Graduate,3,None,Long-Term,Child Education,health
+07caed53-e422-4445-9bdc-9f7fee0b79ea,29,Male,906043,88117.37,Divorced,Yes,Engineer,Chronic,Yes,1,Rural,PhD,1,Heart Disease,Long-Term,Child Education,auto
+61adf9b3-197e-4428-8de4-f12fdea546bb,44,Male,2889613,133453.52,Divorced,No,Engineer,Mild,Yes,3,Rural,Postgraduate,10,None,Long-Term,Wealth Creation,auto
+40dfae07-81aa-44bb-8657-53b9a5f22580,33,Female,969796,63771.6,Single,Yes,Driver,Chronic,No,2,Rural,High School,10,None,Long-Term,Child Education,life
+7da79db4-edb7-4ebb-bea8-b64888136750,55,Male,886256,70911.99,Married,Yes,Driver,Chronic,No,1,Rural,Postgraduate,10,Cancer,Lifetime,Child Education,health
+3d3dd7d4-40fd-43a1-9758-90e2b1582dcf,70,Female,851936,72947.7,Divorced,Yes,Doctor,None,Yes,0,Rural,Graduate,2,Cancer,Short-Term,Wealth Creation,life
+d4b9b96f-acff-49bf-a5ad-1778b13bacb3,25,Male,858007,22837.49,Married,No,Doctor,Mild,No,0,Urban,High School,5,None,Long-Term,Child Education,life
+7d0099e1-94d2-4449-aea2-8646687b1217,67,Female,427514,18289.18,Single,Yes,Teacher,None,Yes,1,Urban,Postgraduate,8,Heart Disease,Long-Term,Wealth Creation,life
+7932aa31-2990-4f1d-98de-18bc927531d0,27,Male,919137,49444.8,Divorced,Yes,Freelancer,None,No,2,Urban,Postgraduate,8,Heart Disease,Short-Term,Retirement,term
+1ad19655-9fdc-4286-8035-4012b1e3145b,52,Female,894162,18668.29,Single,No,Doctor,Mild,No,1,Urban,Graduate,2,Heart Disease,Lifetime,Retirement,health
+7791f090-e8d3-4fea-907b-b437248533e2,55,Female,308994,6657.59,Married,Yes,Retired,None,Yes,3,Rural,High School,10,Diabetes,Lifetime,Retirement,term
+8f65b126-7ca5-450f-94dd-9978a298a9d1,37,Male,603781,31606.15,Married,Yes,Driver,Chronic,Yes,3,Urban,High School,6,Cancer,Short-Term,Wealth Creation,term
+8a53c8bf-206f-45a3-8d32-57a7cae9213f,63,Male,2063945,77924.68,Single,Yes,Teacher,Mild,Yes,3,Rural,PhD,7,None,Long-Term,None,health
+f61e25a7-0c0c-4bd6-a4ef-1f7b6258b648,52,Female,284274,21116.08,Single,No,Engineer,None,Yes,3,Urban,High School,5,None,Lifetime,Retirement,term
+62c16c2e-ce2d-4622-b12d-0b07309a449a,57,Male,1424458,69926.35,Divorced,Yes,Teacher,Chronic,Yes,0,Rural,High School,10,None,Short-Term,None,health
+56222708-9af3-41fe-a21b-bc96a7b1d046,70,Female,323672,18428.07,Married,Yes,Driver,Mild,No,1,Urban,High School,4,Heart Disease,Lifetime,None,health
+a3ee8838-f9b5-4cda-aa51-3707c9cc033d,67,Male,643236,17271.48,Single,No,Teacher,None,Yes,3,Urban,High School,10,None,Lifetime,Retirement,life
+10b72d0a-a4af-4b21-9449-3684df0fa6e4,54,Female,769812,56912.42,Married,Yes,Retired,None,Yes,3,Rural,Graduate,3,Diabetes,Long-Term,Retirement,term
+77968f9d-95f2-4b3b-99de-62bd5d67b126,62,Male,562151,34202.03,Single,Yes,Freelancer,None,No,3,Urban,Graduate,9,Cancer,Long-Term,None,life
+53629b07-3fab-4322-b64e-fb4373a6269a,62,Female,1477508,32415.03,Divorced,No,Retired,Mild,No,3,Urban,Postgraduate,10,None,Lifetime,Retirement,health
+d9ebac37-b5f1-4bc6-9d20-46db07b44a73,26,Female,497337,18904.89,Single,Yes,Retired,None,No,3,Urban,Postgraduate,2,Heart Disease,Short-Term,None,term
+e3216038-351b-4ec6-a1ab-4268cf23ebf7,18,Female,777619,63885.98,Married,No,Driver,Mild,No,3,Rural,Graduate,10,None,Lifetime,Child Education,auto
+a3264a8e-0208-46b2-90d4-c991f083f1da,23,Male,935003,48279.64,Married,Yes,Teacher,None,Yes,0,Urban,High School,5,Heart Disease,Lifetime,Child Education,auto
+b7b2e654-dd80-4c4c-acfb-9f639479a015,31,Male,746986,26278.04,Married,No,Freelancer,None,Yes,0,Urban,Postgraduate,7,Heart Disease,Short-Term,None,health
+fdb202aa-d5ad-404f-b437-3be2b6f4a453,44,Male,337229,13903.32,Divorced,Yes,Retired,Mild,No,0,Urban,Postgraduate,8,None,Short-Term,Wealth Creation,life
+453a1b2f-0146-45a9-b1d4-8cf8f96b465b,59,Female,403946,13296.55,Married,Yes,Retired,None,Yes,0,Urban,Postgraduate,5,Diabetes,Long-Term,Retirement,term
+d0e7b2be-475d-45a4-a148-7a279d35ad3d,52,Male,853890,70335.68,Married,No,Teacher,Chronic,No,2,Rural,High School,7,None,Lifetime,Child Education,health
+00dc71a4-184b-418c-9cdd-2f06666f61c0,37,Male,545402,17729.28,Married,No,Engineer,Chronic,No,2,Rural,High School,4,Cancer,Short-Term,Wealth Creation,term
+35e68277-6e1b-4291-9ff4-4fe75d9bb88c,27,Female,447605,28415.84,Single,Yes,Driver,Chronic,No,3,Rural,Postgraduate,8,Cancer,Short-Term,Retirement,term
+44a6a8b9-5654-4a51-a4d6-ab80673fe200,61,Male,987281,38120.71,Divorced,No,Teacher,Mild,Yes,3,Rural,Postgraduate,8,None,Long-Term,None,health
+daabad14-1483-4d40-9c01-335fb662f2d6,56,Female,917963,89725.17,Divorced,No,Driver,Chronic,No,2,Urban,Graduate,10,Cancer,Long-Term,Wealth Creation,health
+d4559c0a-14c5-4725-a748-9beed1ed6c52,60,Male,950512,84308.01,Single,No,Retired,None,No,0,Rural,PhD,10,Heart Disease,Short-Term,Retirement,auto
+922c09e8-db23-4381-8ed3-f416246cd9c2,57,Male,220698,5304.86,Divorced,No,Teacher,Chronic,Yes,1,Rural,High School,1,None,Long-Term,Child Education,health
+1dee5910-d4e4-4824-ae2c-047eeaafa53d,59,Female,210833,12114.45,Divorced,No,Driver,Mild,No,2,Rural,Graduate,4,Heart Disease,Short-Term,Child Education,health
+aacfbd4d-2d19-4ef9-a069-ce6bef8b787e,41,Female,886172,49955.33,Single,Yes,Teacher,Chronic,Yes,0,Urban,Graduate,9,None,Long-Term,Child Education,life
+019716e3-7272-4bcc-9fc1-665f524e47d0,38,Female,773241,63340.72,Single,Yes,Doctor,None,No,1,Urban,Postgraduate,2,None,Short-Term,None,life
+fc3774c1-9cee-4b24-92fe-1660f0fb3c39,43,Female,473709,22471.65,Divorced,Yes,Freelancer,Mild,No,0,Rural,Postgraduate,8,Cancer,Long-Term,None,life
+bf04b19a-9c87-4409-9ede-afe143bcc0b3,57,Male,291703,10033.24,Married,No,Doctor,Mild,No,3,Urban,PhD,5,Heart Disease,Long-Term,Retirement,health
+4b9f52cd-e400-43ed-a13f-848f0ea44340,27,Male,728945,63406.95,Single,Yes,Driver,Mild,No,3,Rural,Postgraduate,1,Heart Disease,Short-Term,Wealth Creation,term
+86c6166d-8e77-4dae-9bff-8e8327369a18,70,Male,1705238,139910.06,Single,Yes,Retired,None,Yes,3,Rural,PhD,2,Diabetes,Short-Term,Wealth Creation,life
+ab4914e7-15a0-4884-8c1f-ac7fb0891ddc,48,Female,299159,15702.35,Divorced,Yes,Engineer,Mild,No,2,Urban,Graduate,10,Cancer,Lifetime,Wealth Creation,life
+a7cabb8a-6254-4362-85ea-0e95bb5c5f45,25,Male,785517,37834.6,Married,No,Engineer,Mild,Yes,1,Rural,Graduate,1,Diabetes,Short-Term,Child Education,auto
+9d3bd351-31da-446b-a855-98629285efb1,45,Male,482506,36089.9,Single,No,Engineer,None,No,1,Urban,High School,2,Diabetes,Short-Term,Wealth Creation,life
+c2cb8c4d-c373-4bf3-b464-901396009d01,49,Female,523214,33801.91,Married,No,Doctor,None,No,2,Rural,High School,1,Diabetes,Long-Term,None,auto
+b1527534-2154-4310-85bc-238238457690,57,Female,2916733,59372.7,Divorced,Yes,Freelancer,None,No,0,Urban,Graduate,4,None,Lifetime,Retirement,life
+3627657d-2c61-40c4-8a48-999af911a693,44,Female,512972,28930.04,Single,Yes,Doctor,None,No,2,Urban,High School,8,Heart Disease,Lifetime,Wealth Creation,term
+7d22d840-7552-4244-8b3c-15deef556762,50,Female,760802,53592.17,Single,Yes,Doctor,Chronic,Yes,1,Urban,High School,9,None,Long-Term,None,life
+49d8f899-2fe9-41f7-9d1c-f95803205d24,49,Male,919220,25224.9,Divorced,No,Freelancer,None,Yes,0,Urban,PhD,5,None,Lifetime,None,auto
+d52ed120-1927-4f1a-990c-51262cb15ab4,58,Female,2419607,175802.38,Single,No,Freelancer,None,Yes,0,Urban,PhD,5,Diabetes,Short-Term,Child Education,auto
+b72d0f77-9561-47c0-839c-1c2e90a9b784,27,Male,2512923,167737.53,Single,No,Retired,Chronic,Yes,1,Rural,PhD,5,Diabetes,Long-Term,None,auto
+aaecbf91-c65d-4f7f-8f37-64a266e9d22d,28,Male,952609,31644.32,Divorced,Yes,Retired,Chronic,No,3,Urban,Graduate,10,Diabetes,Short-Term,None,term
+9e007118-b4a9-4ea7-84a3-2a0b968ef4a4,50,Male,427068,12852.9,Divorced,No,Retired,None,Yes,2,Rural,PhD,3,Diabetes,Short-Term,Retirement,life
+c6d97308-2b95-45d0-a9ca-182ba28979f4,66,Female,601790,18006.17,Married,No,Engineer,Mild,No,3,Rural,PhD,4,None,Long-Term,Child Education,health
+2c6d9d4f-9488-4059-a467-aa5c0f908d7c,42,Male,899262,77755.27,Divorced,No,Doctor,None,No,0,Urban,Postgraduate,10,Heart Disease,Short-Term,Wealth Creation,term
+21619efc-f414-4a19-851a-f1de07d919e5,66,Male,815333,80213.15,Single,No,Driver,Chronic,Yes,1,Urban,Postgraduate,1,Cancer,Lifetime,Child Education,health
+beb28f36-c9c3-4ac7-9d73-bf6afa0cd4aa,30,Male,854499,69261.18,Married,No,Freelancer,None,Yes,2,Rural,Postgraduate,7,Cancer,Long-Term,Child Education,term
+30248c86-58c6-4c60-aff9-7d6c7d7425b7,55,Female,492812,21260.85,Single,No,Freelancer,Chronic,Yes,0,Urban,PhD,9,None,Short-Term,Wealth Creation,health
+e07409f9-3afa-420f-afc7-47499a4fba14,24,Female,324505,7906.16,Divorced,Yes,Teacher,None,No,1,Rural,High School,4,None,Short-Term,Wealth Creation,term
+cfd9f57a-2f66-4267-9018-cb9b77b42c45,40,Male,1379193,94872.09,Married,No,Engineer,None,Yes,0,Urban,Graduate,4,None,Lifetime,Retirement,term
+e71e46ad-cc6d-4044-b707-5859e9084b3a,52,Female,1836792,87588.83,Divorced,Yes,Engineer,Chronic,Yes,3,Rural,Postgraduate,1,Heart Disease,Lifetime,None,health
+18aae9db-32ab-44f1-b0ca-e19fd7beec04,49,Male,291713,28232.99,Single,No,Retired,None,No,0,Rural,Postgraduate,1,None,Long-Term,Wealth Creation,health
+ec398cf2-7df1-429a-8661-70752e4db3fa,29,Male,857475,31898.74,Married,Yes,Engineer,Chronic,No,1,Urban,Graduate,4,Diabetes,Long-Term,None,life
+e48a76de-b027-49e5-ac18-df74213192a0,19,Male,906056,70953.82,Divorced,Yes,Freelancer,Mild,No,2,Rural,High School,1,None,Short-Term,None,life
+1f0bf6fd-59eb-405d-b44c-e914dbf56e61,26,Male,460518,22117.94,Single,Yes,Teacher,Mild,Yes,0,Rural,Graduate,6,Heart Disease,Short-Term,Child Education,auto
+cda99d63-f84f-4289-a768-4b2a0b4dc380,40,Female,845167,65550.69,Single,Yes,Freelancer,None,Yes,0,Rural,High School,1,Diabetes,Short-Term,Wealth Creation,life
+7c44f537-017a-47d8-bec2-019c9357db86,68,Female,293409,15894.92,Single,No,Retired,Mild,Yes,2,Rural,Graduate,7,Cancer,Lifetime,None,health
+8899e2dd-dde7-482c-8eef-41e9495684dd,18,Male,487473,26506.08,Divorced,Yes,Driver,None,No,2,Urban,High School,8,None,Short-Term,Child Education,term
+cdeeaaec-2fb1-476f-b6a6-467ee1b4613d,70,Female,349749,34733.45,Married,Yes,Engineer,Mild,No,3,Urban,Graduate,2,None,Long-Term,None,health
+9f34cc7c-31fc-4217-80f7-d91a7ff96b7b,44,Male,2328448,50972.35,Married,Yes,Driver,Chronic,No,0,Urban,PhD,3,None,Short-Term,None,life
+4ebf8bb8-ce56-49a6-983f-c9264656a488,31,Male,526733,10573.14,Single,Yes,Doctor,Mild,No,1,Rural,Postgraduate,2,Heart Disease,Lifetime,Child Education,term
+d3c0ab79-5bd5-42d9-8d7d-5738a10efab4,24,Female,460072,9922.93,Married,Yes,Driver,Mild,Yes,2,Rural,Postgraduate,4,Diabetes,Short-Term,None,auto
+c1b7c89e-dad1-4891-bc01-f1bea9641ad2,63,Male,753428,24489.37,Single,No,Driver,None,No,2,Rural,Graduate,5,None,Long-Term,Wealth Creation,life
+d6b5b0f6-ff47-4309-b554-0c63cae064a7,38,Male,1961620,120069.77,Married,No,Driver,None,No,0,Rural,High School,1,Diabetes,Long-Term,Retirement,term
+93f205e3-7bea-43fe-a17c-73feba1f961f,41,Female,407601,9094.27,Married,No,Doctor,Chronic,Yes,3,Rural,PhD,1,Cancer,Long-Term,None,term
+f7902863-54dd-4b31-b947-1b101c08024b,44,Female,290339,6223.53,Married,Yes,Driver,None,Yes,3,Rural,Graduate,3,None,Short-Term,Retirement,life
+091165a1-b1f3-43bf-b26f-9124e062162b,44,Female,609043,54990.28,Married,No,Driver,None,No,3,Urban,PhD,8,Cancer,Short-Term,Child Education,life
+631cc17c-dec1-4b53-9efd-20eb7a93d53e,66,Male,2170832,69855.86,Married,Yes,Driver,None,Yes,3,Urban,PhD,9,Cancer,Long-Term,Retirement,life
+b4618a6c-546b-4b63-b225-41fd78d4e98b,60,Female,1243490,119005.5,Single,No,Teacher,None,Yes,1,Rural,High School,5,Heart Disease,Short-Term,None,term
+eef0679d-593b-4eb5-af0d-425c8a2eee4f,63,Male,2319053,150982.19,Single,Yes,Retired,None,Yes,2,Rural,High School,7,None,Lifetime,Child Education,term
+d76bcd19-35dc-47e4-aa44-588716b5b683,60,Male,952077,50574.05,Married,No,Teacher,None,No,3,Rural,Postgraduate,4,None,Short-Term,Retirement,auto
+ee523eec-4052-4e68-8f20-90b6f7c5fb6e,34,Female,239563,7552.83,Single,Yes,Driver,Chronic,Yes,0,Urban,Graduate,3,None,Short-Term,None,life
+94815935-08cd-49d7-aa9a-a5c6ace29a47,58,Male,650911,39625.44,Single,Yes,Engineer,Chronic,Yes,2,Urban,Postgraduate,8,Cancer,Lifetime,Child Education,health
+9784a95f-1e51-4858-b9fc-81e78f203738,57,Male,572332,14942.35,Married,Yes,Freelancer,Chronic,Yes,3,Rural,Graduate,2,Diabetes,Long-Term,Retirement,health
+e6a8d203-24c9-4d00-a09d-b057983c19c5,47,Male,926486,78859.51,Single,Yes,Retired,Mild,Yes,0,Urban,Graduate,5,None,Lifetime,Retirement,life
+02830737-009e-48e2-b0d2-1be7a46e1d9e,69,Male,287293,8656.2,Divorced,Yes,Driver,None,No,3,Rural,Postgraduate,6,Cancer,Long-Term,Retirement,life
+190f0093-f652-4240-983a-a19c20f8fd00,67,Male,1097603,51527.89,Divorced,Yes,Retired,None,No,0,Rural,Postgraduate,5,Diabetes,Short-Term,Child Education,term
+84012ee1-5eb6-4d39-8acf-6ea0a9781059,40,Female,1301583,42967.93,Divorced,No,Freelancer,Chronic,Yes,0,Urban,Graduate,8,Heart Disease,Long-Term,None,auto
+2dc2c240-22e0-4569-9ef9-96da30d61479,40,Female,510350,41846.39,Married,Yes,Freelancer,Chronic,Yes,0,Rural,PhD,10,None,Short-Term,None,term
+ae2a01f1-f5f4-4da4-b6a2-58bf8b807e77,19,Female,320576,23874.68,Divorced,Yes,Freelancer,None,Yes,0,Rural,Graduate,1,Heart Disease,Long-Term,Wealth Creation,auto
+e53d91a0-ddd9-41e1-b47d-0c5f2b216a49,60,Female,360144,28430.03,Single,No,Retired,Mild,Yes,2,Urban,PhD,5,None,Lifetime,Child Education,health
+5cfd532b-716f-47a3-9910-f66cfe75f9cb,44,Male,327426,25259.14,Single,No,Driver,Mild,Yes,0,Rural,Postgraduate,9,Diabetes,Long-Term,Retirement,auto
+0439c21f-2425-412f-8551-d89e4a1b0b8e,55,Female,254481,23374.8,Married,Yes,Driver,None,No,1,Rural,High School,1,Heart Disease,Lifetime,None,term
+ec983e90-af9b-4fe1-8b53-f9ecacca252e,27,Male,683473,63891.83,Married,Yes,Driver,None,Yes,1,Rural,Postgraduate,7,Cancer,Short-Term,Retirement,auto
+748323a3-58c9-4f1a-94e0-b9fdd4145981,69,Male,886187,74725.49,Single,No,Teacher,Chronic,Yes,0,Rural,Postgraduate,9,None,Short-Term,None,health
+43df441e-2258-4c7c-beb7-09024c883ec7,42,Male,2879040,141801.19,Single,No,Teacher,Chronic,Yes,1,Rural,Graduate,1,Diabetes,Short-Term,Wealth Creation,auto
+5b83c10a-58a6-4dd1-9caa-6ed58684b799,62,Female,219555,9270.74,Married,No,Retired,None,No,0,Urban,Postgraduate,7,None,Long-Term,Retirement,auto
+8a3b2f99-4329-4cd8-a97e-f4daf6eb3a8a,26,Male,295490,6413.81,Single,Yes,Driver,Chronic,Yes,1,Urban,High School,1,Diabetes,Long-Term,Child Education,auto
+a111f3b0-c6c8-4313-bc14-41e47ebe61d8,63,Female,304170,15345.73,Divorced,Yes,Engineer,Chronic,No,3,Urban,Graduate,7,None,Lifetime,Wealth Creation,health
+81df2afd-fa0d-483e-b705-9f5e2c6e2079,41,Male,285495,26083.17,Married,No,Driver,None,Yes,1,Urban,Postgraduate,4,Diabetes,Short-Term,Child Education,life
+043f0c18-2f54-499c-a587-ebea5f0bf3b8,41,Female,941938,78184.89,Married,Yes,Driver,Mild,Yes,1,Urban,Postgraduate,3,None,Long-Term,Wealth Creation,term
+daf6de5c-92e5-4a77-91df-29dfc41d454f,48,Female,239768,18920.71,Single,Yes,Driver,None,Yes,0,Rural,Postgraduate,7,Cancer,Long-Term,Retirement,life
+b7978442-1a4a-4e50-8f68-9267231ebeca,34,Female,303533,11120.32,Married,Yes,Doctor,Chronic,No,0,Urban,Graduate,2,Heart Disease,Long-Term,Retirement,term
+ec9860fc-569c-465d-8674-b8156e9cf8c4,29,Female,351208,9397.75,Single,No,Engineer,Mild,Yes,0,Rural,Postgraduate,9,None,Long-Term,Retirement,auto
+2873e406-0a97-416b-847b-165bcaf01e9d,39,Female,361944,19062.75,Divorced,No,Doctor,Chronic,Yes,2,Urban,High School,6,None,Short-Term,Child Education,health
+f58462a5-2126-4917-9577-b331ea682207,67,Female,1920625,172272.5,Married,No,Teacher,Chronic,No,0,Urban,Graduate,2,None,Short-Term,Wealth Creation,health
+4466c99c-6959-44f3-821a-a8d767e88231,63,Female,925325,66604.95,Single,Yes,Engineer,None,Yes,3,Urban,PhD,8,None,Short-Term,Wealth Creation,life
+6d7750a1-416f-49ab-a0f2-377c73c1227d,39,Female,348936,29198.93,Single,No,Teacher,Mild,Yes,2,Urban,PhD,7,Diabetes,Lifetime,Child Education,auto
+1a6251f3-eff0-4fda-9b62-e6d3f4f33ae6,48,Female,718382,59270.09,Married,Yes,Engineer,None,No,0,Urban,Postgraduate,8,None,Short-Term,Wealth Creation,term
+f9b8408a-227d-4e68-be16-298b83782a63,70,Female,388993,10471.52,Divorced,Yes,Engineer,None,Yes,3,Urban,Postgraduate,10,Diabetes,Long-Term,Child Education,term
+d2ed2081-195d-412e-a17a-0eeb32e32d0c,52,Female,812433,63525.86,Single,Yes,Engineer,None,Yes,1,Rural,PhD,8,Diabetes,Short-Term,Child Education,life
+0ce33d3f-e3c8-41f9-b9fa-46a025d45d7a,24,Female,1669793,63039.7,Divorced,Yes,Freelancer,Mild,No,1,Rural,Postgraduate,8,Cancer,Short-Term,Retirement,life
+635090ec-ab47-466f-8876-e36064bc88fd,20,Male,963145,92915.85,Single,Yes,Doctor,Chronic,No,2,Urban,PhD,7,None,Long-Term,None,life
+122b10b4-cfcc-4c04-a19a-bdc5fa4dc221,34,Male,905625,54900.98,Single,Yes,Retired,None,No,2,Urban,High School,9,Heart Disease,Long-Term,Child Education,term
+a6273b80-ff9a-4e0d-923f-588babf73926,37,Male,798666,20660.8,Married,Yes,Doctor,Chronic,Yes,3,Rural,PhD,9,Diabetes,Long-Term,None,term
+601313dd-7a9c-41f5-8911-8446d77ee1e6,29,Female,321678,29749.31,Married,Yes,Teacher,Mild,Yes,1,Rural,PhD,6,Cancer,Short-Term,Child Education,auto
+1ffa19d1-4e10-4ce7-96d6-2e04b27848b1,52,Male,881853,34073.0,Single,No,Driver,Mild,Yes,0,Rural,Postgraduate,9,Diabetes,Short-Term,Retirement,health
+4eaa1f25-59f9-4d47-bf3b-e2706dcac09d,39,Female,2768375,78322.03,Divorced,Yes,Retired,Mild,Yes,3,Urban,Graduate,2,Heart Disease,Short-Term,Retirement,term
+7ca6f53f-8df0-482d-8683-ff3f3b4489f2,55,Male,419424,13402.26,Single,No,Driver,None,No,3,Rural,Postgraduate,2,None,Long-Term,None,auto
+e05cf707-b7d9-4232-ac4d-2bc456dd321e,57,Female,384461,34085.33,Divorced,No,Freelancer,None,No,1,Rural,High School,6,Cancer,Lifetime,Retirement,term
+d0e646e8-77d6-410b-8ce9-15031e7ef5fd,35,Male,284911,8795.45,Single,Yes,Freelancer,Mild,No,2,Rural,High School,2,Heart Disease,Short-Term,None,term
+4bdfe4a0-1ab6-4df6-8846-733c1f96af58,62,Male,764264,61529.94,Single,Yes,Retired,None,Yes,0,Urban,High School,5,None,Long-Term,Retirement,term
+54940e6f-69d8-40e5-902b-36774987600d,21,Female,657919,56184.89,Married,Yes,Teacher,Chronic,No,3,Rural,High School,9,Diabetes,Short-Term,None,life
+20d8b698-e709-4367-b9db-74989fe9eaef,43,Male,908579,67878.49,Married,No,Doctor,Mild,Yes,3,Rural,Postgraduate,9,None,Long-Term,Retirement,life
+78444462-98be-4919-a5fc-5108f5eaf5c3,56,Female,1515216,65747.11,Married,No,Doctor,Chronic,Yes,2,Urban,Graduate,4,Heart Disease,Lifetime,Retirement,health
+bf01289d-f253-4f85-8e12-5d81d912e5cc,45,Female,299087,26380.19,Single,No,Freelancer,Chronic,No,3,Rural,Postgraduate,3,Heart Disease,Short-Term,None,health
+eed9b191-0eda-4d44-b406-fd7172ef0d02,57,Female,459341,22440.87,Divorced,No,Freelancer,None,No,3,Rural,Graduate,1,Heart Disease,Short-Term,None,health
+3a046d23-ee9c-4035-a847-586d1705d547,27,Male,311730,30991.97,Married,No,Teacher,Chronic,No,1,Rural,PhD,6,None,Lifetime,None,auto
+867465be-357a-4623-a580-2d7c44430c2b,20,Female,2421069,240055.62,Divorced,No,Engineer,None,No,3,Urban,Graduate,4,Heart Disease,Long-Term,Retirement,term
+4b7345ff-64c2-43f4-b194-d31b1d438cb5,52,Male,586147,48677.03,Married,No,Driver,Chronic,Yes,2,Urban,Postgraduate,10,None,Long-Term,Wealth Creation,health
+64ec2973-9edc-4b4f-ba3c-362a260c481c,53,Male,949363,34311.63,Divorced,No,Freelancer,Mild,No,3,Rural,PhD,2,Heart Disease,Short-Term,Wealth Creation,health
+4e72a0a0-43d7-42a4-8aeb-2286eb961287,28,Female,710084,51398.18,Single,Yes,Driver,Chronic,Yes,0,Urban,High School,7,Heart Disease,Lifetime,Child Education,auto
+45e265f7-af24-4020-af17-f4f0701ad924,58,Female,784167,56859.95,Divorced,Yes,Teacher,Chronic,Yes,3,Rural,Graduate,1,Diabetes,Long-Term,None,health
+d0ecc1ae-873f-424a-8541-1350644d977f,34,Male,220300,11983.12,Married,Yes,Teacher,Mild,No,3,Rural,Postgraduate,9,Cancer,Short-Term,Retirement,term
+ef06eaec-810f-4ece-9c62-3c195201d1ea,27,Male,388774,17929.44,Divorced,Yes,Freelancer,None,Yes,1,Rural,Postgraduate,4,None,Short-Term,Wealth Creation,auto
+cf8f8d87-1f7e-4fdf-860f-7b95a04f831f,60,Male,657467,34956.72,Single,No,Driver,Chronic,No,1,Urban,Postgraduate,9,None,Long-Term,None,health
+e65a0233-b128-4573-8259-7818626b67fe,37,Male,472769,18178.8,Single,No,Teacher,None,Yes,0,Rural,Postgraduate,6,None,Short-Term,Child Education,health
+c641bf5e-6493-49cf-b9c0-39cc94eaec4e,61,Male,477643,31348.26,Divorced,Yes,Doctor,Mild,Yes,3,Urban,Postgraduate,5,Cancer,Short-Term,Child Education,health
+4d78ccb4-c3ab-46de-b5de-6a7e80625dc9,68,Female,647869,25749.0,Divorced,Yes,Retired,None,No,0,Rural,PhD,5,Diabetes,Short-Term,Retirement,life
+1505a374-5526-4fb3-9f26-9ccaade3999b,32,Male,295355,10037.24,Divorced,No,Driver,Mild,Yes,0,Rural,Graduate,7,None,Long-Term,None,life

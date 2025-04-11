@@ -1,72 +1,46 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { useAuth } from '@/contexts/AuthContext';
-import { PolicyComparisonService, Policy, UserPreferences } from '@/lib/policyComparison';
-import RoleGuard from '@/components/auth/RoleGuard';
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { collection, doc, getDoc } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
+import { Policy } from '@/types/policy';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Separator } from '@/components/ui/separator';
 
 export default function PolicyComparison() {
-  const router = useRouter();
   const searchParams = useSearchParams();
-  const { user, userProfile } = useAuth();
-  const [loading, setLoading] = useState(true);
   const [policies, setPolicies] = useState<Policy[]>([]);
-  const [recommendations, setRecommendations] = useState<Policy[]>([]);
-  const [bestMatches, setBestMatches] = useState<{
-    premium: Policy | null;
-    coverage: Policy | null;
-    flexibility: Policy | null;
-  }>({
-    premium: null,
-    coverage: null,
-    flexibility: null
-  });
-  const [userPreferences, setUserPreferences] = useState<UserPreferences>({
-    age: 30,
-    occupation: '',
-    income: 0,
-    maritalStatus: 'single',
-    dependents: 0,
-    financialGoals: [],
-    existingPolicies: [],
-    riskAppetite: 'medium'
-  });
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const policyIds = searchParams.get('policies')?.split(',') || [];
-    if (policyIds.length < 2) {
-      router.push('/dashboard/policies');
-      return;
-    }
+    const fetchPolicies = async () => {
+      const policyIds = searchParams.get('policies')?.split(',') || [];
+      if (policyIds.length === 0) return;
 
-    fetchComparisonData(policyIds);
-  }, [searchParams]);
-
-  const fetchComparisonData = async (policyIds: string[]) => {
-    try {
-      setLoading(true);
-      const comparisonService = PolicyComparisonService.getInstance();
-      
-      // Get policy comparison
-      const comparison = await comparisonService.comparePolicies(policyIds);
-      setPolicies(comparison.policies);
-      setBestMatches(comparison.bestMatches);
-
-      // Get recommendations if user is logged in
-      if (user && userProfile) {
-        const recommendations = await comparisonService.getRecommendations(
-          userProfile,
-          userPreferences
+      try {
+        const policiesData = await Promise.all(
+          policyIds.map(async (id) => {
+            const docRef = doc(collection(db, 'policies'), id);
+            const docSnap = await getDoc(docRef);
+            if (docSnap.exists()) {
+              return { id: docSnap.id, ...docSnap.data() } as Policy;
+            }
+            return null;
+          })
         );
-        setRecommendations(recommendations);
+
+        setPolicies(policiesData.filter((p): p is Policy => p !== null));
+      } catch (error) {
+        console.error('Error fetching policies:', error);
+      } finally {
+        setLoading(false);
       }
-    } catch (error) {
-      console.error('Error fetching comparison data:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
+    };
+
+    fetchPolicies();
+  }, [searchParams]);
 
   if (loading) {
     return (
@@ -76,202 +50,132 @@ export default function PolicyComparison() {
     );
   }
 
+  if (policies.length === 0) {
+    return (
+      <div className="text-center py-12">
+        <h3 className="text-lg font-medium text-gray-900">No policies to compare</h3>
+        <p className="mt-2 text-sm text-gray-500">
+          Please select policies to compare from the policies page
+        </p>
+      </div>
+    );
+  }
+
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR',
+      maximumFractionDigits: 0,
+    }).format(amount);
+  };
+
   return (
-    <RoleGuard allowedRoles={['user', 'insurer', 'admin']}>
-      <div className="space-y-6">
-        <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-semibold text-gray-900">Policy Comparison</h1>
-          <button
-            onClick={() => router.push('/dashboard/policies')}
-            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
-          >
-            Back to Policies
-          </button>
-        </div>
+    <div className="space-y-6">
+      <h1 className="text-2xl font-semibold text-gray-900">Policy Comparison</h1>
 
-        {/* Best Matches Section */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {bestMatches.premium && (
-            <div className="bg-white overflow-hidden shadow rounded-lg">
-              <div className="p-5">
-                <h3 className="text-lg font-medium text-gray-900">Best Premium</h3>
-                <p className="mt-1 text-sm text-gray-500">{bestMatches.premium.provider}</p>
-                <p className="mt-2 text-2xl font-semibold text-indigo-600">
-                  ₹{bestMatches.premium.premium.toLocaleString()}
-                </p>
-              </div>
-            </div>
-          )}
+      <div className="grid grid-cols-1 gap-6">
+        {/* Basic Information */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Basic Information</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-[200px_repeat(auto-fit,minmax(200px,1fr))] gap-4">
+              <div className="font-medium text-gray-500">Provider</div>
+              {policies.map(policy => (
+                <div key={`${policy.id}-provider`} className="font-medium">
+                  {policy.provider}
+                </div>
+              ))}
 
-          {bestMatches.coverage && (
-            <div className="bg-white overflow-hidden shadow rounded-lg">
-              <div className="p-5">
-                <h3 className="text-lg font-medium text-gray-900">Best Coverage</h3>
-                <p className="mt-1 text-sm text-gray-500">{bestMatches.coverage.provider}</p>
-                <p className="mt-2 text-2xl font-semibold text-indigo-600">
-                  ₹{bestMatches.coverage.coverage.toLocaleString()}
-                </p>
-              </div>
-            </div>
-          )}
+              <div className="font-medium text-gray-500">Type</div>
+              {policies.map(policy => (
+                <div key={`${policy.id}-type`}>{policy.type}</div>
+              ))}
 
-          {bestMatches.flexibility && (
-            <div className="bg-white overflow-hidden shadow rounded-lg">
-              <div className="p-5">
-                <h3 className="text-lg font-medium text-gray-900">Most Flexible</h3>
-                <p className="mt-1 text-sm text-gray-500">{bestMatches.flexibility.provider}</p>
-                <p className="mt-2 text-sm text-gray-500">
-                  {bestMatches.flexibility.flexibility.length} features
-                </p>
-              </div>
-            </div>
-          )}
-        </div>
+              <div className="font-medium text-gray-500">Premium</div>
+              {policies.map(policy => (
+                <div key={`${policy.id}-premium`} className="text-green-600 font-medium">
+                  {formatCurrency(policy.premium)}/year
+                </div>
+              ))}
 
-        {/* Comparison Table */}
-        <div className="bg-white shadow overflow-hidden sm:rounded-lg">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Feature
-                </th>
-                {policies.map(policy => (
-                  <th
-                    key={policy.id}
-                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  >
-                    {policy.provider}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                  Premium
-                </td>
-                {policies.map(policy => (
-                  <td
-                    key={policy.id}
-                    className={`px-6 py-4 whitespace-nowrap text-sm ${
-                      policy.id === bestMatches.premium?.id
-                        ? 'text-green-600 font-semibold'
-                        : 'text-gray-500'
-                    }`}
-                  >
-                    ₹{policy.premium.toLocaleString()}
-                  </td>
-                ))}
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                  Coverage
-                </td>
-                {policies.map(policy => (
-                  <td
-                    key={policy.id}
-                    className={`px-6 py-4 whitespace-nowrap text-sm ${
-                      policy.id === bestMatches.coverage?.id
-                        ? 'text-green-600 font-semibold'
-                        : 'text-gray-500'
-                    }`}
-                  >
-                    ₹{policy.coverage.toLocaleString()}
-                  </td>
-                ))}
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                  Term (Years)
-                </td>
-                {policies.map(policy => (
-                  <td key={policy.id} className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {policy.term}
-                  </td>
-                ))}
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                  Claim Settlement Ratio
-                </td>
-                {policies.map(policy => (
-                  <td key={policy.id} className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {policy.claimSettlementRatio}%
-                  </td>
-                ))}
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                  Add-ons
-                </td>
-                {policies.map(policy => (
-                  <td key={policy.id} className="px-6 py-4 text-sm text-gray-500">
-                    <ul className="list-disc list-inside">
-                      {policy.addOns.map((addon, index) => (
-                        <li key={index}>{addon}</li>
-                      ))}
-                    </ul>
-                  </td>
-                ))}
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                  Benefits
-                </td>
-                {policies.map(policy => (
-                  <td key={policy.id} className="px-6 py-4 text-sm text-gray-500">
-                    <ul className="list-disc list-inside">
-                      {policy.benefits.map((benefit, index) => (
-                        <li key={index}>{benefit}</li>
-                      ))}
-                    </ul>
-                  </td>
-                ))}
-              </tr>
-            </tbody>
-          </table>
-        </div>
+              <div className="font-medium text-gray-500">Coverage</div>
+              {policies.map(policy => (
+                <div key={`${policy.id}-coverage`} className="font-medium">
+                  {formatCurrency(policy.coverage)}
+                </div>
+              ))}
 
-        {/* Recommendations Section */}
-        {recommendations.length > 0 && (
-          <div className="space-y-4">
-            <h2 className="text-lg font-medium text-gray-900">Recommended for You</h2>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {recommendations.map(policy => (
-                <div
-                  key={policy.id}
-                  className="bg-white overflow-hidden shadow rounded-lg hover:shadow-lg transition-shadow duration-300"
-                >
-                  <div className="p-5">
-                    <div className="flex items-center justify-between">
-                      <h3 className="text-lg font-medium text-gray-900">{policy.provider}</h3>
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                        Best Match
-                      </span>
+              {policies.some(p => p.term) && (
+                <>
+                  <div className="font-medium text-gray-500">Term</div>
+                  {policies.map(policy => (
+                    <div key={`${policy.id}-term`}>
+                      {policy.term ? `${policy.term} years` : 'N/A'}
                     </div>
-                    <p className="mt-1 text-sm text-gray-500">{policy.type} Insurance</p>
-                    <div className="mt-4">
-                      <p className="text-2xl font-semibold text-indigo-600">
-                        ₹{policy.premium.toLocaleString()}
-                      </p>
-                      <p className="text-sm text-gray-500">per year</p>
+                  ))}
+                </>
+              )}
+
+              {policies.some(p => p.claimSettlementRatio) && (
+                <>
+                  <div className="font-medium text-gray-500">Claim Settlement Ratio</div>
+                  {policies.map(policy => (
+                    <div key={`${policy.id}-csr`}>
+                      {policy.claimSettlementRatio ? `${policy.claimSettlementRatio}%` : 'N/A'}
                     </div>
-                    <div className="mt-4">
-                      <button
-                        onClick={() => router.push(`/dashboard/policies/${policy.id}`)}
-                        className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
-                      >
-                        View Details
-                      </button>
-                    </div>
-                  </div>
+                  ))}
+                </>
+              )}
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Benefits */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Benefits</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-[200px_repeat(auto-fit,minmax(200px,1fr))] gap-4">
+              <div className="font-medium text-gray-500">Key Benefits</div>
+              {policies.map(policy => (
+                <div key={`${policy.id}-benefits`} className="space-y-2">
+                  {policy.benefits.map(benefit => (
+                    <Badge key={benefit} variant="secondary">
+                      {benefit}
+                    </Badge>
+                  ))}
                 </div>
               ))}
             </div>
-          </div>
+          </CardContent>
+        </Card>
+
+        {/* Goals */}
+        {policies.some(p => p.goals && p.goals.length > 0) && (
+          <Card>
+            <CardHeader>
+              <CardTitle>Financial Goals</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-[200px_repeat(auto-fit,minmax(200px,1fr))] gap-4">
+                <div className="font-medium text-gray-500">Supported Goals</div>
+                {policies.map(policy => (
+                  <div key={`${policy.id}-goals`} className="space-y-2">
+                    {policy.goals?.map(goal => (
+                      <Badge key={goal} variant="outline">
+                        {goal}
+                      </Badge>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
         )}
       </div>
-    </RoleGuard>
+    </div>
   );
 } 

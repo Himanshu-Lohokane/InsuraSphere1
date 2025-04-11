@@ -10,28 +10,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
 
   useEffect(() => {
-    if (!loading) {
-      if (!user) {
-        router.push('/auth/signin');
-        return;
-      }
-
-      // Redirect based on user role
-      if (userProfile) {
-        const path = window.location.pathname;
-        if (userProfile.role === 'insurer' && !path.startsWith('/insurer')) {
-          router.push('/insurer');
-          return;
-        } else if (userProfile.role === 'admin' && !path.startsWith('/admin')) {
-          router.push('/admin');
-          return;
-        } else if (userProfile.role === 'user' && (path.startsWith('/insurer') || path.startsWith('/admin'))) {
-          router.push('/dashboard');
-          return;
-        }
-      }
+    if (!loading && (!user || !userProfile)) {
+      router.push('/auth/signin');
     }
-  }, [user, userProfile, loading, router]);
+  }, [loading, user, userProfile, router]);
 
   if (loading) {
     return (

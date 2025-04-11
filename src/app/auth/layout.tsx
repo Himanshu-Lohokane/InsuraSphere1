@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import Logo from '@/components/Logo';
 
 export default function AuthLayout({
   children,
@@ -20,14 +20,8 @@ export default function AuthLayout({
       <div className="hidden lg:flex lg:flex-1 relative bg-gradient-to-br from-blue-600 to-indigo-900">
         <div className="absolute inset-0 pattern-grid opacity-10" />
         <div className="relative w-full flex flex-col items-center justify-center text-white p-12 space-y-8">
-          <div className="w-32 h-32 relative">
-            <Image
-              src="/logo.png"
-              alt="InsuraSphere Logo"
-              fill
-              className="object-contain"
-              priority
-            />
+          <div className="w-32 h-32 flex items-center justify-center">
+            <Logo className="w-24 h-24" />
           </div>
           <div className="text-center space-y-4">
             <h2 className="text-3xl font-bold">Welcome to InsuraSphere</h2>

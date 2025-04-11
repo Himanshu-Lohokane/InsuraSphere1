@@ -45,54 +45,95 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log('Setting up auth state listener');
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      console.log('Auth state changed:', { user: user?.email, uid: user?.uid });
       setUser(user);
+      
       if (user) {
-        // Fetch user profile
-        const profileDoc = await getDoc(doc(db, 'users', user.uid));
-        if (profileDoc.exists()) {
-          setUserProfile(profileDoc.data() as UserProfile);
+        try {
+          console.log('Fetching user profile...');
+          const profileDoc = await getDoc(doc(db, 'users', user.uid));
+          if (profileDoc.exists()) {
+            const profileData = profileDoc.data() as UserProfile;
+            console.log('User profile found:', profileData);
+            setUserProfile(profileData);
+          } else {
+            console.log('No user profile found');
+            setUserProfile(null);
+          }
+        } catch (error) {
+          console.error('Error fetching user profile:', error);
+          setUserProfile(null);
         }
       } else {
+        console.log('No user, clearing profile');
         setUserProfile(null);
       }
+      
       setLoading(false);
     });
 
-    return unsubscribe;
+    return () => {
+      console.log('Cleaning up auth state listener');
+      unsubscribe();
+    };
   }, []);
 
   const signIn = async (email: string, password: string, role?: UserRole) => {
-    const result = await signInWithEmailAndPassword(auth, email, password);
-    const profileDoc = await getDoc(doc(db, 'users', result.user.uid));
-    if (profileDoc.exists()) {
-      const profile = profileDoc.data() as UserProfile;
-      setUserProfile(profile);
-      return profile.role;
+    try {
+      console.log('Signing in...', { email });
+      const result = await signInWithEmailAndPassword(auth, email, password);
+      console.log('Sign in successful:', result.user.email);
+      
+      const profileDoc = await getDoc(doc(db, 'users', result.user.uid));
+      if (profileDoc.exists()) {
+        const profile = profileDoc.data() as UserProfile;
+        console.log('Profile loaded:', profile);
+        setUserProfile(profile);
+        return profile.role;
+      }
+      return role || 'user';
+    } catch (error) {
+      console.error('Sign in error:', error);
+      throw error;
     }
-    return role || 'user';
   };
 
   const signUp = async (email: string, password: string, role: UserRole, profile: Partial<UserProfile>) => {
-    const result = await createUserWithEmailAndPassword(auth, email, password);
-    
-    // Create user profile
-    const userProfile: UserProfile = {
-      role,
-      name: profile?.name || '',
-      email: result.user.email || '',
-      phone: profile?.phone || '',
-      company: profile?.company || '',
-      designation: profile?.designation || '',
-    };
+    try {
+      console.log('Signing up...', { email, role });
+      const result = await createUserWithEmailAndPassword(auth, email, password);
+      console.log('Sign up successful:', result.user.email);
+      
+      const userProfile: UserProfile = {
+        role,
+        name: profile?.name || '',
+        email: result.user.email || '',
+        phone: profile?.phone || '',
+        company: profile?.company || '',
+        designation: profile?.designation || '',
+      };
 
-    await setDoc(doc(db, 'users', result.user.uid), userProfile);
-    setUserProfile(userProfile);
+      await setDoc(doc(db, 'users', result.user.uid), userProfile);
+      console.log('Profile created:', userProfile);
+      setUserProfile(userProfile);
+    } catch (error) {
+      console.error('Sign up error:', error);
+      throw error;
+    }
   };
 
   const logout = async () => {
-    await signOut(auth);
-    setUserProfile(null);
+    try {
+      console.log('Logging out...');
+      await signOut(auth);
+      setUserProfile(null);
+      console.log('Logout successful');
+    } catch (error) {
+      console.error('Logout error:', error);
+      throw error;
+    }
   };
 
   const signInWithGoogle = async (role?: UserRole) => {
@@ -146,7 +187,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <AuthContext.Provider value={value}>
-      {!loading && children}
+      {children}
     </AuthContext.Provider>
   );
 }

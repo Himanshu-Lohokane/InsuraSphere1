@@ -14,6 +14,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { HiOutlineMail } from 'react-icons/hi';
 import { RiLockPasswordLine } from 'react-icons/ri';
 import { MdOutlineBusinessCenter, MdOutlineAdminPanelSettings, MdOutlinePerson } from 'react-icons/md';
+import type { UserRole } from '@/contexts/AuthContext';
 
 export default function SignUp() {
   const router = useRouter();
@@ -21,12 +22,23 @@ export default function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [role, setRole] = useState('user');
+  const [role, setRole] = useState<UserRole>('user');
   const [companyName, setCompanyName] = useState('');
   const [companyRegNumber, setCompanyRegNumber] = useState('');
   const [adminCode, setAdminCode] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+
+  const getRedirectPath = (role: UserRole) => {
+    switch (role) {
+      case 'insurer':
+        return '/insurer';
+      case 'admin':
+        return '/admin';
+      default:
+        return '/dashboard';
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,7 +60,7 @@ export default function SignUp() {
       };
       
       await signUp(email, password, role, profileData);
-      router.push('/dashboard');
+      router.push(getRedirectPath(role));
     } catch (err) {
       setError('Failed to create an account. Please try again.');
       console.error('Sign up error:', err);
@@ -59,8 +71,8 @@ export default function SignUp() {
 
   const handleGoogleSignUp = async () => {
     try {
-      await signInWithGoogle(role);
-      router.push('/dashboard');
+      const userRole = await signInWithGoogle(role);
+      router.push(getRedirectPath(userRole));
     } catch (err) {
       setError('Failed to sign up with Google.');
       console.error('Google sign up error:', err);
@@ -81,7 +93,7 @@ export default function SignUp() {
         </p>
       </div>
 
-      <Tabs defaultValue="user" className="w-full" onValueChange={value => setRole(value)}>
+      <Tabs defaultValue="user" className="w-full" onValueChange={value => setRole(value as UserRole)}>
         <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="user" className="flex items-center space-x-2">
             <MdOutlinePerson className="w-4 h-4" />

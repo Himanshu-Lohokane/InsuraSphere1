@@ -12,9 +12,13 @@ import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Separator } from '@/components/ui/separator';
-import { ArrowLeft, ArrowRight, CreditCard, Bank, Wallet } from 'lucide-react';
+import { ArrowLeft, ArrowRight, CreditCard, Building, Wallet } from 'lucide-react';
 
-export default function PolicyPurchasePage({ params }: { params: { id: string } }) {
+type Props = {
+  params: { id: string }
+}
+
+export default function PolicyPurchasePage({ params }: Props) {
   const router = useRouter();
   const { user } = useAuth();
   const [loading, setLoading] = useState(true);
@@ -348,7 +352,7 @@ export default function PolicyPurchasePage({ params }: { params: { id: string } 
                       <Label htmlFor="card" className="cursor-pointer">Credit Card</Label>
                     </div>
                     <div className="flex flex-col items-center p-4 border rounded-lg cursor-pointer hover:border-indigo-600">
-                      <Bank className="h-8 w-8 mb-2" />
+                      <Building className="h-8 w-8 mb-2" />
                       <RadioGroupItem value="bank" id="bank" className="sr-only" />
                       <Label htmlFor="bank" className="cursor-pointer">Bank Transfer</Label>
                     </div>
@@ -420,4 +424,4 @@ export default function PolicyPurchasePage({ params }: { params: { id: string } 
       </div>
     </RoleGuard>
   );
-} 
+}

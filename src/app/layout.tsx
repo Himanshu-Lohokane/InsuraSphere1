@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google';
 import { AuthProvider } from '@/contexts/AuthContext';
+import ClientLayout from '@/components/layout/ClientLayout';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -15,10 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="light">
-      <body className={`${inter.className} bg-background text-foreground`}>
+    <html lang="en" className={inter.className}>
+      <head>
+        <title>InsuraSphere</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body className="bg-background text-foreground">
         <AuthProvider>
-          {children}
+          <ClientLayout>{children}</ClientLayout>
         </AuthProvider>
       </body>
     </html>

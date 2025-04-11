@@ -29,7 +29,13 @@ export default function RoleGuard({ children, allowedRoles }: RoleGuardProps) {
       }
 
       if (!allowedRoles.includes(userProfile.role)) {
-        router.push('/dashboard');
+        if (userProfile.role === 'insurer') {
+          router.push('/insurer');
+        } else if (userProfile.role === 'admin') {
+          router.push('/admin');
+        } else {
+          router.push('/dashboard');
+        }
         return;
       }
 

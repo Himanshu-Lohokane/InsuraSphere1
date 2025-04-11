@@ -1,6 +1,7 @@
+'use client';
 import { useState, useEffect } from 'react';
 import { PolicyComparisonService, Policy } from '@/lib/policyComparison';
-import { RoleGuard } from '@/components/auth/RoleGuard';
+import RoleGuard from '@/components/auth/RoleGuard';
 import { UserRole } from '@/contexts/AuthContext';
 import { Spinner } from '@/components/ui/Spinner';
 
@@ -63,7 +64,7 @@ export default function PolicyComparison() {
   };
 
   return (
-    <RoleGuard allowedRoles={[UserRole.USER, UserRole.ADMIN, UserRole.INSURER]}>
+    <RoleGuard allowedRoles={['user', 'admin', 'insurer']}>
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-8">Policy Comparison</h1>
 
@@ -223,4 +224,4 @@ export default function PolicyComparison() {
       </div>
     </RoleGuard>
   );
-} 
+}

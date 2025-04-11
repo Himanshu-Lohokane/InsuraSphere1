@@ -12,7 +12,11 @@ import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ArrowLeft, Star, StarOff, Edit, Trash2, Download, Share2 } from 'lucide-react';
 
-export default function PolicyDetailPage({ params }: { params: { id: string } }) {
+type Props = {
+  params: { id: string }
+}
+
+export default function PolicyDetailPage({ params }: Props) {
   const router = useRouter();
   const { user, userProfile } = useAuth();
   const [loading, setLoading] = useState(true);
@@ -296,4 +300,4 @@ export default function PolicyDetailPage({ params }: { params: { id: string } })
       </div>
     </RoleGuard>
   );
-} 
+}

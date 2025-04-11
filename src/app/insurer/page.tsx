@@ -1,57 +1,47 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { collection, query, where, getDocs } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
 import { useAuth } from '@/contexts/AuthContext';
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
-import { Line, Bar } from 'react-chartjs-2';
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+import { collection, query, where, getDocs, addDoc, updateDoc, doc } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { ChartBarIcon, DocumentTextIcon, ClockIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
 interface InsurerStats {
   totalPolicies: number;
   activePolicies: number;
-  totalRevenue: number;
-  monthlyRevenue: { month: string; amount: number }[];
-  policyTypes: { type: string; count: number }[];
-  claims: { status: string; count: number }[];
+  pendingClaims: number;
+  monthlyRevenue: number;
+}
+
+interface Policy {
+  id: string;
+  type: string;
+  provider: string;
+  description: string;
+  coverage: number;
+  premium: number;
+  status: 'active' | 'inactive';
+  createdAt: string;
 }
 
 export default function InsurerDashboard() {
   const { user, userProfile } = useAuth();
-  const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState<InsurerStats>({
     totalPolicies: 0,
     activePolicies: 0,
-    totalRevenue: 0,
-    monthlyRevenue: [],
-    policyTypes: [],
-    claims: [],
+    pendingClaims: 0,
+    monthlyRevenue: 0,
   });
+  const [loading, setLoading] = useState(true);
+  const [recentPolicies, setRecentPolicies] = useState<Policy[]>([]);
 
   useEffect(() => {
     if (user && userProfile) {
       fetchInsurerStats();
+      fetchRecentPolicies();
     }
   }, [user, userProfile]);
 
@@ -59,65 +49,62 @@ export default function InsurerDashboard() {
     if (!user) return;
 
     try {
-      setLoading(true);
       // Fetch policies
       const policiesQuery = query(
         collection(db, 'policies'),
-        where('insurerId', '==', user.uid)
+        where('providerId', '==', user.uid)
       );
       const policiesSnapshot = await getDocs(policiesQuery);
-      const policies = policiesSnapshot.docs.map(doc => doc.data());
+      const policies = policiesSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 
-      // Calculate stats
-      const activePolicies = policies.filter(policy => policy.status === 'active');
-      const totalRevenue = policies.reduce((sum, policy) => sum + (policy.premium || 0), 0);
-
-      // Process monthly revenue
-      const monthlyRevenue = processMonthlyRevenue(policies);
-      const policyTypes = processPolicyTypes(policies);
-
-      // Fetch and process claims
+      // Fetch claims
       const claimsQuery = query(
         collection(db, 'claims'),
-        where('insurerId', '==', user.uid)
+        where('providerId', '==', user.uid),
+        where('status', '==', 'pending')
       );
       const claimsSnapshot = await getDocs(claimsQuery);
-      const claims = claimsSnapshot.docs.map(doc => doc.data());
-      const claimsStats = processClaims(claims);
+
+      // Calculate stats
+      const activePolicies = policies.filter(p => p.status === 'active');
+      const monthlyRevenue = activePolicies.reduce((sum, policy) => sum + (policy.premium || 0), 0);
 
       setStats({
         totalPolicies: policies.length,
         activePolicies: activePolicies.length,
-        totalRevenue,
+        pendingClaims: claimsSnapshot.size,
         monthlyRevenue,
-        policyTypes,
-        claims: claimsStats,
       });
     } catch (error) {
       console.error('Error fetching insurer stats:', error);
-    } finally {
+    }
+  };
+
+  const fetchRecentPolicies = async () => {
+    if (!user) return;
+
+    try {
+      const policiesQuery = query(
+        collection(db, 'policies'),
+        where('providerId', '==', user.uid)
+      );
+      const snapshot = await getDocs(policiesQuery);
+      const policies = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data(),
+      })) as Policy[];
+
+      setRecentPolicies(policies.slice(0, 5));
+      setLoading(false);
+    } catch (error) {
+      console.error('Error fetching recent policies:', error);
       setLoading(false);
     }
   };
 
-  const processMonthlyRevenue = (policies: any[]) => {
-    // Process monthly revenue logic here
-    return [];
-  };
-
-  const processPolicyTypes = (policies: any[]) => {
-    // Process policy types logic here
-    return [];
-  };
-
-  const processClaims = (claims: any[]) => {
-    // Process claims logic here
-    return [];
-  };
-
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-64">
+      <div className="flex items-center justify-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600"></div>
       </div>
     );
@@ -125,80 +112,114 @@ export default function InsurerDashboard() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold">Insurer Dashboard</h1>
-
-      {/* Stats Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-lg font-medium text-gray-900">Total Policies</h3>
-          <p className="mt-2 text-3xl font-bold text-indigo-600">{stats.totalPolicies}</p>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-lg font-medium text-gray-900">Active Policies</h3>
-          <p className="mt-2 text-3xl font-bold text-indigo-600">{stats.activePolicies}</p>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-lg font-medium text-gray-900">Total Revenue</h3>
-          <p className="mt-2 text-3xl font-bold text-indigo-600">
-            ${stats.totalRevenue.toLocaleString()}
-          </p>
-        </div>
+      <div className="flex justify-between items-center">
+        <h1 className="text-2xl font-bold">Insurer Dashboard</h1>
+        <Button asChild>
+          <Link href="/insurer/policies/new">Add New Policy</Link>
+        </Button>
       </div>
 
-      {/* Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Monthly Revenue Chart */}
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Monthly Revenue</h3>
-          <Line
-            data={{
-              labels: stats.monthlyRevenue.map(item => item.month),
-              datasets: [
-                {
-                  label: 'Revenue',
-                  data: stats.monthlyRevenue.map(item => item.amount),
-                  borderColor: 'rgb(79, 70, 229)',
-                  tension: 0.1,
-                },
-              ],
-            }}
-            options={{
-              responsive: true,
-              plugins: {
-                legend: {
-                  position: 'top' as const,
-                },
-              },
-            }}
-          />
-        </div>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Total Policies Card */}
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Total Policies</CardTitle>
+            <DocumentTextIcon className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{stats.totalPolicies}</div>
+            <p className="text-xs text-muted-foreground">
+              {stats.activePolicies} active
+            </p>
+          </CardContent>
+        </Card>
 
-        {/* Policy Types Chart */}
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Policy Distribution</h3>
-          <Bar
-            data={{
-              labels: stats.policyTypes.map(item => item.type),
-              datasets: [
-                {
-                  label: 'Policies',
-                  data: stats.policyTypes.map(item => item.count),
-                  backgroundColor: 'rgb(79, 70, 229)',
-                },
-              ],
-            }}
-            options={{
-              responsive: true,
-              plugins: {
-                legend: {
-                  position: 'top' as const,
-                },
-              },
-            }}
-          />
-        </div>
+        {/* Pending Claims Card */}
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Pending Claims</CardTitle>
+            <ClockIcon className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{stats.pendingClaims}</div>
+            <p className="text-xs text-muted-foreground">
+              Awaiting review
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* Monthly Revenue Card */}
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Monthly Revenue</CardTitle>
+            <ChartBarIcon className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">${stats.monthlyRevenue.toLocaleString()}</div>
+            <p className="text-xs text-muted-foreground">
+              From active policies
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Recent Policies */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Recent Policies</CardTitle>
+          <CardDescription>Your recently added insurance policies</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-8">
+            {recentPolicies.map((policy) => (
+              <div key={policy.id} className="flex items-center">
+                <div className="space-y-1">
+                  <p className="text-sm font-medium leading-none">{policy.type}</p>
+                  <p className="text-sm text-muted-foreground">
+                    Premium: ${policy.premium}/month
+                  </p>
+                </div>
+                <div className="ml-auto font-medium">
+                  <span className={`px-2 py-1 rounded-full text-xs ${
+                    policy.status === 'active' 
+                      ? 'bg-green-100 text-green-800' 
+                      : 'bg-gray-100 text-gray-800'
+                  }`}>
+                    {policy.status}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Quick Actions */}
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Link href="/insurer/policies">
+          <Card className="hover:bg-gray-50 transition-colors cursor-pointer">
+            <CardHeader>
+              <CardTitle>Manage Policies</CardTitle>
+              <CardDescription>View and manage all your insurance policies</CardDescription>
+            </CardHeader>
+          </Card>
+        </Link>
+        <Link href="/insurer/claims">
+          <Card className="hover:bg-gray-50 transition-colors cursor-pointer">
+            <CardHeader>
+              <CardTitle>Review Claims</CardTitle>
+              <CardDescription>Process and manage insurance claims</CardDescription>
+            </CardHeader>
+          </Card>
+        </Link>
+        <Link href="/insurer/analytics">
+          <Card className="hover:bg-gray-50 transition-colors cursor-pointer">
+            <CardHeader>
+              <CardTitle>Analytics</CardTitle>
+              <CardDescription>View detailed analytics and reports</CardDescription>
+            </CardHeader>
+          </Card>
+        </Link>
       </div>
     </div>
   );

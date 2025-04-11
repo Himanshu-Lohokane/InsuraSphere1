@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
-import { PolicyComparisonService, Policy } from '@/lib/policyComparison';
-import RoleGuard from '@/components/auth/RoleGuard';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -16,8 +16,8 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { Search, Filter, ChevronDown, ChevronUp, Star, StarOff } from 'lucide-react';
-import { collection, query, where, getDocs } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
+import RoleGuard from '@/components/auth/RoleGuard';
+import MLPolicyRecommendations from '@/components/policies/MLPolicyRecommendations';
 
 const POLICY_TYPES = [
   'Life Insurance',
@@ -38,6 +38,27 @@ const PROVIDERS = [
   'Max Life',
   'Reliance General'
 ];
+
+interface Policy {
+  id: string;
+  type: string;
+  provider: string;
+  premium: number;
+  benefits: string[];
+  goals?: string[];
+  status: 'active' | 'pending' | 'expired';
+  startDate: string;
+  endDate: string;
+  coverage: number;
+  description?: string;
+  term?: number;
+  claimSettlementRatio?: number;
+  addOns: string[];
+  eligibility: {
+    minAge: number;
+    maxAge: number;
+  };
+}
 
 export default function PoliciesPage() {
   const router = useRouter();
@@ -78,12 +99,32 @@ export default function PoliciesPage() {
       }
 
       const querySnapshot = await getDocs(policiesQuery);
-      const fetchedPolicies = querySnapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      })) as Policy[];
+      const fetchedPolicies = querySnapshot.docs.map(doc => {
+        const data = doc.data();
+        return {
+          id: doc.id,
+          type: data.type || '',
+          provider: data.provider || '',
+          premium: data.premium || 0,
+          benefits: data.benefits || [],
+          goals: data.goals || [],
+          status: data.status || 'active',
+          startDate: data.startDate || '',
+          endDate: data.endDate || '',
+          coverage: data.coverage || 0,
+          description: data.description || '',
+          term: data.term,
+          claimSettlementRatio: data.claimSettlementRatio,
+          addOns: data.addOns || [],
+          eligibility: {
+            minAge: data.eligibility?.minAge || 18,
+            maxAge: data.eligibility?.maxAge || 100,
+          },
+        } as Policy;
+      });
 
       setPolicies(fetchedPolicies);
+      setFilteredPolicies(fetchedPolicies);
     } catch (error) {
       console.error('Error fetching policies:', error);
       setError('Failed to fetch policies. Please try again later.');
@@ -101,7 +142,7 @@ export default function PoliciesPage() {
       filtered = filtered.filter(policy => 
         policy.provider.toLowerCase().includes(query) ||
         policy.type.toLowerCase().includes(query) ||
-        policy.benefits.some(benefit => benefit.toLowerCase().includes(query))
+        (policy.benefits && policy.benefits.some(benefit => benefit.toLowerCase().includes(query)))
       );
     }
     
@@ -123,7 +164,7 @@ export default function PoliciesPage() {
     // Apply goals filter
     if (selectedGoals.length > 0) {
       filtered = filtered.filter(policy => 
-        selectedGoals.some(goal => policy.goals.includes(goal))
+        policy.goals && selectedGoals.some(goal => policy.goals?.includes(goal))
       );
     }
     
@@ -157,6 +198,10 @@ export default function PoliciesPage() {
     });
   };
 
+  const handlePriceRangeChange = (values: number[]) => {
+    setPriceRange([values[0], values[1]] as [number, number]);
+  };
+
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
@@ -167,15 +212,26 @@ export default function PoliciesPage() {
 
   return (
     <RoleGuard allowedRoles={['user', 'insurer', 'admin']}>
-      <div className="space-y-6">
+      <div className="space-y-8">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-semibold text-gray-900">Insurance Policies</h1>
-          {userProfile?.role === 'insurer' && (
-            <Button onClick={() => router.push('/dashboard/policies/create')}>
-              Add New Policy
-            </Button>
-          )}
+          <h1 className="text-3xl font-bold">Insurance Policies</h1>
+          <Button onClick={() => router.push('/dashboard/policies/compare')}>
+            Compare Policies
+          </Button>
         </div>
+
+        {/* ML Recommendations */}
+        <MLPolicyRecommendations
+          userPreferences={{
+            age: 30, // This should come from user profile
+            income: 1000000, // This should come from user profile
+            occupation: 'professional',
+            familySize: 2,
+            riskTolerance: 0.7,
+            goals: ['retirement', 'education'],
+          }}
+          availablePolicies={policies}
+        />
 
         {/* Search and Filter Bar */}
         <div className="flex flex-col space-y-4">
@@ -249,8 +305,8 @@ export default function PoliciesPage() {
                         min={0}
                         max={100000}
                         step={1000}
-                        value={priceRange}
-                        onValueChange={setPriceRange}
+                        value={[priceRange[0], priceRange[1]]}
+                        onValueChange={handlePriceRangeChange}
                       />
                       <div className="flex justify-between mt-2 text-sm text-gray-500">
                         <span>₹{priceRange[0].toLocaleString()}</span>
@@ -332,10 +388,10 @@ export default function PoliciesPage() {
                     <span className="text-lg font-semibold">{policy.claimSettlementRatio}%</span>
                   </div>
                   <div className="flex flex-wrap gap-1">
-                    {policy.goals.slice(0, 3).map(goal => (
+                    {policy.goals?.slice(0, 3).map(goal => (
                       <Badge key={goal} variant="secondary">{goal}</Badge>
                     ))}
-                    {policy.goals.length > 3 && (
+                    {policy.goals && policy.goals.length > 3 && (
                       <Badge variant="outline">+{policy.goals.length - 3} more</Badge>
                     )}
                   </div>
