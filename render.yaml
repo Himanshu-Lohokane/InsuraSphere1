@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: insurasphere-ml
+    env: python
+    buildCommand: |
+      pip install -r src/ml/requirements.txt
+      cd src/ml && python train_model.py
+    startCommand: cd src/ml && uvicorn api:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+    healthCheckPath: /health 
