@@ -1,23 +1,25 @@
 export interface Policy {
   id: string;
-  provider: string;
-  type: string;
+  name: string;
+  description: string;
   premium: number;
   coverage: number;
-  term?: number;
-  claimSettlementRatio?: number;
+  term: number;
   benefits: string[];
-  addOns: string[];
-  goals?: string[];
-  eligibility: {
-    minAge: number;
-    maxAge: number;
+  goals: string[];
+  flexibility?: {
+    partialWithdrawal: boolean;
+    topUp: boolean;
+    premiumHoliday: boolean;
   };
-  status: 'active' | 'pending' | 'expired';
-  startDate: string;
-  endDate: string;
-  description?: string;
-  matchScore?: number;
+  claimSettlementRatio: number;
+  company: string;
+  category: string;
+  features: string[];
+  exclusions: string[];
+  documents: string[];
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface UserPreferences {

@@ -3,13 +3,14 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { ClaimService, Claim } from '@/lib/services/claimService';
 import { toast } from 'sonner';
-import { Search, Filter, CheckCircle, XCircle, Clock, FileText, Download } from 'lucide-react';
+import { Search, Filter, CheckCircle, XCircle, Clock } from 'lucide-react';
 
 export default function InsurerClaimsPage() {
   const router = useRouter();
@@ -53,15 +54,9 @@ export default function InsurerClaimsPage() {
   };
 
   const filteredClaims = claims.filter(claim => {
-    if (!searchTerm) return true;
-
-    const searchLower = searchTerm.toLowerCase();
-    const policyNumber = claim.policyNumber || '';
-    const reason = claim.reason || '';
-    
     const matchesSearch = 
-      policyNumber.toLowerCase().includes(searchLower) ||
-      reason.toLowerCase().includes(searchLower);
+      claim.policyNumber.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      claim.reason.toLowerCase().includes(searchTerm.toLowerCase());
     
     const matchesStatus = statusFilter === 'all' || claim.status === statusFilter;
     
@@ -129,7 +124,7 @@ export default function InsurerClaimsPage() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-700">
-                  <th className="text-left py-3 px-4 text-gray-400">Policy Details</th>
+                  <th className="text-left py-3 px-4 text-gray-400">User</th>
                   <th className="text-left py-3 px-4 text-gray-400">Amount</th>
                   <th className="text-left py-3 px-4 text-gray-400">Description</th>
                   <th className="text-left py-3 px-4 text-gray-400">Status</th>
@@ -195,14 +190,6 @@ export default function InsurerClaimsPage() {
                             onClick={() => handleStatusChange(claim.id, 'in-review')}
                           >
                             <Clock className="h-4 w-4" />
-                          </Button>
-                          <Button
-                            size="sm"
-                            variant="outline"
-                            className="border-blue-600 text-blue-500 hover:bg-blue-900 hover:text-blue-200"
-                            onClick={() => router.push(`/insurer/claims/${claim.id}`)}
-                          >
-                            <FileText className="h-4 w-4" />
                           </Button>
                         </div>
                       </td>

@@ -25,6 +25,7 @@ export default function RoleGuard({ children, allowedRoles }: RoleGuardProps) {
 
       if (!userProfile) {
         setIsLoading(false);
+        setIsAuthorized(false);
         return;
       }
 
@@ -56,7 +57,13 @@ export default function RoleGuard({ children, allowedRoles }: RoleGuardProps) {
   }
 
   if (!isAuthorized) {
-    return null;
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-background">
+        <div className="text-center">
+          <p className="text-foreground">You don't have permission to access this page.</p>
+        </div>
+      </div>
+    );
   }
 
   return <>{children}</>;

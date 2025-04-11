@@ -19,9 +19,32 @@ interface UserProfile {
   role: UserRole;
   name: string;
   email: string;
-  phone?: string;
+  phone: string;
+  address: string;
+  dateOfBirth: string;
+  familyMembers: number;
+  income: number;
+  occupation: string;
   company?: string;
   designation?: string;
+  preferences?: {
+    emailUpdates: boolean;
+    notifications: boolean;
+  };
+}
+
+// Add helper function to calculate age
+export function calculateAge(dateOfBirth: string): number {
+  const birthDate = new Date(dateOfBirth);
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+  
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  
+  return age;
 }
 
 interface AuthContextType {
@@ -111,8 +134,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         name: profile?.name || '',
         email: result.user.email || '',
         phone: profile?.phone || '',
+        address: profile?.address || '',
+        dateOfBirth: profile?.dateOfBirth || '',
+        familyMembers: profile?.familyMembers || 0,
+        income: profile?.income || 0,
+        occupation: profile?.occupation || '',
         company: profile?.company || '',
         designation: profile?.designation || '',
+        preferences: profile?.preferences || { emailUpdates: false, notifications: false },
       };
 
       await setDoc(doc(db, 'users', result.user.uid), userProfile);
@@ -148,6 +177,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         role: role || 'user',
         name: result.user.displayName || '',
         email: result.user.email || '',
+        phone: result.user.metadata.creationTime ? String(Math.floor(Math.random() * 10000000000) + 1000000000) : '',
+        address: result.user.metadata.creationTime ? '123 Main St, Anytown, USA' : '',
+        dateOfBirth: result.user.metadata.creationTime ? new Date(result.user.metadata.creationTime).toISOString().split('T')[0] : '',
+        familyMembers: result.user.metadata.creationTime ? Math.floor(Math.random() * 5) + 1 : 1,
+        income: result.user.metadata.creationTime ? Math.floor(Math.random() * 100000) : 0,
+        occupation: result.user.metadata.creationTime ? 'Unemployed' : '',
+        company: result.user.metadata.creationTime ? 'Acme Corp' : '',
+        designation: result.user.metadata.creationTime ? 'Software Engineer' : '',
+        preferences: result.user.metadata.creationTime ? { emailUpdates: true, notifications: true } : { emailUpdates: false, notifications: false },
       };
       await setDoc(doc(db, 'users', result.user.uid), userProfile);
       setUserProfile(userProfile);

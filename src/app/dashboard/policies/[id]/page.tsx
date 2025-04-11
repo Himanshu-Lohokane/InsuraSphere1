@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, use } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 import { PolicyComparisonService, Policy } from '@/lib/policyComparison';
@@ -11,6 +11,7 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ArrowLeft, Star, StarOff, Edit, Trash2, Download, Share2 } from 'lucide-react';
+import BenefitsAnalysis from '@/components/BenefitsAnalysis';
 
 type Props = {
   params: { id: string }
@@ -22,25 +23,39 @@ export default function PolicyDetailPage({ params }: Props) {
   const [loading, setLoading] = useState(true);
   const [policy, setPolicy] = useState<Policy | null>(null);
   const [isFavorite, setIsFavorite] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const { id } = params;
 
   useEffect(() => {
     fetchPolicy();
-  }, [params.id]);
+  }, [id]);
 
   const fetchPolicy = async () => {
     try {
+      console.log('Fetching policy:', id);
       setLoading(true);
+      setError(null);
       const comparisonService = PolicyComparisonService.getInstance();
-      const policyData = await comparisonService.getPolicyById(params.id);
+      const policyData = await comparisonService.getPolicyById(id);
+      
+      console.log('Policy data:', JSON.stringify(policyData, null, 2));
+      if (!policyData) {
+        setError('Policy not found');
+        setPolicy(null);
+        return;
+      }
+
       setPolicy(policyData);
       
       // Check if policy is in user's favorites
       if (user) {
-        const isFav = await comparisonService.isPolicyFavorite(user.uid, params.id);
+        const isFav = await comparisonService.isPolicyFavorite(user.uid, id);
         setIsFavorite(isFav);
       }
     } catch (error) {
       console.error('Error fetching policy:', error);
+      setError('Failed to fetch policy details. Please try again later.');
+      setPolicy(null);
     } finally {
       setLoading(false);
     }
@@ -80,6 +95,21 @@ export default function PolicyDetailPage({ params }: Props) {
     return (
       <div className="flex items-center justify-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="text-center py-12">
+        <h3 className="text-lg font-medium text-gray-900">Error</h3>
+        <p className="mt-2 text-sm text-gray-500">{error}</p>
+        <Button
+          onClick={() => router.push('/dashboard/policies')}
+          className="mt-4"
+        >
+          Back to Policies
+        </Button>
       </div>
     );
   }
@@ -166,23 +196,25 @@ export default function PolicyDetailPage({ params }: Props) {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <p className="text-sm text-gray-500">Premium</p>
-                    <p className="text-lg font-semibold">₹{policy.premium.toLocaleString()}</p>
+                    <p className="text-lg font-semibold">₹{policy.premium?.toLocaleString() || 'N/A'}</p>
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Coverage</p>
-                    <p className="text-lg font-semibold">₹{policy.coverage.toLocaleString()}</p>
+                    <p className="text-lg font-semibold">₹{policy.coverage?.toLocaleString() || 'N/A'}</p>
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Term</p>
-                    <p className="text-lg font-semibold">{policy.term} years</p>
+                    <p className="text-lg font-semibold">{policy.term ? `${policy.term} years` : 'N/A'}</p>
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Claim Settlement Ratio</p>
-                    <p className="text-lg font-semibold">{policy.claimSettlementRatio}%</p>
+                    <p className="text-lg font-semibold">{policy.claimSettlementRatio ? `${policy.claimSettlementRatio}%` : 'N/A'}</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
+
+            <BenefitsAnalysis policy={policy} />
 
             <Tabs defaultValue="benefits">
               <TabsList>
@@ -195,12 +227,14 @@ export default function PolicyDetailPage({ params }: Props) {
                 <Card>
                   <CardContent className="pt-6">
                     <ul className="space-y-2">
-                      {policy.benefits.map((benefit, index) => (
+                      {policy.benefits?.map((benefit, index) => (
                         <li key={index} className="flex items-start">
                           <span className="h-6 w-6 flex items-center justify-center rounded-full bg-green-100 text-green-800 mr-2">✓</span>
                           <span>{benefit}</span>
                         </li>
-                      ))}
+                      )) || (
+                        <li className="text-gray-500">No benefits listed</li>
+                      )}
                     </ul>
                   </CardContent>
                 </Card>
@@ -209,12 +243,14 @@ export default function PolicyDetailPage({ params }: Props) {
                 <Card>
                   <CardContent className="pt-6">
                     <ul className="space-y-2">
-                      {policy.addOns.map((addon, index) => (
+                      {policy.addOns?.map((addon, index) => (
                         <li key={index} className="flex items-start">
                           <span className="h-6 w-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-800 mr-2">+</span>
                           <span>{addon}</span>
                         </li>
-                      ))}
+                      )) || (
+                        <li className="text-gray-500">No add-ons available</li>
+                      )}
                     </ul>
                   </CardContent>
                 </Card>
@@ -223,12 +259,14 @@ export default function PolicyDetailPage({ params }: Props) {
                 <Card>
                   <CardContent className="pt-6">
                     <ul className="space-y-2">
-                      {policy.exclusions.map((exclusion, index) => (
+                      {policy.exclusions?.map((exclusion, index) => (
                         <li key={index} className="flex items-start">
                           <span className="h-6 w-6 flex items-center justify-center rounded-full bg-red-100 text-red-800 mr-2">×</span>
                           <span>{exclusion}</span>
                         </li>
-                      ))}
+                      )) || (
+                        <li className="text-gray-500">No exclusions listed</li>
+                      )}
                     </ul>
                   </CardContent>
                 </Card>
@@ -240,13 +278,13 @@ export default function PolicyDetailPage({ params }: Props) {
                       <div>
                         <p className="text-sm text-gray-500">Age Range</p>
                         <p className="text-lg font-semibold">
-                          {policy.eligibility.minAge} - {policy.eligibility.maxAge} years
+                          {policy.eligibility ? `${policy.eligibility.minAge} - ${policy.eligibility.maxAge} years` : 'N/A'}
                         </p>
                       </div>
                       <div>
                         <p className="text-sm text-gray-500">Minimum Income</p>
                         <p className="text-lg font-semibold">
-                          ₹{policy.eligibility.minIncome.toLocaleString()}/year
+                          ₹{policy.eligibility?.minIncome.toLocaleString() || 'N/A'}/year
                         </p>
                       </div>
                     </div>
@@ -258,6 +296,7 @@ export default function PolicyDetailPage({ params }: Props) {
 
           {/* Sidebar */}
           <div className="space-y-6">
+            {/* Financial Goals Card */}
             <Card>
               <CardHeader>
                 <CardTitle>Financial Goals</CardTitle>
@@ -265,27 +304,46 @@ export default function PolicyDetailPage({ params }: Props) {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {policy.goals.map((goal, index) => (
-                    <Badge key={index} variant="secondary">{goal}</Badge>
-                  ))}
+                  {policy.goals?.length > 0 ? (
+                    policy.goals.map((goal, index) => (
+                      <Badge key={index} variant="secondary">{goal}</Badge>
+                    ))
+                  ) : (
+                    <span className="text-gray-500">No goals specified</span>
+                  )}
                 </div>
               </CardContent>
             </Card>
 
+            {/* Flexibility Features Card */}
             <Card>
               <CardHeader>
                 <CardTitle>Flexibility Features</CardTitle>
                 <CardDescription>Policy customization options</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2">
-                  {policy.flexibility.map((feature, index) => (
-                    <li key={index} className="flex items-center">
+                {policy.flexibility ? (
+                  <ul className="space-y-2">
+                    <li className="flex items-center">
                       <span className="h-5 w-5 flex items-center justify-center rounded-full bg-purple-100 text-purple-800 mr-2">⚡</span>
-                      <span>{feature}</span>
+                      <span>Length: {policy.flexibility.length} years</span>
                     </li>
-                  ))}
-                </ul>
+                    <li className="flex items-center">
+                      <span className="h-5 w-5 flex items-center justify-center rounded-full bg-purple-100 text-purple-800 mr-2">⚡</span>
+                      <span>Portability: {policy.flexibility.portability ? 'Yes' : 'No'}</span>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="h-5 w-5 flex items-center justify-center rounded-full bg-purple-100 text-purple-800 mr-2">⚡</span>
+                      <span>Partial Withdrawal: {policy.flexibility.partialWithdrawal ? 'Yes' : 'No'}</span>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="h-5 w-5 flex items-center justify-center rounded-full bg-purple-100 text-purple-800 mr-2">⚡</span>
+                      <span>Top-up: {policy.flexibility.topUp ? 'Yes' : 'No'}</span>
+                    </li>
+                  </ul>
+                ) : (
+                  <span className="text-gray-500">No flexibility features specified</span>
+                )}
               </CardContent>
             </Card>
 

@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 interface Policy {
   id: string;
-  type: string;
+  category: string;
   provider: string;
   description: string;
   coverage: number;
@@ -91,7 +91,7 @@ export default function PoliciesPage() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Type</TableHead>
+                <TableHead>Category</TableHead>
                 <TableHead>Description</TableHead>
                 <TableHead>Coverage</TableHead>
                 <TableHead>Premium</TableHead>
@@ -102,10 +102,10 @@ export default function PoliciesPage() {
             <TableBody>
               {policies.map((policy) => (
                 <TableRow key={policy.id}>
-                  <TableCell className="font-medium">{policy.type}</TableCell>
+                  <TableCell className="font-medium">{policy.category}</TableCell>
                   <TableCell>{policy.description}</TableCell>
-                  <TableCell>${policy.coverage.toLocaleString()}</TableCell>
-                  <TableCell>${policy.premium.toLocaleString()}/month</TableCell>
+                  <TableCell>₹{policy.coverage.toLocaleString()}</TableCell>
+                  <TableCell>₹{policy.premium.toLocaleString()}/month</TableCell>
                   <TableCell>
                     <Badge variant={policy.status === 'active' ? 'default' : 'secondary'}>
                       {policy.status}

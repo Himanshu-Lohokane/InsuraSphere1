@@ -1,89 +1,109 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useAuth } from '@/contexts/AuthContext';
-import { PolicyComparisonService, Policy } from '@/lib/policyComparison';
-import RoleGuard from '@/components/auth/RoleGuard';
+import { useEffect, useState } from 'react';
+import { useParams, useRouter } from 'next/navigation';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
+import { Policy } from '@/types/policy';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Separator } from '@/components/ui/separator';
-import { ArrowLeft, ArrowRight, CreditCard, Building, Wallet } from 'lucide-react';
+import { Loader2, ArrowLeft, CreditCard, Shield, Clock } from 'lucide-react';
+import { useAuth } from '@/contexts/AuthContext';
+import { UserPolicyService } from '@/lib/services/userPolicyService';
+import { toast } from 'sonner';
 
-type Props = {
-  params: { id: string }
-}
-
-export default function PolicyPurchasePage({ params }: Props) {
+export default function PurchasePage() {
+  const params = useParams();
   const router = useRouter();
   const { user } = useAuth();
-  const [loading, setLoading] = useState(true);
   const [policy, setPolicy] = useState<Policy | null>(null);
-  const [step, setStep] = useState(1);
+  const [loading, setLoading] = useState(true);
+  const [purchasing, setPurchasing] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    dateOfBirth: '',
-    gender: '',
+    fullName: '',
     email: '',
     phone: '',
     address: '',
-    city: '',
-    state: '',
-    pincode: '',
-    occupation: '',
-    annualIncome: '',
-    paymentMethod: '',
-    termsAccepted: false,
+    cardNumber: '',
+    expiryDate: '',
+    cvv: ''
   });
 
   useEffect(() => {
+    const fetchPolicy = async () => {
+      if (!params.id) return;
+
+      try {
+        const docRef = doc(db, 'policies', params.id as string);
+        const docSnap = await getDoc(docRef);
+        
+        if (docSnap.exists()) {
+          setPolicy({ id: docSnap.id, ...docSnap.data() } as Policy);
+        }
+      } catch (error) {
+        console.error('Error fetching policy:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchPolicy();
   }, [params.id]);
 
-  const fetchPolicy = async () => {
-    try {
-      setLoading(true);
-      const comparisonService = PolicyComparisonService.getInstance();
-      const policyData = await comparisonService.getPolicyById(params.id);
-      setPolicy(policyData);
-    } catch (error) {
-      console.error('Error fetching policy:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (step < 3) {
-      setStep(step + 1);
+    
+    if (!user || !policy) {
+      toast.error('Please sign in to purchase a policy');
       return;
     }
 
     try {
-      // Here you would integrate with your payment gateway
-      // For now, we'll just simulate a successful purchase
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      router.push('/dashboard/policies');
+      setPurchasing(true);
+
+      // Extract purchase details from form data
+      const purchaseDetails = {
+        fullName: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        address: formData.address
+      };
+
+      // Purchase the policy
+      await UserPolicyService.purchasePolicy(user.uid, policy, purchaseDetails);
+
+      toast.success('Policy purchased successfully!');
+      router.push('/dashboard');
     } catch (error) {
       console.error('Error purchasing policy:', error);
+      toast.error('Failed to purchase policy. Please try again.');
+    } finally {
+      setPurchasing(false);
     }
+  };
+
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR',
+      maximumFractionDigits: 0,
+    }).format(amount);
   };
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600"></div>
+      <div className="flex items-center justify-center h-screen">
+        <Loader2 className="h-8 w-8 animate-spin text-blue-500" />
       </div>
     );
   }
@@ -92,336 +112,203 @@ export default function PolicyPurchasePage({ params }: Props) {
     return (
       <div className="text-center py-12">
         <h3 className="text-lg font-medium text-gray-900">Policy not found</h3>
-        <p className="mt-2 text-sm text-gray-500">
-          The policy you're looking for doesn't exist or has been removed.
-        </p>
         <Button
-          onClick={() => router.push('/dashboard/policies')}
+          onClick={() => router.back()}
           className="mt-4"
+          variant="outline"
         >
-          Back to Policies
+          <ArrowLeft className="h-4 w-4 mr-2" />
+          Go Back
         </Button>
       </div>
     );
   }
 
   return (
-    <RoleGuard allowedRoles={['user']}>
-      <div className="max-w-4xl mx-auto space-y-6">
-        {/* Header */}
-        <div className="flex items-center space-x-4">
-          <Button
-            variant="ghost"
-            onClick={() => router.push(`/dashboard/policies/${params.id}`)}
-            className="p-0"
-          >
-            <ArrowLeft className="h-6 w-6" />
-          </Button>
-          <div>
-            <h1 className="text-2xl font-semibold text-gray-900">Purchase Policy</h1>
-            <p className="text-sm text-gray-500">{policy.provider} - {policy.type}</p>
-          </div>
-        </div>
+    <div className="min-h-screen bg-gray-50 p-6">
+      <div className="max-w-4xl mx-auto space-y-8">
+        <Button
+          onClick={() => router.back()}
+          variant="outline"
+          className="mb-6"
+        >
+          <ArrowLeft className="h-4 w-4 mr-2" />
+          Back to Comparison
+        </Button>
 
-        {/* Progress Steps */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-              step >= 1 ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-600'
-            }`}>
-              1
-            </div>
-            <div className="ml-2">Personal Info</div>
-          </div>
-          <div className="flex-1 h-1 mx-4 bg-gray-200">
-            <div
-              className="h-full bg-indigo-600 transition-all duration-300"
-              style={{ width: `${(step - 1) * 50}%` }}
-            />
-          </div>
-          <div className="flex items-center">
-            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-              step >= 2 ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-600'
-            }`}>
-              2
-            </div>
-            <div className="ml-2">Contact Details</div>
-          </div>
-          <div className="flex-1 h-1 mx-4 bg-gray-200">
-            <div
-              className="h-full bg-indigo-600 transition-all duration-300"
-              style={{ width: `${(step - 2) * 50}%` }}
-            />
-          </div>
-          <div className="flex items-center">
-            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-              step >= 3 ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-600'
-            }`}>
-              3
-            </div>
-            <div className="ml-2">Payment</div>
-          </div>
-        </div>
-
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Step 1: Personal Information */}
-          {step === 1 && (
-            <Card>
-              <CardHeader>
-                <CardTitle>Personal Information</CardTitle>
-                <CardDescription>Please provide your personal details</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName">First Name</Label>
-                    <Input
-                      id="firstName"
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="lastName">Last Name</Label>
-                    <Input
-                      id="lastName"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleInputChange}
-                      required
-                    />
+        <Card className="bg-white shadow-sm">
+          <CardHeader className="bg-gradient-to-r from-teal-500 to-cyan-600">
+            <CardTitle className="text-white text-2xl">Purchase Policy</CardTitle>
+            <CardDescription className="text-teal-100">
+              {policy.name}
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="p-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                <Shield className="h-6 w-6 text-teal-500" />
+                <div>
+                  <div className="text-sm font-medium text-gray-500">Coverage</div>
+                  <div className="text-lg font-semibold text-gray-900">
+                    {formatCurrency(policy.coverage)}
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="dateOfBirth">Date of Birth</Label>
-                    <Input
-                      id="dateOfBirth"
-                      name="dateOfBirth"
-                      type="date"
-                      value={formData.dateOfBirth}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label>Gender</Label>
-                    <RadioGroup
-                      value={formData.gender}
-                      onValueChange={(value) => setFormData(prev => ({ ...prev, gender: value }))}
-                      className="flex space-x-4"
-                    >
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="male" id="male" />
-                        <Label htmlFor="male">Male</Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="female" id="female" />
-                        <Label htmlFor="female">Female</Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="other" id="other" />
-                        <Label htmlFor="other">Other</Label>
-                      </div>
-                    </RadioGroup>
+              </div>
+              <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                <CreditCard className="h-6 w-6 text-teal-500" />
+                <div>
+                  <div className="text-sm font-medium text-gray-500">Premium</div>
+                  <div className="text-lg font-semibold text-gray-900">
+                    {formatCurrency(policy.premium)}/year
                   </div>
                 </div>
+              </div>
+              <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                <Clock className="h-6 w-6 text-teal-500" />
+                <div>
+                  <div className="text-sm font-medium text-gray-500">Term</div>
+                  <div className="text-lg font-semibold text-gray-900">
+                    {policy.term} years
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="occupation">Occupation</Label>
+                  <Label htmlFor="fullName" className="text-sm font-medium text-gray-700">
+                    Full Name
+                  </Label>
                   <Input
-                    id="occupation"
-                    name="occupation"
-                    value={formData.occupation}
+                    id="fullName"
+                    name="fullName"
+                    value={formData.fullName}
                     onChange={handleInputChange}
                     required
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                    placeholder="Enter your full name"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="annualIncome">Annual Income (₹)</Label>
+                  <Label htmlFor="email" className="text-sm font-medium text-gray-700">
+                    Email Address
+                  </Label>
                   <Input
-                    id="annualIncome"
-                    name="annualIncome"
-                    type="number"
-                    value={formData.annualIncome}
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
                     onChange={handleInputChange}
                     required
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                    placeholder="you@example.com"
                   />
                 </div>
-              </CardContent>
-            </Card>
-          )}
-
-          {/* Step 2: Contact Details */}
-          {step === 2 && (
-            <Card>
-              <CardHeader>
-                <CardTitle>Contact Details</CardTitle>
-                <CardDescription>Please provide your contact information</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
+                <div className="space-y-2">
+                  <Label htmlFor="phone" className="text-sm font-medium text-gray-700">
+                    Phone Number
+                  </Label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                    placeholder="Enter your phone number"
+                  />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="address">Address</Label>
+                  <Label htmlFor="address" className="text-sm font-medium text-gray-700">
+                    Address
+                  </Label>
                   <Input
                     id="address"
                     name="address"
                     value={formData.address}
                     onChange={handleInputChange}
                     required
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                    placeholder="Enter your address"
                   />
                 </div>
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="city">City</Label>
-                    <Input
-                      id="city"
-                      name="city"
-                      value={formData.city}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="state">State</Label>
-                    <Input
-                      id="state"
-                      name="state"
-                      value={formData.state}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="pincode">PIN Code</Label>
-                    <Input
-                      id="pincode"
-                      name="pincode"
-                      value={formData.pincode}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          )}
+              </div>
 
-          {/* Step 3: Payment */}
-          {step === 3 && (
-            <Card>
-              <CardHeader>
-                <CardTitle>Payment Details</CardTitle>
-                <CardDescription>Choose your payment method and complete the purchase</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="space-y-4">
-                  <Label>Payment Method</Label>
-                  <RadioGroup
-                    value={formData.paymentMethod}
-                    onValueChange={(value) => setFormData(prev => ({ ...prev, paymentMethod: value }))}
-                    className="grid grid-cols-3 gap-4"
-                  >
-                    <div className="flex flex-col items-center p-4 border rounded-lg cursor-pointer hover:border-indigo-600">
-                      <CreditCard className="h-8 w-8 mb-2" />
-                      <RadioGroupItem value="card" id="card" className="sr-only" />
-                      <Label htmlFor="card" className="cursor-pointer">Credit Card</Label>
-                    </div>
-                    <div className="flex flex-col items-center p-4 border rounded-lg cursor-pointer hover:border-indigo-600">
-                      <Building className="h-8 w-8 mb-2" />
-                      <RadioGroupItem value="bank" id="bank" className="sr-only" />
-                      <Label htmlFor="bank" className="cursor-pointer">Bank Transfer</Label>
-                    </div>
-                    <div className="flex flex-col items-center p-4 border rounded-lg cursor-pointer hover:border-indigo-600">
-                      <Wallet className="h-8 w-8 mb-2" />
-                      <RadioGroupItem value="upi" id="upi" className="sr-only" />
-                      <Label htmlFor="upi" className="cursor-pointer">UPI</Label>
-                    </div>
-                  </RadioGroup>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox
-                      id="terms"
-                      checked={formData.termsAccepted}
-                      onCheckedChange={(checked) => 
-                        setFormData(prev => ({ ...prev, termsAccepted: checked as boolean }))
-                      }
-                    />
-                    <Label htmlFor="terms" className="text-sm">
-                      I agree to the terms and conditions and confirm that all information provided is accurate
+              <div className="border-t border-gray-200 my-6 pt-6">
+                <h3 className="text-lg font-medium text-gray-900 mb-4">Payment Details</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="cardNumber" className="text-sm font-medium text-gray-700">
+                      Card Number
                     </Label>
+                    <Input
+                      id="cardNumber"
+                      name="cardNumber"
+                      value={formData.cardNumber}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      placeholder="1234 5678 9012 3456"
+                    />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="expiryDate" className="text-sm font-medium text-gray-700">
+                        Expiry Date
+                      </Label>
+                      <Input
+                        id="expiryDate"
+                        name="expiryDate"
+                        placeholder="MM/YY"
+                        value={formData.expiryDate}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="cvv" className="text-sm font-medium text-gray-700">
+                        CVV
+                      </Label>
+                      <Input
+                        id="cvv"
+                        name="cvv"
+                        type="password"
+                        maxLength={3}
+                        value={formData.cvv}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                        placeholder="123"
+                      />
+                    </div>
                   </div>
                 </div>
+              </div>
 
-                <Separator />
-
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span>Policy Premium</span>
-                    <span>₹{policy.premium.toLocaleString()}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>GST (18%)</span>
-                    <span>₹{(policy.premium * 0.18).toLocaleString()}</span>
-                  </div>
-                  <div className="flex justify-between font-semibold">
-                    <span>Total Amount</span>
-                    <span>₹{(policy.premium * 1.18).toLocaleString()}</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          )}
-
-          {/* Navigation Buttons */}
-          <div className="flex justify-between">
-            {step > 1 && (
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => setStep(step - 1)}
-              >
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Back
-              </Button>
-            )}
-            <Button
-              type="submit"
-              className="ml-auto"
-              disabled={step === 3 && !formData.termsAccepted}
-            >
-              {step === 3 ? 'Complete Purchase' : 'Continue'}
-              {step < 3 && <ArrowRight className="h-4 w-4 ml-2" />}
-            </Button>
-          </div>
-        </form>
+              <div className="flex justify-end space-x-4">
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={() => router.back()}
+                  disabled={purchasing}
+                >
+                  Cancel
+                </Button>
+                <Button 
+                  type="submit" 
+                  disabled={purchasing}
+                  className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-md"
+                >
+                  {purchasing ? 'Processing...' : 'Complete Purchase'}
+                </Button>
+              </div>
+            </form>
+          </CardContent>
+        </Card>
       </div>
-    </RoleGuard>
+    </div>
   );
 }

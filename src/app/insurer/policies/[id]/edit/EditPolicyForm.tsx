@@ -1,70 +1,93 @@
 'use client';
 
-import { useState } from 'react';
-import { useAuth } from '@/contexts/AuthContext';
-import { collection, addDoc } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Button } from '@/components/ui/button';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
+import { Policy } from '@/types/policy';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { Loader2 } from 'lucide-react';
 
-export default function NewPolicyPage() {
-  const { user, userProfile } = useAuth();
+interface EditPolicyFormProps {
+  policyId: string;
+}
+
+export default function EditPolicyForm({ policyId }: EditPolicyFormProps) {
   const router = useRouter();
-  const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [formData, setFormData] = useState<Partial<Policy>>({
     name: '',
     description: '',
-    premium: '',
-    coverage: '',
-    term: '',
-    claimSettlementRatio: '',
+    premium: 0,
+    coverage: 0,
+    term: 0,
+    claimSettlementRatio: 0,
     company: '',
     category: '',
-    benefits: [] as string[],
-    goals: [] as string[],
-    features: [] as string[],
-    exclusions: [] as string[],
-    documents: [] as string[],
+    benefits: [],
+    goals: [],
+    features: [],
+    exclusions: [],
+    documents: [],
     flexibility: {
       partialWithdrawal: false,
       topUp: false,
       premiumHoliday: false
-    },
-    status: 'active'
+    }
   });
+
+  useEffect(() => {
+    const fetchPolicy = async () => {
+      try {
+        const policyDoc = await getDoc(doc(db, 'policies', policyId));
+        if (policyDoc.exists()) {
+          const policyData = policyDoc.data() as Policy;
+          setFormData({
+            ...policyData,
+            flexibility: policyData.flexibility || {
+              partialWithdrawal: false,
+              topUp: false,
+              premiumHoliday: false
+            }
+          });
+        } else {
+          console.error('Policy not found');
+          router.push('/dashboard/policies');
+        }
+      } catch (error) {
+        console.error('Error fetching policy:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPolicy();
+  }, [policyId, router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!user) return;
+    setSaving(true);
 
-    setLoading(true);
     try {
-      await addDoc(collection(db, 'policies'), {
+      await updateDoc(doc(db, 'policies', policyId), {
         ...formData,
-        providerId: user.uid,
-        provider: userProfile?.companyName || userProfile?.name || 'Unknown Provider',
-        premium: parseFloat(formData.premium) || 0,
-        coverage: parseFloat(formData.coverage) || 0,
-        term: parseFloat(formData.term) || 0,
-        claimSettlementRatio: parseFloat(formData.claimSettlementRatio) || 0,
-        createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
       });
-
-      router.push('/insurer/policies');
+      router.push('/dashboard/policies');
     } catch (error) {
-      console.error('Error creating policy:', error);
-      setLoading(false);
+      console.error('Error updating policy:', error);
+    } finally {
+      setSaving(false);
     }
   };
 
-  const handleChange = (field: string, value: any) => {
+  const handleChange = (field: keyof Policy, value: any) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
@@ -73,13 +96,21 @@ export default function NewPolicyPage() {
     handleChange(field, items);
   };
 
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <Loader2 className="h-8 w-8 animate-spin text-blue-500" />
+      </div>
+    );
+  }
+
   return (
     <div className="container mx-auto p-6 max-w-4xl">
       <Card className="bg-white shadow-lg">
         <CardHeader className="bg-gradient-to-r from-slate-800 to-slate-900 text-white">
-          <CardTitle className="text-2xl">Create New Policy</CardTitle>
+          <CardTitle className="text-2xl">Edit Policy</CardTitle>
           <CardDescription className="text-slate-200">
-            Add a new insurance policy to your portfolio
+            Update the insurance policy details
           </CardDescription>
         </CardHeader>
         <CardContent className="p-6">
@@ -139,8 +170,8 @@ export default function NewPolicyPage() {
                   <Input
                     type="number"
                     required
-                    value={formData.premium}
-                    onChange={(e) => handleChange('premium', e.target.value)}
+                    value={formData.premium?.toString()}
+                    onChange={(e) => handleChange('premium', Number(e.target.value))}
                     placeholder="Enter annual premium"
                     className="bg-white text-slate-900 placeholder:text-slate-400"
                   />
@@ -150,8 +181,8 @@ export default function NewPolicyPage() {
                   <Input
                     type="number"
                     required
-                    value={formData.coverage}
-                    onChange={(e) => handleChange('coverage', e.target.value)}
+                    value={formData.coverage?.toString()}
+                    onChange={(e) => handleChange('coverage', Number(e.target.value))}
                     placeholder="Enter coverage amount"
                     className="bg-white text-slate-900 placeholder:text-slate-400"
                   />
@@ -161,8 +192,8 @@ export default function NewPolicyPage() {
                   <Input
                     type="number"
                     required
-                    value={formData.term}
-                    onChange={(e) => handleChange('term', e.target.value)}
+                    value={formData.term?.toString()}
+                    onChange={(e) => handleChange('term', Number(e.target.value))}
                     placeholder="Enter policy term"
                     className="bg-white text-slate-900 placeholder:text-slate-400"
                   />
@@ -174,8 +205,8 @@ export default function NewPolicyPage() {
                     required
                     min="0"
                     max="100"
-                    value={formData.claimSettlementRatio}
-                    onChange={(e) => handleChange('claimSettlementRatio', e.target.value)}
+                    value={formData.claimSettlementRatio?.toString()}
+                    onChange={(e) => handleChange('claimSettlementRatio', Number(e.target.value))}
                     placeholder="Enter claim settlement ratio"
                     className="bg-white text-slate-900 placeholder:text-slate-400"
                   />
@@ -190,7 +221,7 @@ export default function NewPolicyPage() {
                 <div className="space-y-2">
                   <Label className="text-base font-medium text-slate-900">Benefits (comma-separated)</Label>
                   <Textarea
-                    value={formData.benefits.join(', ')}
+                    value={formData.benefits?.join(', ')}
                     onChange={(e) => handleArrayInput('benefits', e.target.value)}
                     placeholder="Enter benefits, separated by commas"
                     className="bg-white text-slate-900 placeholder:text-slate-400"
@@ -199,7 +230,7 @@ export default function NewPolicyPage() {
                 <div className="space-y-2">
                   <Label className="text-base font-medium text-slate-900">Financial Goals (comma-separated)</Label>
                   <Textarea
-                    value={formData.goals.join(', ')}
+                    value={formData.goals?.join(', ')}
                     onChange={(e) => handleArrayInput('goals', e.target.value)}
                     placeholder="Enter financial goals, separated by commas"
                     className="bg-white text-slate-900 placeholder:text-slate-400"
@@ -208,7 +239,7 @@ export default function NewPolicyPage() {
                 <div className="space-y-2">
                   <Label className="text-base font-medium text-slate-900">Features (comma-separated)</Label>
                   <Textarea
-                    value={formData.features.join(', ')}
+                    value={formData.features?.join(', ')}
                     onChange={(e) => handleArrayInput('features', e.target.value)}
                     placeholder="Enter features, separated by commas"
                     className="bg-white text-slate-900 placeholder:text-slate-400"
@@ -217,7 +248,7 @@ export default function NewPolicyPage() {
                 <div className="space-y-2">
                   <Label className="text-base font-medium text-slate-900">Exclusions (comma-separated)</Label>
                   <Textarea
-                    value={formData.exclusions.join(', ')}
+                    value={formData.exclusions?.join(', ')}
                     onChange={(e) => handleArrayInput('exclusions', e.target.value)}
                     placeholder="Enter exclusions, separated by commas"
                     className="bg-white text-slate-900 placeholder:text-slate-400"
@@ -233,7 +264,7 @@ export default function NewPolicyPage() {
                 <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200">
                   <Label className="text-base font-medium text-slate-900">Partial Withdrawal</Label>
                   <Switch
-                    checked={formData.flexibility.partialWithdrawal}
+                    checked={formData.flexibility?.partialWithdrawal}
                     onCheckedChange={(checked) => 
                       handleChange('flexibility', { ...formData.flexibility, partialWithdrawal: checked })}
                   />
@@ -241,7 +272,7 @@ export default function NewPolicyPage() {
                 <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200">
                   <Label className="text-base font-medium text-slate-900">Top-up Option</Label>
                   <Switch
-                    checked={formData.flexibility.topUp}
+                    checked={formData.flexibility?.topUp}
                     onCheckedChange={(checked) => 
                       handleChange('flexibility', { ...formData.flexibility, topUp: checked })}
                   />
@@ -249,7 +280,7 @@ export default function NewPolicyPage() {
                 <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200">
                   <Label className="text-base font-medium text-slate-900">Premium Holiday</Label>
                   <Switch
-                    checked={formData.flexibility.premiumHoliday}
+                    checked={formData.flexibility?.premiumHoliday}
                     onCheckedChange={(checked) => 
                       handleChange('flexibility', { ...formData.flexibility, premiumHoliday: checked })}
                   />
@@ -262,23 +293,23 @@ export default function NewPolicyPage() {
                 type="button"
                 variant="outline"
                 onClick={() => router.back()}
-                disabled={loading}
+                disabled={saving}
                 className="border-slate-300 text-slate-700 hover:bg-slate-100"
               >
                 Cancel
               </Button>
               <Button 
                 type="submit" 
-                disabled={loading}
+                disabled={saving}
                 className="bg-slate-800 hover:bg-slate-700 text-white"
               >
-                {loading ? (
+                {saving ? (
                   <>
                     <Loader2 className="h-4 w-4 animate-spin mr-2" />
-                    Creating...
+                    Saving...
                   </>
                 ) : (
-                  'Create Policy'
+                  'Save Changes'
                 )}
               </Button>
             </div>

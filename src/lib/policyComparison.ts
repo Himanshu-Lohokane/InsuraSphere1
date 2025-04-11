@@ -1,5 +1,5 @@
 import { db } from '@/lib/firebase';
-import { collection, doc, getDoc, getDocs, query, where, Query } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, query, where, Query, setDoc, deleteDoc } from 'firebase/firestore';
 import { UserRole } from '@/contexts/AuthContext';
 
 export interface Policy {
@@ -53,6 +53,7 @@ export interface UserPreferences {
 export class PolicyComparisonService {
   private static instance: PolicyComparisonService;
   private policiesCollection = collection(db, 'policies');
+  private favoritesCollection = collection(db, 'favorites');
 
   private constructor() {}
 
@@ -63,16 +64,16 @@ export class PolicyComparisonService {
     return PolicyComparisonService.instance;
   }
 
-  async getPolicyById(id: string): Promise<Policy> {
+  async getPolicyById(id: string): Promise<Policy | null> {
     try {
       const policyDoc = await getDoc(doc(this.policiesCollection, id));
       if (!policyDoc.exists()) {
-        throw new Error('Policy not found');
+        return null;
       }
       return { id: policyDoc.id, ...policyDoc.data() } as Policy;
     } catch (error) {
       console.error('Error fetching policy:', error);
-      throw error;
+      return null;
     }
   }
 
@@ -343,5 +344,62 @@ export class PolicyComparisonService {
     return policies.reduce((best, current) => 
       !best || current.flexibility.length > best.flexibility.length ? current : best
     );
+  }
+
+  async isPolicyFavorite(userId: string, policyId: string): Promise<boolean> {
+    try {
+      const favoriteDoc = await getDoc(doc(this.favoritesCollection, `${userId}_${policyId}`));
+      return favoriteDoc.exists();
+    } catch (error) {
+      console.error('Error checking favorite status:', error);
+      throw error;
+    }
+  }
+
+  async addToFavorites(userId: string, policyId: string): Promise<void> {
+    try {
+      await setDoc(doc(this.favoritesCollection, `${userId}_${policyId}`), {
+        userId,
+        policyId,
+        createdAt: new Date()
+      });
+    } catch (error) {
+      console.error('Error adding to favorites:', error);
+      throw error;
+    }
+  }
+
+  async removeFromFavorites(userId: string, policyId: string): Promise<void> {
+    try {
+      await deleteDoc(doc(this.favoritesCollection, `${userId}_${policyId}`));
+    } catch (error) {
+      console.error('Error removing from favorites:', error);
+      throw error;
+    }
+  }
+
+  async deletePolicy(policyId: string): Promise<void> {
+    try {
+      await deleteDoc(doc(this.policiesCollection, policyId));
+    } catch (error) {
+      console.error('Error deleting policy:', error);
+      throw error;
+    }
+  }
+
+  async addPolicy(policy: Omit<Policy, 'id'>): Promise<string> {
+    try {
+      const docRef = doc(this.policiesCollection);
+      await setDoc(docRef, {
+        ...policy,
+        status: 'active',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      });
+      return docRef.id;
+    } catch (error) {
+      console.error('Error adding policy:', error);
+      throw error;
+    }
   }
 } 
