@@ -9,55 +9,45 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   const router = useRouter();
 
   useEffect(() => {
-    if (!loading) {
-      const path = window.location.pathname;
+    if (loading) return;
 
-      // Handle unauthenticated users
-      if (!user && !path.startsWith('/auth/')) {
-        router.push('/auth/signin');
-        return;
-      }
+    const path = window.location.pathname;
+    const isAuthPath = path.startsWith('/auth/');
 
-      // Only handle redirects for authenticated users with profiles
-      if (user && userProfile) {
-        // Handle root path redirects
-        if (path === '/') {
-          switch (userProfile.role) {
-            case 'insurer':
-              router.push('/insurer');
-              break;
-            case 'admin':
-              router.push('/admin');
-              break;
-            case 'user':
-              router.push('/dashboard');
-              break;
-          }
-          return;
-        }
+    // Allow access to public routes
+    if (path === '/' || path === '/features') return;
 
-        // Handle incorrect section access
-        const isInDashboard = path.startsWith('/dashboard');
-        const isInInsurer = path.startsWith('/insurer');
-        const isInAdmin = path.startsWith('/admin');
+    // Handle unauthenticated users
+    if (!user && !isAuthPath) {
+      router.push('/auth/signin');
+      return;
+    }
 
-        if (
-          (userProfile.role === 'user' && (isInInsurer || isInAdmin)) ||
-          (userProfile.role === 'insurer' && (isInDashboard || isInAdmin)) ||
-          (userProfile.role === 'admin' && (isInDashboard || isInInsurer))
-        ) {
-          switch (userProfile.role) {
-            case 'insurer':
-              router.push('/insurer');
-              break;
-            case 'admin':
-              router.push('/admin');
-              break;
-            case 'user':
-              router.push('/dashboard');
-              break;
-          }
-        }
+    // Allow authenticated users to access auth pages
+    if (user && isAuthPath) {
+      router.push('/dashboard');
+      return;
+    }
+
+    // Only handle role-based redirects for authenticated users with profiles
+    if (user && userProfile) {
+      const isInDashboard = path.startsWith('/dashboard');
+      const isInInsurer = path.startsWith('/insurer');
+      const isInAdmin = path.startsWith('/admin');
+
+      // Redirect based on role if accessing incorrect section
+      if (
+        (userProfile.role === 'user' && (isInInsurer || isInAdmin)) ||
+        (userProfile.role === 'insurer' && (isInDashboard || isInAdmin)) ||
+        (userProfile.role === 'admin' && (isInDashboard || isInInsurer))
+      ) {
+        const redirectPath = {
+          insurer: '/insurer',
+          admin: '/admin',
+          user: '/dashboard'
+        }[userProfile.role];
+        
+        router.push(redirectPath);
       }
     }
   }, [user, userProfile, loading, router]);
@@ -71,4 +61,4 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   }
 
   return children;
-} 
+}
