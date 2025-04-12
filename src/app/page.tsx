@@ -52,20 +52,16 @@ export default function Home() {
               From policy management to AI-powered recommendations, we've got you covered.
             </p>
           </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-              {features.map((feature) => (
-                <div key={feature.name} className="flex flex-col">
-                  <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-                    <feature.icon className="h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
-                    {feature.name}
-                  </dt>
-                  <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                    <p className="flex-auto">{feature.description}</p>
-                  </dd>
+          <div className="mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature) => (
+              <div key={feature.name} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div className="flex items-center gap-x-3">
+                  <feature.icon className="h-6 w-6 text-indigo-600" aria-hidden="true" />
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{feature.name}</h3>
                 </div>
-              ))}
-            </dl>
+                <p className="mt-4 text-base text-gray-600 dark:text-gray-300">{feature.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -155,7 +155,7 @@ export default function InsurerDashboard() {
             <ChartBarIcon className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">${stats.monthlyRevenue.toLocaleString()}</div>
+            <div className="text-2xl font-bold">₹{stats.monthlyRevenue.toLocaleString()}</div>
             <p className="text-xs text-muted-foreground">
               From active policies
             </p>
@@ -176,7 +176,7 @@ export default function InsurerDashboard() {
                 <div className="space-y-1">
                   <p className="text-sm font-medium leading-none">{policy.type}</p>
                   <p className="text-sm text-muted-foreground">
-                    Premium: ${policy.premium}/month
+                    Premium: ₹{policy.premium}/month
                   </p>
                 </div>
                 <div className="ml-auto font-medium">

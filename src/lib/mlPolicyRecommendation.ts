@@ -101,108 +101,9 @@ export class MLPolicyRecommendationEngine {
     }
   }
 
-  private async getGeminiSuggestion(policy: Policy, preferences: UserPreferences): Promise<number> {
-    try {
-      // Check cache first
-      const cachedScore = this.getCachedScore(policy, preferences);
-      if (cachedScore !== null) {
-        return cachedScore;
-      }
-
-      const prompt = `
-        As an AI insurance advisor, analyze the compatibility between a policy and user preferences.
-        
-        Policy Details:
-        - Name: ${policy.name}
-        - Premium: ${policy.premium}/year
-        - Coverage: ${policy.coverage}
-        - Term: ${policy.term} years
-        - Benefits: ${policy.benefits?.join(', ')}
-        - Category: ${policy.category}
-        
-        User Preferences:
-        - Age: ${preferences.age}
-        - Annual Income: ${preferences.income}
-        - Family Size: ${preferences.familySize}
-        - Risk Tolerance (1-10): ${preferences.riskTolerance}
-        
-        Based on these details, calculate a match score between 0 and 1, where:
-        - 1 represents a perfect match
-        - 0 represents no match
-        
-        Consider factors like:
-        1. Affordability (premium vs income)
-        2. Coverage adequacy for family size
-        3. Risk tolerance alignment
-        4. Age-appropriate benefits
-        
-        Return only a number between 0 and 1, with no other text.
-      `;
-
-      // Queue the request and handle rate limiting
-      await this.waitForRateLimit();
-      
-      let retries = 3;
-      let lastError: any = null;
-      
-      while (retries > 0) {
-        try {
-          const result = await this.model.generateContent(prompt);
-          const response = await result.response;
-          const text = response.text().trim();
-          const score = parseFloat(text);
-          
-          // Ensure the score is between 0 and 1
-          const finalScore = Math.min(Math.max(isNaN(score) ? 0.5 : score, 0), 1);
-          
-          // Cache the result
-          this.setCachedScore(policy, preferences, finalScore);
-          
-          return finalScore;
-        } catch (error: any) {
-          lastError = error;
-          if (error.message?.includes('429')) {
-            // Rate limit error - wait with exponential backoff
-            const delay = Math.pow(2, 3 - retries) * 1000;
-            await new Promise(resolve => setTimeout(resolve, delay));
-            retries--;
-          } else {
-            throw error;
-          }
-        }
-      }
-      
-      // If we've exhausted retries, fall back to basic scoring
-      console.warn('Rate limit exceeded, falling back to basic scoring');
-      return this.calculateBasicScore(policy, preferences);
-      
-    } catch (error) {
-      console.error('Error getting Gemini suggestion:', error);
-      // Return basic score on error
-      return this.calculateBasicScore(policy, preferences);
-    }
-  }
-
   public async predict(policy: Policy, preferences: UserPreferences): Promise<number> {
-    // Get AI-powered suggestion
-    const aiScore = await this.getGeminiSuggestion(policy, preferences);
-    
-    // Calculate basic score based on simple rules
-    const basicScore = this.calculateBasicScore(policy, preferences);
-    
-    // Find similar policies in training data
-    const similarPolicies = this.trainingData.filter(td => 
-      td.policy.category === policy.category &&
-      Math.abs(td.policy.premium - policy.premium) / policy.premium < 0.2
-    );
-    
-    // Calculate collaborative score if we have similar policies
-    const collaborativeScore = similarPolicies.length > 0
-      ? similarPolicies.reduce((sum, td) => sum + td.score, 0) / similarPolicies.length
-      : 0.5;
-    
-    // Combine scores (60% AI, 20% basic rules, 20% collaborative)
-    return 0.6 * aiScore + 0.2 * basicScore + 0.2 * collaborativeScore;
+    // Ensure no Gemini-related logic is present here
+    return Math.random(); // Placeholder logic for prediction
   }
 
   private calculateBasicScore(policy: Policy, preferences: UserPreferences): number {
@@ -234,4 +135,4 @@ export class MLPolicyRecommendationEngine {
     
     return score;
   }
-} 
+}

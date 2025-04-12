@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useRouter } from 'next/navigation';
-import { useAuth } from '@/contexts/AuthContext';
+import { useAuth, AuthContext } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -24,6 +24,7 @@ export default function SignIn() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [aiRecommendation, setAiRecommendation] = useState<string | null>(null);
+  const [isSigningIn, setIsSigningIn] = useState(false); // Track button state
 
   useEffect(() => {
     // Simulate AI recommendation based on user behavior or previous sessions
@@ -58,12 +59,16 @@ export default function SignIn() {
   };
 
   const handleGoogleSignIn = async () => {
+    if (isSigningIn) return; // Prevent multiple clicks
+    setIsSigningIn(true);
     try {
       const userRole = await signInWithGoogle(role);
       router.push(userRole === 'insurer' ? '/insurer' : userRole === 'admin' ? '/admin' : '/dashboard');
     } catch (err) {
       setError('Failed to sign in with Google.');
       console.error('Google sign in error:', err);
+    } finally {
+      setIsSigningIn(false); // Reset button state
     }
   };
 
@@ -157,9 +162,10 @@ export default function SignIn() {
                   variant="outline"
                   onClick={handleGoogleSignIn}
                   className="w-full"
+                  disabled={isSigningIn} // Disable button while signing in
                 >
                   <FcGoogle className="w-5 h-5 mr-2" />
-                  Sign in with Google
+                  {isSigningIn ? 'Signing in...' : 'Sign in with Google'}
                 </Button>
               </CardFooter>
             </form>
@@ -215,9 +221,10 @@ export default function SignIn() {
                   variant="outline"
                   onClick={handleGoogleSignIn}
                   className="w-full"
+                  disabled={isSigningIn} // Disable button while signing in
                 >
                   <FcGoogle className="w-5 h-5 mr-2" />
-                  Sign in with Google
+                  {isSigningIn ? 'Signing in...' : 'Sign in with Google'}
                 </Button>
               </CardFooter>
             </form>
