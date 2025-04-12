@@ -67,25 +67,6 @@ export default function Home() {
               ))}
             </dl>
           </div>
-          {/* Modern Feature Card */}
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-              <div className="flex justify-between items-center">
-                <div>
-                  <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">Total Users</h3>
-                  <p className="mt-2 text-3xl font-bold text-gray-900 dark:text-white">1,200</p>
-                </div>
-                <div className="flex items-center">
-                  <span className="text-green-600 dark:text-green-400 text-sm font-medium bg-green-100 dark:bg-green-900 px-2 py-1 rounded-full">
-                    +8.2%
-                  </span>
-                </div>
-              </div>
-              <div className="mt-4">
-                <div className="h-16 w-full bg-indigo-100 dark:bg-indigo-900 rounded-lg"></div> {/* Placeholder for chart or icon */}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
