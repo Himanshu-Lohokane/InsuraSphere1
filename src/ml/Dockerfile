@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.9-slim
 
 WORKDIR /app
 
@@ -13,14 +13,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application
 COPY . .
-
-# Create models directory
-RUN mkdir -p models
-
-# Copy model files
-COPY models/insurance_recommender.joblib models/
-COPY models/label_encoders.joblib models/
-COPY models/scaler.joblib models/
 
 # Expose the port the app runs on
 EXPOSE 8000

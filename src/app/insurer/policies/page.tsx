@@ -135,4 +135,4 @@ export default function PoliciesPage() {
       </Card>
     </div>
   );
-} 
+}

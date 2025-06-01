@@ -1,5 +1,4 @@
 from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, ConfigDict
 from typing import List, Dict, Optional
 from integration import InsuranceMLIntegration
@@ -16,19 +15,6 @@ app = FastAPI(
     title="Insurance Recommendation API",
     description="API for insurance policy recommendations using ML",
     version="1.0.0"
-)
-
-# Configure CORS
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",  # Local development
-        "https://insurasphere.vercel.app",  # Vercel production URL
-        "https://insurasphere-ml.onrender.com"  # Render production URL
-    ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
 )
 
 # Initialize ML integration

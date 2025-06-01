@@ -1,15 +1,16 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { collection, query, getDocs } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 import { useAuth } from '@/contexts/AuthContext';
 import RoleGuard from '@/components/auth/RoleGuard';
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
 
 interface AdminStats {
   totalUsers: number;
+  totalInsurers: number;
   totalPolicies: number;
-  activeUsers: number;
+  totalClaims: number;
 }
 
 export default function AdminDashboard() {
@@ -17,59 +18,81 @@ export default function AdminDashboard() {
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState<AdminStats>({
     totalUsers: 0,
+    totalInsurers: 0,
     totalPolicies: 0,
-    activeUsers: 0
+    totalClaims: 0,
   });
 
   useEffect(() => {
-    const fetchStats = async () => {
-      try {
-        const usersSnapshot = await getDocs(collection(db, 'users'));
-        const policiesSnapshot = await getDocs(collection(db, 'policies'));
-        
-        setStats({
-          totalUsers: usersSnapshot.size,
-          totalPolicies: policiesSnapshot.size,
-          activeUsers: usersSnapshot.docs.filter(doc => doc.data().lastLogin).length
-        });
-      } catch (error) {
-        console.error('Error fetching stats:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    if (userProfile?.role === 'admin') {
-      fetchStats();
+    if (user && userProfile) {
+      fetchAdminStats();
     }
-  }, [userProfile]);
+  }, [user, userProfile]);
 
-  if (!userProfile) {
-    return null;
-  }
+  const fetchAdminStats = async () => {
+    if (!user) return;
+
+    try {
+      setLoading(true);
+      
+      // Fetch users
+      const usersQuery = query(collection(db, 'users'));
+      const usersSnapshot = await getDocs(usersQuery);
+      const users = usersSnapshot.docs.map(doc => doc.data());
+      
+      // Count insurers
+      const insurers = users.filter(user => user.role === 'insurer');
+      
+      // Fetch policies
+      const policiesQuery = query(collection(db, 'policies'));
+      const policiesSnapshot = await getDocs(policiesQuery);
+      
+      // Fetch claims
+      const claimsQuery = query(collection(db, 'claims'));
+      const claimsSnapshot = await getDocs(claimsQuery);
+      
+      setStats({
+        totalUsers: users.length,
+        totalInsurers: insurers.length,
+        totalPolicies: policiesSnapshot.size,
+        totalClaims: claimsSnapshot.size,
+      });
+    } catch (error) {
+      console.error('Error fetching admin stats:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <RoleGuard requiredRole="admin">
-      <div className="p-6">
-        <h1 className="text-2xl font-bold mb-6">Admin Dashboard</h1>
+    <RoleGuard allowedRoles={['admin']}>
+      <div className="space-y-6">
+        <h1 className="text-2xl font-bold">Admin Dashboard</h1>
         
         {loading ? (
-          <div>Loading stats...</div>
+          <div className="flex justify-center items-center h-64">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600"></div>
+          </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow">
-              <h2 className="text-lg font-semibold mb-2">Total Users</h2>
-              <p className="text-3xl">{stats.totalUsers}</p>
+              <h3 className="text-lg font-medium text-gray-900">Total Users</h3>
+              <p className="mt-2 text-3xl font-bold text-indigo-600">{stats.totalUsers}</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow">
-              <h2 className="text-lg font-semibold mb-2">Total Policies</h2>
-              <p className="text-3xl">{stats.totalPolicies}</p>
+              <h3 className="text-lg font-medium text-gray-900">Total Insurers</h3>
+              <p className="mt-2 text-3xl font-bold text-indigo-600">{stats.totalInsurers}</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow">
-              <h2 className="text-lg font-semibold mb-2">Active Users</h2>
-              <p className="text-3xl">{stats.activeUsers}</p>
+              <h3 className="text-lg font-medium text-gray-900">Total Policies</h3>
+              <p className="mt-2 text-3xl font-bold text-indigo-600">{stats.totalPolicies}</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-lg font-medium text-gray-900">Total Claims</h3>
+              <p className="mt-2 text-3xl font-bold text-indigo-600">{stats.totalClaims}</p>
             </div>
           </div>
         )}

@@ -1,24 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  env: {
-    ML_API_URL: process.env.ML_API_URL || 'https://insurasphere-ml.onrender.com',
-  },
+  // Configure output directory
+  distDir: '.next',
+  // Configure image domains if needed
   images: {
-    domains: ['localhost', 'insurasphere-ml.onrender.com'],
+    domains: [],
   },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: `${process.env.ML_API_URL || 'https://insurasphere-ml.onrender.com'}/:path*`,
-      },
-    ];
+  // Configure source directory
+  experimental: {
+    appDir: true
   },
-  // Disable ESLint during build to prevent build failures due to linting errors
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-}
+  output: 'standalone'
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

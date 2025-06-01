@@ -12,7 +12,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Slider } from '@/components/ui/slider';
 import { MLPolicyRecommendationEngine } from '@/lib/mlPolicyRecommendation';
-import { GoogleGenerativeAI } from '@google/generative-ai';
 import { 
   Loader2,
   CheckCircle2,
@@ -86,72 +85,21 @@ export default function PolicyComparison() {
   const analyzeBenefits = async (policies: Policy[]) => {
     setAnalyzingBenefits(true);
     try {
-      const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY || '');
-      const model = genAI.getGenerativeModel({ 
-        model: "gemini-2.0-flash",
-        generationConfig: {
-          temperature: 0.7,
-          topP: 0.8,
-          topK: 40
-        }
-      });
-
       const refinedBenefitsMap: {[key: string]: RefinedBenefits} = {};
 
       for (const policy of policies) {
         if (!policy.benefits || policy.benefits.length === 0) continue;
 
-        const prompt = `
-          You are an expert insurance advisor. Please analyze these insurance policy benefits and provide:
-          1. A clear, concise explanation of what these benefits mean for the policyholder (2-3 sentences)
-          2. 2-3 additional recommended benefits that would complement the existing benefits well
-
-          Policy Name: ${policy.name}
-          Policy Category: ${policy.category}
-          Current Benefits: ${policy.benefits.join(', ')}
-
-          Please respond in this exact JSON format:
-          {
-            "explanation": "your explanation here",
-            "recommendations": ["recommended benefit 1", "recommended benefit 2", "recommended benefit 3"]
-          }
-
-          Keep the explanation under 200 characters and ensure each recommended benefit is under 50 characters.
-        `;
-
-        try {
-          const result = await model.generateContent(prompt);
-          const response = await result.response;
-          const text = response.text().trim();
-          
-          try {
-            const analysis = JSON.parse(text);
-            refinedBenefitsMap[policy.id] = {
-              original: policy.benefits,
-              explanation: analysis.explanation || 'Analysis not available.',
-              recommendations: Array.isArray(analysis.recommendations) ? analysis.recommendations : []
-            };
-          } catch (parseError) {
-            console.error('Error parsing Gemini response:', parseError);
-            refinedBenefitsMap[policy.id] = {
-              original: policy.benefits,
-              explanation: 'Unable to analyze benefits at this time.',
-              recommendations: []
-            };
-          }
-        } catch (apiError) {
-          console.error('Error calling Gemini API:', apiError);
-          refinedBenefitsMap[policy.id] = {
-            original: policy.benefits,
-            explanation: 'Unable to analyze benefits at this time.',
-            recommendations: []
-          };
-        }
+        refinedBenefitsMap[policy.id] = {
+          original: policy.benefits,
+          explanation: 'Analysis not available.',
+          recommendations: []
+        };
       }
 
       setRefinedBenefits(refinedBenefitsMap);
     } catch (error) {
-      console.error('Error initializing Gemini API:', error);
+      console.error('Error analyzing benefits:', error);
     } finally {
       setAnalyzingBenefits(false);
     }
@@ -659,4 +607,4 @@ export default function PolicyComparison() {
       </div>
     </div>
   );
-} 
+}
